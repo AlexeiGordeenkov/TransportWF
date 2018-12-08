@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AddGooseVehicleButton = new System.Windows.Forms.Button();
+            this.AddHorseDrawnVehicleButton = new System.Windows.Forms.Button();
             this.AddVehicleButton = new System.Windows.Forms.Button();
             this.AddMuscleVehicleButton = new System.Windows.Forms.Button();
             this.GoBackToSetUpViewButton = new System.Windows.Forms.Button();
             this.AddElectricVehicleButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // AddGooseVehicleButton
+            // AddHorseDrawnVehicleButton
             // 
-            this.AddGooseVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.AddGooseVehicleButton.Location = new System.Drawing.Point(28, 44);
-            this.AddGooseVehicleButton.Name = "AddGooseVehicleButton";
-            this.AddGooseVehicleButton.Size = new System.Drawing.Size(203, 167);
-            this.AddGooseVehicleButton.TabIndex = 1;
-            this.AddGooseVehicleButton.Text = "Добавить Гужевое ТС";
-            this.AddGooseVehicleButton.UseVisualStyleBackColor = true;
-            this.AddGooseVehicleButton.Click += new System.EventHandler(this.AddGooseVehicleButton_Click);
+            this.AddHorseDrawnVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.AddHorseDrawnVehicleButton.Location = new System.Drawing.Point(28, 44);
+            this.AddHorseDrawnVehicleButton.Name = "AddHorseDrawnVehicleButton";
+            this.AddHorseDrawnVehicleButton.Size = new System.Drawing.Size(203, 167);
+            this.AddHorseDrawnVehicleButton.TabIndex = 1;
+            this.AddHorseDrawnVehicleButton.Text = "Добавить Гужевое ТС";
+            this.AddHorseDrawnVehicleButton.UseVisualStyleBackColor = true;
+            this.AddHorseDrawnVehicleButton.Click += new System.EventHandler(this.AddHorseDrawnVehicleButton_Click);
             // 
             // AddVehicleButton
             // 
@@ -99,7 +99,7 @@
             this.Controls.Add(this.GoBackToSetUpViewButton);
             this.Controls.Add(this.AddMuscleVehicleButton);
             this.Controls.Add(this.AddVehicleButton);
-            this.Controls.Add(this.AddGooseVehicleButton);
+            this.Controls.Add(this.AddHorseDrawnVehicleButton);
             this.Name = "SetUpVehiclesView";
             this.Text = "SetUpVehiclesView";
             this.ResumeLayout(false);
@@ -108,7 +108,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button AddGooseVehicleButton;
+        private System.Windows.Forms.Button AddHorseDrawnVehicleButton;
         private System.Windows.Forms.Button AddVehicleButton;
         private System.Windows.Forms.Button AddMuscleVehicleButton;
         private System.Windows.Forms.Button GoBackToSetUpViewButton;

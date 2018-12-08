@@ -55,11 +55,11 @@
     <Compile Include="AddElectricVehicleView.Designer.cs">
       <DependentUpon>AddElectricVehicleView.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddGooseVehicleView.cs">
+    <Compile Include="AddHorseDrawnVehicleView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddGooseVehicleView.Designer.cs">
-      <DependentUpon>AddGooseVehicleView.cs</DependentUpon>
+    <Compile Include="AddHorseDrawnVehicleView.Designer.cs">
+      <DependentUpon>AddHorseDrawnVehicleView.cs</DependentUpon>
     </Compile>
     <Compile Include="AddMuscleVehicleView.cs">
       <SubType>Form</SubType>
@@ -99,6 +99,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddHorseDrawnVehicleView.resx">
+      <DependentUpon>AddHorseDrawnVehicleView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SetUpRoadView.resx">
       <DependentUpon>SetUpRoadView.cs</DependentUpon>
     </EmbeddedResource>

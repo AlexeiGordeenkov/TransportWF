@@ -9,7 +9,7 @@ namespace Presentation
     public interface ISetUpVehiclesView : IView
     {
         event Action GoBackToSetUpView;
-        event Action AddGooseVehicle;
+        event Action AddHorseDrawnVehicle;
         event Action AddMuscleVehicle;
         event Action AddGasolineVehicle;
         event Action AddElectricVehicle;

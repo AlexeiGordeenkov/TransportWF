@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Presentation.Presenters
 {
-    public class AddGooseVehiclePresenter : IPresenter
+    public class AddHorseDrawnVehiclePresenter : IPresenter
     {
         public void Run()
         {

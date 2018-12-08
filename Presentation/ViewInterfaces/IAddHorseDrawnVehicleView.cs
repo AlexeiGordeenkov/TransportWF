@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Presentation
 {
-    public interface IAddGooseVehicleView:IView
+    public interface IAddHorseDrawnVehicleView:IView
     {
     }
 }

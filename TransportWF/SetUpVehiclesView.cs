@@ -19,7 +19,7 @@ namespace TransportWF
         }
 
         public event Action GoBackToSetUpView;
-        public event Action AddGooseVehicle;
+        public event Action AddHorseDrawnVehicle;
         public event Action AddMuscleVehicle;
         public event Action AddGasolineVehicle;
         public event Action AddElectricVehicle;
@@ -29,9 +29,9 @@ namespace TransportWF
             GoBackToSetUpView?.Invoke();
         }
 
-        private void AddGooseVehicleButton_Click(object sender, EventArgs e)
+        private void AddHorseDrawnVehicleButton_Click(object sender, EventArgs e)
         {
-            AddGooseVehicle?.Invoke();
+            AddHorseDrawnVehicle?.Invoke();
         }
 
         private void AddVehicleButton_Click(object sender, EventArgs e)
@@ -48,5 +48,7 @@ namespace TransportWF
         {
             AddElectricVehicle?.Invoke();
         }
+
+        
     }
 }

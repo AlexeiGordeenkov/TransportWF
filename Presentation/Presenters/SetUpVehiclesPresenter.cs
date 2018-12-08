@@ -20,7 +20,7 @@ namespace Presentation
             _view = view;
             _service = service;
 
-            _view.AddGooseVehicle += AddGooseVehicle;
+            _view.AddHorseDrawnVehicle += AddGooseVehicle;
             _view.AddMuscleVehicle += AddMuscleVehicle;
             _view.AddGasolineVehicle += AddVehicle;
             _view.GoBackToSetUpView += GoBackToSetUpView;

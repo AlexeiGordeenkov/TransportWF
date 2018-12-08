@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TransportWF
 {
-    public partial class AddGooseVehicleView : Form, IAddGooseVehicleView
+    public partial class AddHorseDrawnVehicleView : Form, IAddHorseDrawnVehicleView
     {
-        public AddGooseVehicleView()
+        public AddHorseDrawnVehicleView()
         {
             InitializeComponent();
         }
