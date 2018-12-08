@@ -49,6 +49,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddElectricVehicleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddElectricVehicleView.Designer.cs">
+      <DependentUpon>AddElectricVehicleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGooseVehicleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGooseVehicleView.Designer.cs">
+      <DependentUpon>AddGooseVehicleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMuscleVehicleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMuscleVehicleView.Designer.cs">
+      <DependentUpon>AddMuscleVehicleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGasolineVehicleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGasolineVehicleView.Designer.cs">
+      <DependentUpon>AddGasolineVehicleView.cs</DependentUpon>
+    </Compile>
     <Compile Include="SetUpRoadView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +99,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="SetUpRoadView.resx">
+      <DependentUpon>SetUpRoadView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetUpVehiclesView.resx">
+      <DependentUpon>SetUpVehiclesView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SetUpView.resx">
       <DependentUpon>SetUpView.cs</DependentUpon>
     </EmbeddedResource>

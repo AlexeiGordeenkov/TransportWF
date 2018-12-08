@@ -8,5 +8,6 @@ namespace Presentation
 {
     public interface ISetUpRoadView:IView
     {
+        event Action Apply;
     }
 }

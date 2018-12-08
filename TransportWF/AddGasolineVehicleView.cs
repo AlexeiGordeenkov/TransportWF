@@ -11,18 +11,11 @@ using System.Windows.Forms;
 
 namespace TransportWF
 {
-    public partial class SetUpRoadView : Form,ISetUpRoadView
+    public partial class AddGasolineVehicleView : Form, IAddGasolineVehicleView
     {
-        public SetUpRoadView()
+        public AddGasolineVehicleView()
         {
             InitializeComponent();
-        }
-
-        public event Action Apply;
-
-        private void ApplyButton_Click(object sender, EventArgs e)
-        {
-            Apply?.Invoke();
         }
     }
 }

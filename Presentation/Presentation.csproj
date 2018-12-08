@@ -52,17 +52,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presenters\AddElectricVehiclePresenter.cs" />
+    <Compile Include="Presenters\AddGasolineVehiclePresenter.cs" />
+    <Compile Include="Presenters\AddGooseVehiclePresenter.cs" />
+    <Compile Include="Presenters\AddMuscleVehiclePresenter.cs" />
+    <Compile Include="ViewInterfaces\IAddElectricVehicleView.cs" />
+    <Compile Include="ViewInterfaces\IAddGasolineVehicleView.cs" />
+    <Compile Include="ViewInterfaces\IAddGooseVehicleView.cs" />
+    <Compile Include="ViewInterfaces\IAddMuscleVehicleView.cs" />
     <Compile Include="IPresenter.cs" />
-    <Compile Include="ISetUpRoadView.cs" />
-    <Compile Include="ISetUpVehiclesView.cs" />
-    <Compile Include="ISetUpView.cs" />
-    <Compile Include="ITransportView.cs" />
+    <Compile Include="ViewInterfaces\ISetUpRoadView.cs" />
+    <Compile Include="ViewInterfaces\ISetUpVehiclesView.cs" />
+    <Compile Include="ViewInterfaces\ISetUpView.cs" />
+    <Compile Include="ViewInterfaces\ITransportView.cs" />
     <Compile Include="IView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SetUpPresenter.cs" />
-    <Compile Include="SetUpRoadPresenter.cs" />
-    <Compile Include="SetUpVehiclesPresenter.cs" />
-    <Compile Include="TransportPresenter.cs" />
+    <Compile Include="Presenters\SetUpPresenter.cs" />
+    <Compile Include="Presenters\SetUpRoadPresenter.cs" />
+    <Compile Include="Presenters\SetUpVehiclesPresenter.cs" />
+    <Compile Include="Presenters\TransportPresenter.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

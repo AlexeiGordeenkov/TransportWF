@@ -18,6 +18,19 @@ namespace Presentation
             _kernel = kernel;
             _view = view;
             _service = service;
+
+            _view.Apply += Apply;
+        }
+
+        private void Apply()
+        {
+            /*
+             Тут должна быть 
+              Абстрактная Фабрика
+             */
+
+            _kernel.Get<TransportPresenter>().Run();
+            _view.Close();
         }
 
         public void Run()

@@ -19,6 +19,32 @@ namespace Presentation
             _kernel = kernel;
             _view = view;
             _service = service;
+
+            _view.AddGooseVehicle += AddGooseVehicle;
+            _view.AddMuscleVehicle += AddMuscleVehicle;
+            _view.AddGasolineVehicle += AddVehicle;
+            _view.GoBackToSetUpView += GoBackToSetUpView;
+        }
+
+        private void GoBackToSetUpView()
+        {
+            _kernel.Get<SetUpPresenter>().Run();
+            _view.Close();
+        }
+
+        private void AddVehicle()
+        {
+            _view.Close();
+        }
+
+        private void AddMuscleVehicle()
+        {
+            _view.Close();
+        }
+
+        private void AddGooseVehicle()
+        {
+            _view.Close();
         }
 
         public void Run()

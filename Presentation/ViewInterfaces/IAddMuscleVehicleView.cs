@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Presentation
 {
-    public interface ISetUpVehiclesView:IView
+    public interface IAddMuscleVehicleView:IView
     {
     }
 }

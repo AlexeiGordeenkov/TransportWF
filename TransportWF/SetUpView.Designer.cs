@@ -30,10 +30,12 @@
         {
             this.SetUpVehiclesButton = new System.Windows.Forms.Button();
             this.SetUpRoadButton = new System.Windows.Forms.Button();
+            this.GoBackToTransportViewButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SetUpVehiclesButton
             // 
+            this.SetUpVehiclesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.SetUpVehiclesButton.Location = new System.Drawing.Point(98, 114);
             this.SetUpVehiclesButton.Name = "SetUpVehiclesButton";
             this.SetUpVehiclesButton.Size = new System.Drawing.Size(203, 167);
@@ -44,6 +46,7 @@
             // 
             // SetUpRoadButton
             // 
+            this.SetUpRoadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.SetUpRoadButton.Location = new System.Drawing.Point(450, 114);
             this.SetUpRoadButton.Name = "SetUpRoadButton";
             this.SetUpRoadButton.Size = new System.Drawing.Size(203, 167);
@@ -52,11 +55,22 @@
             this.SetUpRoadButton.UseVisualStyleBackColor = true;
             this.SetUpRoadButton.Click += new System.EventHandler(this.SetUpRoadButton_Click);
             // 
+            // GoBackToTransportViewButton
+            // 
+            this.GoBackToTransportViewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.GoBackToTransportViewButton.Location = new System.Drawing.Point(641, 385);
+            this.GoBackToTransportViewButton.Name = "GoBackToTransportViewButton";
+            this.GoBackToTransportViewButton.Size = new System.Drawing.Size(134, 53);
+            this.GoBackToTransportViewButton.TabIndex = 2;
+            this.GoBackToTransportViewButton.Text = "Назад";
+            this.GoBackToTransportViewButton.UseVisualStyleBackColor = true;
+            // 
             // SetUpView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GoBackToTransportViewButton);
             this.Controls.Add(this.SetUpRoadButton);
             this.Controls.Add(this.SetUpVehiclesButton);
             this.Name = "SetUpView";
@@ -69,5 +83,6 @@
 
         private System.Windows.Forms.Button SetUpVehiclesButton;
         private System.Windows.Forms.Button SetUpRoadButton;
+        private System.Windows.Forms.Button GoBackToTransportViewButton;
     }
 }
