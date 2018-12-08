@@ -21,8 +21,15 @@ namespace Presentation
 
             _view.SetUpVehicles += SetUpVehicles;
             _view.SetUpRoad += SetUpRoad;
+            _view.GoBackToTransportView += GoBackToTransportView;
         }
-    
+
+        private void GoBackToTransportView()
+        {
+            _kernel.Get<TransportPresenter>().Run();
+            _view.Close();
+        }
+
         void SetUpVehicles()
         {
             _kernel.Get<SetUpVehiclesPresenter>().Run();

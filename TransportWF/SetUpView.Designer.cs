@@ -64,6 +64,7 @@
             this.GoBackToTransportViewButton.TabIndex = 2;
             this.GoBackToTransportViewButton.Text = "Назад";
             this.GoBackToTransportViewButton.UseVisualStyleBackColor = true;
+            this.GoBackToTransportViewButton.Click += new System.EventHandler(this.GoBackToTransportViewButton_Click);
             // 
             // SetUpView
             // 
