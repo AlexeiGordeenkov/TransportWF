@@ -19,6 +19,7 @@ namespace Model
         //methods
         abstract public void Start();
         abstract public void Stop();
-        abstract public void saveDate();
+        abstract public void SaveDate();
+        abstract public void Step();
     }
 }

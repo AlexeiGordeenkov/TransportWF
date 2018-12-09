@@ -12,12 +12,18 @@ namespace Model
         {
         }
 
-        public override void saveDate()
+        public override void SaveDate()
         {
             throw new NotImplementedException();
         }
 
         public override void Start()
+        {
+            
+            throw new NotImplementedException();
+        }
+
+        public override void Step()
         {
             throw new NotImplementedException();
         }
