@@ -8,6 +8,8 @@ using Model;
 using Ninject;
 using Presentation.Presenters;
 using Presentation.ViewInterfaces;
+using Model.Services;
+using Model.InterfacesForServices;
 
 namespace TransportWF
 {
@@ -44,6 +46,7 @@ namespace TransportWF
             kernel.Bind<AddMuscleVehiclePresenter>().ToSelf();
 
             kernel.Bind<ITransportService>().To<TransportService>().InSingletonScope();
+            kernel.Bind<IFuelService>().To<FuelService>().InSingletonScope();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

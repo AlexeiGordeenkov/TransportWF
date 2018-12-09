@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Presentation.ViewInterfaces;
 using Ninject;
+using Model.InterfacesForServices;
 using Model;
 
 namespace Presentation.Presenters
@@ -13,9 +14,9 @@ namespace Presentation.Presenters
     {
         private readonly IKernel _kernel;
         private readonly IAddFuelView _view;
-        private readonly ITransportService _service;
+        private readonly IFuelService _service;
 
-        public AddFuelPresenter(IKernel kernel, IAddFuelView view, ITransportService service)
+        public AddFuelPresenter(IKernel kernel, IAddFuelView view, IFuelService service)
         {
             _kernel = kernel;
             _view = view;
