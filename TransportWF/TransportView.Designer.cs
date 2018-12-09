@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransportView));
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.RailsForLine4 = new System.Windows.Forms.PictureBox();
+            this.RailsForLine3 = new System.Windows.Forms.PictureBox();
+            this.RailsForLine = new System.Windows.Forms.PictureBox();
+            this.RailsForLine1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -44,68 +43,69 @@
             this.StopButton = new System.Windows.Forms.Button();
             this.StartButton = new System.Windows.Forms.Button();
             this.SetUpSimulationButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.RailsForLine5 = new System.Windows.Forms.PictureBox();
+            this.WiresForLine5 = new System.Windows.Forms.PictureBox();
+            this.WiresForLine4 = new System.Windows.Forms.PictureBox();
+            this.WiresForLine3 = new System.Windows.Forms.PictureBox();
+            this.WiresForLine2 = new System.Windows.Forms.PictureBox();
+            this.WiresForLine1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox11
+            // RailsForLine4
             // 
-            this.pictureBox11.Image = global::TransportWF.Properties.Resources.Rails1;
-            this.pictureBox11.Location = new System.Drawing.Point(-18, 370);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(1263, 38);
-            this.pictureBox11.TabIndex = 14;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Visible = false;
+            this.RailsForLine4.Image = global::TransportWF.Properties.Resources.Rails1;
+            this.RailsForLine4.Location = new System.Drawing.Point(-18, 310);
+            this.RailsForLine4.Name = "RailsForLine4";
+            this.RailsForLine4.Size = new System.Drawing.Size(1263, 38);
+            this.RailsForLine4.TabIndex = 13;
+            this.RailsForLine4.TabStop = false;
+            this.RailsForLine4.Visible = false;
             // 
-            // pictureBox10
+            // RailsForLine3
             // 
-            this.pictureBox10.Image = global::TransportWF.Properties.Resources.Rails1;
-            this.pictureBox10.Location = new System.Drawing.Point(-18, 310);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(1263, 38);
-            this.pictureBox10.TabIndex = 13;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Visible = false;
+            this.RailsForLine3.Image = global::TransportWF.Properties.Resources.Rails1;
+            this.RailsForLine3.Location = new System.Drawing.Point(-31, 250);
+            this.RailsForLine3.Name = "RailsForLine3";
+            this.RailsForLine3.Size = new System.Drawing.Size(1263, 38);
+            this.RailsForLine3.TabIndex = 12;
+            this.RailsForLine3.TabStop = false;
+            this.RailsForLine3.Visible = false;
             // 
-            // pictureBox9
+            // RailsForLine
             // 
-            this.pictureBox9.Image = global::TransportWF.Properties.Resources.Rails1;
-            this.pictureBox9.Location = new System.Drawing.Point(-31, 250);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(1263, 38);
-            this.pictureBox9.TabIndex = 12;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Visible = false;
+            this.RailsForLine.Image = global::TransportWF.Properties.Resources.Rails1;
+            this.RailsForLine.Location = new System.Drawing.Point(-18, 190);
+            this.RailsForLine.Name = "RailsForLine";
+            this.RailsForLine.Size = new System.Drawing.Size(1263, 38);
+            this.RailsForLine.TabIndex = 11;
+            this.RailsForLine.TabStop = false;
+            this.RailsForLine.Visible = false;
             // 
-            // pictureBox8
+            // RailsForLine1
             // 
-            this.pictureBox8.Image = global::TransportWF.Properties.Resources.Rails1;
-            this.pictureBox8.Location = new System.Drawing.Point(-18, 190);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(1263, 38);
-            this.pictureBox8.TabIndex = 11;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Visible = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::TransportWF.Properties.Resources.Rails1;
-            this.pictureBox7.Location = new System.Drawing.Point(-18, 130);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(1263, 38);
-            this.pictureBox7.TabIndex = 10;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Visible = false;
+            this.RailsForLine1.Image = global::TransportWF.Properties.Resources.Rails1;
+            this.RailsForLine1.Location = new System.Drawing.Point(-18, 130);
+            this.RailsForLine1.Name = "RailsForLine1";
+            this.RailsForLine1.Size = new System.Drawing.Size(1263, 38);
+            this.RailsForLine1.TabIndex = 10;
+            this.RailsForLine1.TabStop = false;
+            this.RailsForLine1.Visible = false;
             // 
             // pictureBox6
             // 
@@ -207,17 +207,81 @@
             this.SetUpSimulationButton.UseVisualStyleBackColor = false;
             this.SetUpSimulationButton.Click += new System.EventHandler(this.SetUpSimulationButton_Click);
             // 
+            // RailsForLine5
+            // 
+            this.RailsForLine5.Image = global::TransportWF.Properties.Resources.Rails1;
+            this.RailsForLine5.Location = new System.Drawing.Point(-18, 370);
+            this.RailsForLine5.Name = "RailsForLine5";
+            this.RailsForLine5.Size = new System.Drawing.Size(1263, 38);
+            this.RailsForLine5.TabIndex = 14;
+            this.RailsForLine5.TabStop = false;
+            this.RailsForLine5.Visible = false;
+            // 
+            // WiresForLine5
+            // 
+            this.WiresForLine5.Image = global::TransportWF.Properties.Resources.Wires;
+            this.WiresForLine5.Location = new System.Drawing.Point(-67, 370);
+            this.WiresForLine5.Name = "WiresForLine5";
+            this.WiresForLine5.Size = new System.Drawing.Size(1263, 47);
+            this.WiresForLine5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.WiresForLine5.TabIndex = 15;
+            this.WiresForLine5.TabStop = false;
+            this.WiresForLine5.Visible = false;
+            // 
+            // WiresForLine4
+            // 
+            this.WiresForLine4.Image = global::TransportWF.Properties.Resources.Wires;
+            this.WiresForLine4.Location = new System.Drawing.Point(-185, 301);
+            this.WiresForLine4.Name = "WiresForLine4";
+            this.WiresForLine4.Size = new System.Drawing.Size(1263, 47);
+            this.WiresForLine4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.WiresForLine4.TabIndex = 16;
+            this.WiresForLine4.TabStop = false;
+            this.WiresForLine4.Visible = false;
+            // 
+            // WiresForLine3
+            // 
+            this.WiresForLine3.Image = global::TransportWF.Properties.Resources.Wires;
+            this.WiresForLine3.Location = new System.Drawing.Point(-185, 241);
+            this.WiresForLine3.Name = "WiresForLine3";
+            this.WiresForLine3.Size = new System.Drawing.Size(1263, 47);
+            this.WiresForLine3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.WiresForLine3.TabIndex = 17;
+            this.WiresForLine3.TabStop = false;
+            this.WiresForLine3.Visible = false;
+            // 
+            // WiresForLine2
+            // 
+            this.WiresForLine2.Image = global::TransportWF.Properties.Resources.Wires;
+            this.WiresForLine2.Location = new System.Drawing.Point(-185, 188);
+            this.WiresForLine2.Name = "WiresForLine2";
+            this.WiresForLine2.Size = new System.Drawing.Size(1263, 47);
+            this.WiresForLine2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.WiresForLine2.TabIndex = 18;
+            this.WiresForLine2.TabStop = false;
+            this.WiresForLine2.Visible = false;
+            // 
+            // WiresForLine1
+            // 
+            this.WiresForLine1.Image = global::TransportWF.Properties.Resources.Wires;
+            this.WiresForLine1.Location = new System.Drawing.Point(-185, 121);
+            this.WiresForLine1.Name = "WiresForLine1";
+            this.WiresForLine1.Size = new System.Drawing.Size(1263, 47);
+            this.WiresForLine1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.WiresForLine1.TabIndex = 19;
+            this.WiresForLine1.TabStop = false;
+            this.WiresForLine1.Visible = false;
+            // 
             // TransportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 529);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.RailsForLine4);
+            this.Controls.Add(this.RailsForLine3);
+            this.Controls.Add(this.RailsForLine);
+            this.Controls.Add(this.RailsForLine1);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -228,19 +292,30 @@
             this.Controls.Add(this.StopButton);
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.SetUpSimulationButton);
+            this.Controls.Add(this.RailsForLine5);
+            this.Controls.Add(this.WiresForLine1);
+            this.Controls.Add(this.WiresForLine2);
+            this.Controls.Add(this.WiresForLine3);
+            this.Controls.Add(this.WiresForLine4);
+            this.Controls.Add(this.WiresForLine5);
             this.Name = "TransportView";
             this.Text = "Transport";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,11 +332,16 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox RailsForLine1;
+        private System.Windows.Forms.PictureBox RailsForLine;
+        private System.Windows.Forms.PictureBox RailsForLine3;
+        private System.Windows.Forms.PictureBox RailsForLine4;
+        private System.Windows.Forms.PictureBox RailsForLine5;
+        private System.Windows.Forms.PictureBox WiresForLine5;
+        private System.Windows.Forms.PictureBox WiresForLine4;
+        private System.Windows.Forms.PictureBox WiresForLine3;
+        private System.Windows.Forms.PictureBox WiresForLine2;
+        private System.Windows.Forms.PictureBox WiresForLine1;
     }
 }
 
