@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Model.InterfacesForServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model
+namespace Model.Services
 {
-    public class TransportService:ITransportService
+    public class FuelService:IFuelService
     {
         //Variables//
         private List<Fuel> listOfFuel = new List<Fuel>();
@@ -25,15 +26,14 @@ namespace Model
             return listNameFuel;
         }
 
-        public void AddFuelInList(Fuel fuel) =>   listOfFuel.Add(fuel);
+        public void AddFuelInList(Fuel fuel) => listOfFuel.Add(fuel);
 
         public bool VerifiacationFuel(Fuel fuel)// метод возвращает true в случае отсутствия еще такого топлива в списке
-        {  
+        {
             foreach (Fuel iteratorFuel in listOfFuel)
                 if (fuel.GetName() == iteratorFuel.GetName())
                     return false;
             return true;
         }
-
     }
 }
