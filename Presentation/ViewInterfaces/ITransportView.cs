@@ -12,5 +12,6 @@ namespace Presentation
         event Action ShowLog;
         event Action StartSimulation;
         event Action StopSimulation;
+        void WriteTempLabel(string s);
     }
 }

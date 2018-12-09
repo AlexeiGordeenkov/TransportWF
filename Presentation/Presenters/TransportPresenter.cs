@@ -1,6 +1,7 @@
 ﻿using System;
 using Ninject;
 using Model;
+using System.Threading;
 
 namespace Presentation
 {
@@ -10,7 +11,11 @@ namespace Presentation
         private readonly ITransportView _view;
         private readonly ITransportService _service;
 
-        public TransportPresenter(IKernel kernel,ITransportView view, ITransportService service)
+        private bool simulationInProces;
+        private bool firstStart;
+        private Thread thread;
+
+        public TransportPresenter(IKernel kernel, ITransportView view, ITransportService service)
         {
             _kernel = kernel;
             _service = service;
@@ -19,6 +24,8 @@ namespace Presentation
             _view.SetUp += SetUp;
             _view.StartSimulation += StartSimulation;
             _view.StopSimulation += StopSimulation;
+
+            firstStart = true;
         }
 
         private void SetUp()
@@ -29,12 +36,37 @@ namespace Presentation
 
         private void StartSimulation()
         {
-
+            if (firstStart)
+            {
+                simulationInProces = true;
+                thread = new Thread(Simulate);
+                thread.Start();
+                firstStart = false;
+            }
+            else
+            {
+                if (!simulationInProces)
+                {
+                    thread.Resume();
+                    simulationInProces = true;
+                }
+            }
+        }
+        private void Simulate()
+        {
+            int i = 0;
+            while (true)
+            {
+                System.Threading.Thread.Sleep(100);
+                _view.WriteTempLabel((i++).ToString());          
+            }
         }
 
         private void StopSimulation()
         {
-
+            if (!simulationInProces) return;
+            simulationInProces = false;
+            thread.Suspend();
         }
 
         public void Run()
