@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SetUpSimulationButton = new System.Windows.Forms.Button();
-            this.StartButton = new System.Windows.Forms.Button();
-            this.StopButton = new System.Windows.Forms.Button();
-            this.ShowLogButton = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransportView));
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -39,10 +40,14 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.ShowLogButton = new System.Windows.Forms.Button();
+            this.StopButton = new System.Windows.Forms.Button();
+            this.StartButton = new System.Windows.Forms.Button();
+            this.SetUpSimulationButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -50,48 +55,47 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
-            // SetUpSimulationButton
+            // pictureBox11
             // 
-            this.SetUpSimulationButton.Location = new System.Drawing.Point(406, 22);
-            this.SetUpSimulationButton.Name = "SetUpSimulationButton";
-            this.SetUpSimulationButton.Size = new System.Drawing.Size(124, 74);
-            this.SetUpSimulationButton.TabIndex = 0;
-            this.SetUpSimulationButton.Text = "Настройка симуляции";
-            this.SetUpSimulationButton.UseVisualStyleBackColor = true;
-            this.SetUpSimulationButton.Click += new System.EventHandler(this.SetUpSimulationButton_Click);
+            this.pictureBox11.Image = global::TransportWF.Properties.Resources.Rails1;
+            this.pictureBox11.Location = new System.Drawing.Point(-18, 370);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(1263, 38);
+            this.pictureBox11.TabIndex = 14;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Visible = false;
             // 
-            // StartButton
+            // pictureBox10
             // 
-            this.StartButton.Location = new System.Drawing.Point(536, 22);
-            this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(124, 74);
-            this.StartButton.TabIndex = 1;
-            this.StartButton.Text = "Старт/Продолжить движение";
-            this.StartButton.UseVisualStyleBackColor = true;
+            this.pictureBox10.Image = global::TransportWF.Properties.Resources.Rails1;
+            this.pictureBox10.Location = new System.Drawing.Point(-18, 310);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(1263, 38);
+            this.pictureBox10.TabIndex = 13;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Visible = false;
             // 
-            // StopButton
+            // pictureBox9
             // 
-            this.StopButton.Location = new System.Drawing.Point(666, 22);
-            this.StopButton.Name = "StopButton";
-            this.StopButton.Size = new System.Drawing.Size(124, 74);
-            this.StopButton.TabIndex = 2;
-            this.StopButton.Text = "Стоп";
-            this.StopButton.UseVisualStyleBackColor = true;
+            this.pictureBox9.Image = global::TransportWF.Properties.Resources.Rails1;
+            this.pictureBox9.Location = new System.Drawing.Point(-31, 250);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(1263, 38);
+            this.pictureBox9.TabIndex = 12;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Visible = false;
             // 
-            // ShowLogButton
+            // pictureBox8
             // 
-            this.ShowLogButton.Location = new System.Drawing.Point(12, 22);
-            this.ShowLogButton.Name = "ShowLogButton";
-            this.ShowLogButton.Size = new System.Drawing.Size(124, 74);
-            this.ShowLogButton.TabIndex = 3;
-            this.ShowLogButton.Text = "Журнал";
-            this.ShowLogButton.UseVisualStyleBackColor = true;
+            this.pictureBox8.Image = global::TransportWF.Properties.Resources.Rails1;
+            this.pictureBox8.Location = new System.Drawing.Point(-18, 190);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(1263, 38);
+            this.pictureBox8.TabIndex = 11;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Visible = false;
             // 
             // pictureBox7
             // 
@@ -101,6 +105,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(1263, 38);
             this.pictureBox7.TabIndex = 10;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Visible = false;
             // 
             // pictureBox6
             // 
@@ -156,41 +161,51 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox8
+            // ShowLogButton
             // 
-            this.pictureBox8.Image = global::TransportWF.Properties.Resources.Rails1;
-            this.pictureBox8.Location = new System.Drawing.Point(-18, 190);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(1263, 38);
-            this.pictureBox8.TabIndex = 11;
-            this.pictureBox8.TabStop = false;
+            this.ShowLogButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ShowLogButton.Image = ((System.Drawing.Image)(resources.GetObject("ShowLogButton.Image")));
+            this.ShowLogButton.Location = new System.Drawing.Point(12, 22);
+            this.ShowLogButton.Name = "ShowLogButton";
+            this.ShowLogButton.Size = new System.Drawing.Size(124, 74);
+            this.ShowLogButton.TabIndex = 3;
+            this.ShowLogButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ShowLogButton.UseVisualStyleBackColor = false;
             // 
-            // pictureBox9
+            // StopButton
             // 
-            this.pictureBox9.Image = global::TransportWF.Properties.Resources.Rails1;
-            this.pictureBox9.Location = new System.Drawing.Point(-31, 250);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(1263, 38);
-            this.pictureBox9.TabIndex = 12;
-            this.pictureBox9.TabStop = false;
+            this.StopButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.StopButton.Image = global::TransportWF.Properties.Resources.stop;
+            this.StopButton.Location = new System.Drawing.Point(403, 22);
+            this.StopButton.Name = "StopButton";
+            this.StopButton.Size = new System.Drawing.Size(124, 74);
+            this.StopButton.TabIndex = 2;
+            this.StopButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.StopButton.UseVisualStyleBackColor = false;
             // 
-            // pictureBox10
+            // StartButton
             // 
-            this.pictureBox10.Image = global::TransportWF.Properties.Resources.Rails1;
-            this.pictureBox10.Location = new System.Drawing.Point(-18, 310);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(1263, 38);
-            this.pictureBox10.TabIndex = 13;
-            this.pictureBox10.TabStop = false;
+            this.StartButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.StartButton.Image = global::TransportWF.Properties.Resources.start;
+            this.StartButton.Location = new System.Drawing.Point(249, 22);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(124, 74);
+            this.StartButton.TabIndex = 1;
+            this.StartButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.StartButton.UseVisualStyleBackColor = false;
             // 
-            // pictureBox11
+            // SetUpSimulationButton
             // 
-            this.pictureBox11.Image = global::TransportWF.Properties.Resources.Rails1;
-            this.pictureBox11.Location = new System.Drawing.Point(-18, 370);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(1263, 38);
-            this.pictureBox11.TabIndex = 14;
-            this.pictureBox11.TabStop = false;
+            this.SetUpSimulationButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.SetUpSimulationButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.SetUpSimulationButton.Image = ((System.Drawing.Image)(resources.GetObject("SetUpSimulationButton.Image")));
+            this.SetUpSimulationButton.Location = new System.Drawing.Point(664, 22);
+            this.SetUpSimulationButton.Name = "SetUpSimulationButton";
+            this.SetUpSimulationButton.Size = new System.Drawing.Size(124, 74);
+            this.SetUpSimulationButton.TabIndex = 0;
+            this.SetUpSimulationButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.SetUpSimulationButton.UseVisualStyleBackColor = false;
+            this.SetUpSimulationButton.Click += new System.EventHandler(this.SetUpSimulationButton_Click);
             // 
             // TransportView
             // 
@@ -215,6 +230,10 @@
             this.Controls.Add(this.SetUpSimulationButton);
             this.Name = "TransportView";
             this.Text = "Transport";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -222,10 +241,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
 
         }
