@@ -49,6 +49,7 @@
             this.WiresForLine3 = new System.Windows.Forms.PictureBox();
             this.WiresForLine2 = new System.Windows.Forms.PictureBox();
             this.WiresForLine1 = new System.Windows.Forms.PictureBox();
+            this.TempLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine)).BeginInit();
@@ -171,6 +172,7 @@
             this.ShowLogButton.TabIndex = 3;
             this.ShowLogButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ShowLogButton.UseVisualStyleBackColor = false;
+            this.ShowLogButton.Click += new System.EventHandler(this.ShowLogButton_Click);
             // 
             // StopButton
             // 
@@ -182,6 +184,7 @@
             this.StopButton.TabIndex = 2;
             this.StopButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.StopButton.UseVisualStyleBackColor = false;
+            this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
             // 
             // StartButton
             // 
@@ -193,6 +196,7 @@
             this.StartButton.TabIndex = 1;
             this.StartButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.StartButton.UseVisualStyleBackColor = false;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // SetUpSimulationButton
             // 
@@ -272,12 +276,21 @@
             this.WiresForLine1.TabStop = false;
             this.WiresForLine1.Visible = false;
             // 
+            // TempLabel
+            // 
+            this.TempLabel.AutoSize = true;
+            this.TempLabel.Location = new System.Drawing.Point(612, 467);
+            this.TempLabel.Name = "TempLabel";
+            this.TempLabel.Size = new System.Drawing.Size(0, 13);
+            this.TempLabel.TabIndex = 20;
+            // 
             // TransportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 529);
+            this.Controls.Add(this.TempLabel);
             this.Controls.Add(this.RailsForLine4);
             this.Controls.Add(this.RailsForLine3);
             this.Controls.Add(this.RailsForLine);
@@ -317,6 +330,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.WiresForLine2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WiresForLine1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -342,6 +356,7 @@
         private System.Windows.Forms.PictureBox WiresForLine3;
         private System.Windows.Forms.PictureBox WiresForLine2;
         private System.Windows.Forms.PictureBox WiresForLine1;
+        private System.Windows.Forms.Label TempLabel;
     }
 }
 
