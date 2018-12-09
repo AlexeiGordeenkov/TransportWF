@@ -9,9 +9,9 @@ namespace Presentation.FactoryMethod
 {
     class CreatorTruck : ICreatorMotorVehicle
     {
-        public Vehicle Creator()
+        public MotorVehicle Creator(string name, Fuel fuel, double maxSpeed, double startSpeed, double tankCapacity, double fuelConsumption)
         {
-            return new Truck();
+            return new Truck(name, fuel, maxSpeed, startSpeed, tankCapacity, fuelConsumption);
         }
     }
 }

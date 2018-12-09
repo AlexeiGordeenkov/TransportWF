@@ -8,7 +8,7 @@ namespace Model
 {
     public interface ITransportService
     {
-       
+        void AddVehicle(Vehicle vehicle);
 
     }
 }

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Presentation.FactoryMethod;
 
 namespace Presentation.Presenters
 {
@@ -15,6 +16,8 @@ namespace Presentation.Presenters
         private readonly IAddMotorVehicleView _view;
         private readonly ITransportService _transportService;
         private readonly IFuelService  _fuelService;
+        private ICreatorMotorVehicle _creator;
+
 
         public AddMotorVehiclePresenter(IKernel kernel, IAddMotorVehicleView view, ITransportService transportService, IFuelService fuelService)
         {
@@ -34,12 +37,30 @@ namespace Presentation.Presenters
 
         private void AddVehicle()
         {
-            
+            string name;
+            string index;
+            string maxSpeed;
+            string startSpeed;
+            string tankCapacity;
+            string fuelConsumption;
+            _view.GetData(out name, out index, out maxSpeed, out startSpeed, out tankCapacity, out fuelConsumption);
+            Fuel fuel = _fuelService.GetFuelFromList(Int32.Parse(index));
+            MotorVehicle motorVehicle = _creator.Creator(name,fuel,Double.Parse(maxSpeed), Double.Parse(startSpeed), Double.Parse(tankCapacity), Double.Parse(fuelConsumption) );
+            Vehicle vehicle = motorVehicle;
+            _transportService.AddVehicle(vehicle);
+  
+        }
+        
+
+        public void Run(ICreatorMotorVehicle creator)
+        {
+            _creator = creator;
+            _view.Show();
         }
 
         public void Run()
         {
-            _view.Show();
+            throw new NotImplementedException();
         }
     }
 }

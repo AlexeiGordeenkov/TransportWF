@@ -9,9 +9,14 @@ namespace Model
     public class Truck : MotorVehicle
     {
         public static string TYPE = "Грузовик";
-        public Truck()
+        public Truck(string name, Fuel fuel, double maxSpeed, double startSpeed, double tankCapacity, double fuelConsumption)
         {
-            
+            this.name = name;
+            this.fuel = fuel;
+            this.maxSpeed = maxSpeed;
+            this.startSpeed = startSpeed;
+            this.tankCapacity = tankCapacity;
+            this.fuelConsumption = fuelConsumption;
         }
 
 

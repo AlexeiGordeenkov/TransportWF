@@ -8,6 +8,7 @@ namespace Model
 {
     public class TransportService:ITransportService
     {
+        List<Vehicle> listOFVehicle = new List<Vehicle>();
         public DateTime timeStarting = new DateTime();
 
         public void StartRuning()
@@ -20,6 +21,8 @@ namespace Model
             TimeSpan differensTime = (DateTime.Now).Subtract(timeStarting);
             return (int)differensTime.TotalMilliseconds;
         }
+
+        public void AddVehicle(Vehicle vehicle) => listOFVehicle.Add(vehicle);
        
 
     }

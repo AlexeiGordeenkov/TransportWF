@@ -46,9 +46,20 @@ namespace TransportWF
                 FuelComboBox.Items.Add(nameFuel);
         }
 
-        public void GetData(out string name, out string IndexFuel, out string maxSpeed, out string startingSpeed, out string capacityTank, out string fuelConsption)
+        public void GetData(out string name, out string IndexFuel, out string maxSpeed, 
+                            out string startingSpeed, out string capacityTank, out string fuelConsption)
         {
-            throw new NotImplementedException();
+            name = NameTextBox.Text;
+            IndexFuel = FuelComboBox.SelectedIndex.ToString();
+            maxSpeed = MaxSpeddTextBox.Text;
+            startingSpeed = StartingSpeedTextBox.Text;
+            capacityTank = CapacityTextBox.Text;
+            fuelConsption = FuelConsumptionTextBox.Text;
+
+        }
+        public new void Show()
+        {
+            ShowDialog();
         }
     }
 }

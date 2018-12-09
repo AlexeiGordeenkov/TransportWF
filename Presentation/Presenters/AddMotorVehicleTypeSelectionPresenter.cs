@@ -32,21 +32,21 @@ namespace Presentation.Presenters
 
         private void PanzerTypeSelected()
         {
-            _kernel.Get<AddMotorVehiclePresenter>().Run();
+            _kernel.Get<AddMotorVehiclePresenter>().Run(creator);
             _view.Close();
         }
 
         private void TrukTypeSelected()
         {
             creator = new CreatorTruck();
-            _kernel.Get<AddMotorVehiclePresenter>().Run();
+            _kernel.Get<AddMotorVehiclePresenter>().Run(creator);
             _view.Close();
         }
 
         private void CarTypeSelected()
         {
             creator = new CreatorCar();
-            _kernel.Get<AddMotorVehiclePresenter>().Run();
+            _kernel.Get<AddMotorVehiclePresenter>().Run(creator);
             _view.Close();
         }
 

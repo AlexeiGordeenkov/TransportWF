@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Presentation.FactoryMethod
 {
-    interface ICreatorMotorVehicle
+    public interface ICreatorMotorVehicle
     {
-        Vehicle Creator();
+        MotorVehicle Creator(string name, Fuel fuel, double maxSpeed, double startSpeed, double tankCapacity, double fuelConsumption);
     }
 }

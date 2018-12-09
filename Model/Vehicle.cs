@@ -9,12 +9,13 @@ namespace Model
     abstract public class Vehicle
     {
         //Variables
-        protected string pathToPictures;
-        protected double MaxSpedd;
-        protected double brakingDistaces;
-        protected double startSpeed;
-        protected double curentSpeed;
-        protected double coordinate;
+        protected string name { get; set; }
+        protected string pathToPictures { get; set; }
+        protected double maxSpeed { get; set; }
+        protected double brakingDistaces { get; set; }
+        protected double startSpeed { get; set; }
+        protected double curentSpeed { get; set; }
+        protected double coordinate { get; set; }
 
         //methods
         abstract public void Start();

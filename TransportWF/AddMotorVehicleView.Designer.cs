@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.FuelComboBox = new System.Windows.Forms.ComboBox();
             this.FuelConsumptionTextBox = new System.Windows.Forms.TextBox();
             this.CapacityTextBox = new System.Windows.Forms.TextBox();
             this.StartingSpeedTextBox = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.NameLabel = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.AddFuelButton = new System.Windows.Forms.Button();
-            this.FuelComboBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(447, 371);
             this.panel1.TabIndex = 0;
+            // 
+            // FuelComboBox
+            // 
+            this.FuelComboBox.FormattingEnabled = true;
+            this.FuelComboBox.Location = new System.Drawing.Point(267, 84);
+            this.FuelComboBox.Name = "FuelComboBox";
+            this.FuelComboBox.Size = new System.Drawing.Size(136, 21);
+            this.FuelComboBox.TabIndex = 15;
             // 
             // FuelConsumptionTextBox
             // 
@@ -171,14 +179,6 @@
             this.AddFuelButton.Text = "Добавить";
             this.AddFuelButton.UseVisualStyleBackColor = true;
             this.AddFuelButton.Click += new System.EventHandler(this.AddFuelButton_Click);
-            // 
-            // FuelComboBox
-            // 
-            this.FuelComboBox.FormattingEnabled = true;
-            this.FuelComboBox.Location = new System.Drawing.Point(267, 84);
-            this.FuelComboBox.Name = "FuelComboBox";
-            this.FuelComboBox.Size = new System.Drawing.Size(136, 21);
-            this.FuelComboBox.TabIndex = 15;
             // 
             // AddMotorVehicleView
             // 

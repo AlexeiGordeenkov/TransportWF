@@ -8,8 +8,14 @@ namespace Model
 {
     public class Car : MotorVehicle
     {
-        public Car()
+        public Car(string name, Fuel fuel, double maxSpeed, double startSpeed, double tankCapacity, double fuelConsumption )
         {
+            this.name = name;
+            this.fuel = fuel;
+            this.maxSpeed = maxSpeed;
+            this.startSpeed = startSpeed;
+            this.tankCapacity = tankCapacity;
+            this.fuelConsumption = fuelConsumption;
         }
 
         public override void SaveDate()
