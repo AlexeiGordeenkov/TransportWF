@@ -8,21 +8,21 @@ namespace Model
 {
     public class Fuel
     {
-        private string Name;
+        private string name;
 
-        public Fuel(string Name)
+        public Fuel(string name)
         {
-            this.Name = Name;
+            this.name = name;
         }
 
         public string GetName()
         {
-            return Name;
+            return name;
         }
         
         public override string ToString()
         {
-            return Name;
+            return name;
         }
     }
 }
