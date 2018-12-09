@@ -22,6 +22,13 @@ namespace Presentation.Presenters
             _service = service;
 
             _view.AddFuel += AddFuel;
+            _view.AddFuelViewLoad += AddFuelViewLoad;
+        }
+
+        private void AddFuelViewLoad()
+        {
+           
+            _view.ShowListFuel(_service.GetListNameFuel());
         }
 
         private void AddFuel()
@@ -29,6 +36,7 @@ namespace Presentation.Presenters
             string NameFuel = _view.GetNameFuel();
             if (_service.VerifiacationFuel(new Fuel(NameFuel)))
                 _service.AddFuelInList(new Fuel(NameFuel));
+           
             
             _view.ShowListFuel(_service.GetListNameFuel());
         }

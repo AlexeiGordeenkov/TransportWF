@@ -9,6 +9,7 @@ namespace Presentation.ViewInterfaces
     public interface IAddFuelView:IView
     {
         event Action AddFuel;
+        event Action AddFuelViewLoad;
         string GetNameFuel();
         void ShowListFuel(List<string> ListNameFuel);
     }

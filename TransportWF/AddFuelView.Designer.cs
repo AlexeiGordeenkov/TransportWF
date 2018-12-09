@@ -53,6 +53,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(305, 378);
             this.panel1.TabIndex = 0;
+  
             // 
             // label2
             // 
@@ -113,6 +114,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AddFuelView";
             this.Text = "AddFuelView";
+            this.Load += new System.EventHandler(this.AddFuelView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -49,7 +49,7 @@ namespace Presentation
         private void AddFuelInList()
         {
             _kernel.Get<AddFuelPresenter>().Run();
-            _view.Close();
+           // _view.Close();
         }
 
         public void Run()

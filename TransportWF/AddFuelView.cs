@@ -16,8 +16,11 @@ namespace TransportWF
         public AddFuelView()
         {
             InitializeComponent();
+           
         }
+
         public string GetNameFuel() => NewFuelTextBox.Text;
+
         public void ShowListFuel(List<string> ListNameFuel) {
             ListFuelTextBox.Text = "";
             foreach(string name in ListNameFuel)
@@ -27,12 +30,16 @@ namespace TransportWF
         }
         
         public event Action AddFuel;
+        public event Action AddFuelViewLoad;
 
         private void AddFuelButton_Click(object sender, EventArgs e)
         {
             AddFuel?.Invoke();
         }
 
-       
+        private void AddFuelView_Load(object sender, EventArgs e)
+        {
+            AddFuelViewLoad?.Invoke();
+        }
     }
 }
