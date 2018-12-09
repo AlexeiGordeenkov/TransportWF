@@ -7,6 +7,7 @@ using Presentation;
 using Model;
 using Ninject;
 using Presentation.Presenters;
+using Presentation.ViewInterfaces;
 
 namespace TransportWF
 {
@@ -25,9 +26,10 @@ namespace TransportWF
             kernel.Bind<ISetUpRoadView>().To<SetUpRoadView>();
             kernel.Bind<ISetUpVehiclesView>().To<SetUpVehiclesView>();
             kernel.Bind<ITransportView>().To<TransportView>();
+            kernel.Bind<IAddFuelView>().To<AddFuelView>();
 
             kernel.Bind<IAddElectricVehicleView>().To<AddElectricVehicleView>();
-            kernel.Bind<IAddGasolineVehicleView>().To<AddGasolineVehicleView>();
+            kernel.Bind<IAddMotorVehicleView>().To<AddMotorVehicleView>();
             kernel.Bind<IAddHorseDrawnVehicleView>().To<AddHorseDrawnVehicleView>();
             kernel.Bind<IAddMuscleVehicleView>().To<AddMuscleVehicleView>();
 
@@ -38,7 +40,7 @@ namespace TransportWF
 
             kernel.Bind<AddElectricVehiclePresenter>().ToSelf();
             kernel.Bind<AddHorseDrawnVehiclePresenter>().ToSelf();
-            kernel.Bind<AddGasolineVehiclePresenter>().ToSelf();
+            kernel.Bind<AddMotorVehiclePresenter>().ToSelf();
             kernel.Bind<AddMuscleVehiclePresenter>().ToSelf();
 
             kernel.Bind<ITransportService>().To<TransportService>().InSingletonScope();

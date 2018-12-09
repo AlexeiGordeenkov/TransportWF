@@ -8,5 +8,11 @@ namespace Model
 {
     public interface ITransportService
     {
+        int GetSizeListOfFuel();
+        Fuel GetFuelFromList(int index);
+        void AddFuelInList(Fuel fuel);
+        bool VerifiacationFuel(Fuel fuel);
+        List<string> GetListNameFuel();
+
     }
 }

@@ -55,6 +55,12 @@
     <Compile Include="AddElectricVehicleView.Designer.cs">
       <DependentUpon>AddElectricVehicleView.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddFuelView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFuelView.Designer.cs">
+      <DependentUpon>AddFuelView.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddHorseDrawnVehicleView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,11 +73,11 @@
     <Compile Include="AddMuscleVehicleView.Designer.cs">
       <DependentUpon>AddMuscleVehicleView.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddGasolineVehicleView.cs">
+    <Compile Include="AddMotorVehicleView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddGasolineVehicleView.Designer.cs">
-      <DependentUpon>AddGasolineVehicleView.cs</DependentUpon>
+    <Compile Include="AddMotorVehicleView.Designer.cs">
+      <DependentUpon>AddMotorVehicleView.cs</DependentUpon>
     </Compile>
     <Compile Include="SetUpRoadView.cs">
       <SubType>Form</SubType>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddFuelView.resx">
+      <DependentUpon>AddFuelView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMotorVehicleView.resx">
+      <DependentUpon>AddMotorVehicleView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddHorseDrawnVehicleView.resx">
       <DependentUpon>AddHorseDrawnVehicleView.cs</DependentUpon>
     </EmbeddedResource>

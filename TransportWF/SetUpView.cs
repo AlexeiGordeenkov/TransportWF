@@ -22,6 +22,7 @@ namespace TransportWF
         public event Action SetUpVehicles;
         public event Action SetUpRoad;
         public event Action GoBackToTransportView;
+        public event Action AddFuelInList;
 
         private void SetUpVehiclesButton_Click(object sender, EventArgs e)
         {
@@ -36,6 +37,11 @@ namespace TransportWF
         private void GoBackToTransportViewButton_Click(object sender, EventArgs e)
         {
             GoBackToTransportView?.Invoke();
+        }
+
+        private void AddFuelInList_Click(object sender, EventArgs e)
+        {
+            AddFuelInList?.Invoke();
         }
     }
 }

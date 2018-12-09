@@ -1,5 +1,6 @@
 ﻿using Model;
 using Ninject;
+using Presentation.Presenters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,10 @@ namespace Presentation
             _view.SetUpVehicles += SetUpVehicles;
             _view.SetUpRoad += SetUpRoad;
             _view.GoBackToTransportView += GoBackToTransportView;
+            _view.AddFuelInList += AddFuelInList;
         }
+
+       
 
         private void GoBackToTransportView()
         {
@@ -39,6 +43,12 @@ namespace Presentation
         void SetUpRoad()
         {
             _kernel.Get<SetUpRoadPresenter>().Run();
+            _view.Close();
+        }
+
+        private void AddFuelInList()
+        {
+            _kernel.Get<AddFuelPresenter>().Run();
             _view.Close();
         }
 

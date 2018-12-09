@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Presentation
 {
-    public interface IAddGasolineVehicleView:IView
+    public interface IAddMotorVehicleView:IView
     {
     }
 }

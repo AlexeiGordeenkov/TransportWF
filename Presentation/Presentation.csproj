@@ -53,11 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Presenters\AddElectricVehiclePresenter.cs" />
-    <Compile Include="Presenters\AddGasolineVehiclePresenter.cs" />
+    <Compile Include="Presenters\AddFuelPresenter.cs" />
+    <Compile Include="Presenters\AddMotorVehiclePresenter.cs" />
     <Compile Include="Presenters\AddHorseDrawnVehiclePresenter.cs" />
     <Compile Include="Presenters\AddMuscleVehiclePresenter.cs" />
     <Compile Include="ViewInterfaces\IAddElectricVehicleView.cs" />
-    <Compile Include="ViewInterfaces\IAddGasolineVehicleView.cs" />
+    <Compile Include="ViewInterfaces\IAddFuelView.cs" />
+    <Compile Include="ViewInterfaces\IAddMotorVehicleView.cs" />
     <Compile Include="ViewInterfaces\IAddHorseDrawnVehicleView.cs" />
     <Compile Include="ViewInterfaces\IAddMuscleVehicleView.cs" />
     <Compile Include="IPresenter.cs" />
