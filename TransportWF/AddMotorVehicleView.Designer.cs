@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.FuelConsumptionTextBox = new System.Windows.Forms.TextBox();
             this.CapacityTextBox = new System.Windows.Forms.TextBox();
             this.StartingSpeedTextBox = new System.Windows.Forms.TextBox();
@@ -42,6 +41,7 @@
             this.NameLabel = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.AddFuelButton = new System.Windows.Forms.Button();
+            this.FuelComboBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.listBox2);
+            this.panel1.Controls.Add(this.FuelComboBox);
             this.panel1.Controls.Add(this.FuelConsumptionTextBox);
             this.panel1.Controls.Add(this.CapacityTextBox);
             this.panel1.Controls.Add(this.StartingSpeedTextBox);
@@ -67,14 +67,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(447, 371);
             this.panel1.TabIndex = 0;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(267, 72);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(135, 30);
-            this.listBox2.TabIndex = 16;
             // 
             // FuelConsumptionTextBox
             // 
@@ -180,6 +172,14 @@
             this.AddFuelButton.UseVisualStyleBackColor = true;
             this.AddFuelButton.Click += new System.EventHandler(this.AddFuelButton_Click);
             // 
+            // FuelComboBox
+            // 
+            this.FuelComboBox.FormattingEnabled = true;
+            this.FuelComboBox.Location = new System.Drawing.Point(267, 84);
+            this.FuelComboBox.Name = "FuelComboBox";
+            this.FuelComboBox.Size = new System.Drawing.Size(136, 21);
+            this.FuelComboBox.TabIndex = 15;
+            // 
             // AddMotorVehicleView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +210,6 @@
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Button AddFuelButton;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ComboBox FuelComboBox;
     }
 }

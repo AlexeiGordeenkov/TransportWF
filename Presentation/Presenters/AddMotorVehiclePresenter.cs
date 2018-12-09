@@ -23,6 +23,17 @@ namespace Presentation.Presenters
             _fuelService = fuelService;
             _view = view;
 
+            _view.AddVehicle += AddVehicle;
+            _view.AddMotorVehicleViewLoad += AddMotorVehicleViewLoad;
+        }
+
+        private void AddMotorVehicleViewLoad()
+        {
+            _view.ShowListFuel(_fuelService.GetListNameFuel());
+        }
+
+        private void AddVehicle()
+        {
             
         }
 

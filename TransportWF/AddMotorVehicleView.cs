@@ -14,18 +14,19 @@ namespace TransportWF
 {
     public partial class AddMotorVehicleView : Form, IAddMotorVehicleView
     {
-        XDocument document = new XDocument();
+        //XDocument document = new XDocument();
         public AddMotorVehicleView()
         {
             InitializeComponent();
         }
 
-        public event Action AddFuel;
+        public event Action AddVehicle;
+        public event Action AddMotorVehicleViewLoad;
 
         private void AddFuelButton_Click(object sender, EventArgs e)
         {
           
-            AddFuel?.Invoke();
+            AddVehicle?.Invoke();
             
         }
 
@@ -36,7 +37,18 @@ namespace TransportWF
 
         private void AddMotorVehicleView_Load(object sender, EventArgs e)
         {
+            AddMotorVehicleViewLoad?.Invoke();
+        }
 
+        public void ShowListFuel(List<string> ListNameFuel)
+        {
+            foreach (string nameFuel in ListNameFuel)
+                FuelComboBox.Items.Add(nameFuel);
+        }
+
+        public void GetData(out string name, out string IndexFuel, out string maxSpeed, out string startingSpeed, out string capacityTank, out string fuelConsption)
+        {
+            throw new NotImplementedException();
         }
     }
 }

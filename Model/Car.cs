@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Car : MotorVehicle
+    public class Car : MotorVehicle
     {
-        protected Car()
+        public Car()
         {
         }
 

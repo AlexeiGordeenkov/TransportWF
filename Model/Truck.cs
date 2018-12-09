@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Truck : MotorVehicle
+    public class Truck : MotorVehicle
     {
         public static string TYPE = "Грузовик";
-        protected Truck()
+        public Truck()
         {
             
         }
