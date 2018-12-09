@@ -193,5 +193,11 @@
   <ItemGroup>
     <None Include="Resources\markup2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rails1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
