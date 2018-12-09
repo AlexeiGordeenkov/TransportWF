@@ -10,10 +10,10 @@ namespace Presentation
         private readonly ITransportView _view;
         private readonly ITransportService _service;
 
-        public TransportPresenter(IKernel kernel,ITransportView view, ITransportService secrvice)
+        public TransportPresenter(IKernel kernel,ITransportView view, ITransportService service)
         {
             _kernel = kernel;
-            _service = secrvice;
+            _service = service;
             _view = view;
 
             _view.SetUp += SetUp;

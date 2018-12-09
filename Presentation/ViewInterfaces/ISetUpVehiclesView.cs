@@ -11,7 +11,7 @@ namespace Presentation
         event Action GoBackToSetUpView;
         event Action AddHorseDrawnVehicle;
         event Action AddMuscleVehicle;
-        event Action AddGasolineVehicle;
+        event Action AddMotorVehicle;
         event Action AddElectricVehicle;
     }
 }

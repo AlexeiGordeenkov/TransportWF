@@ -41,7 +41,7 @@ namespace TransportWF
         {
             AddFuelViewLoad?.Invoke();
         }
-        public void Show()
+        public new void Show()
         {
             ShowDialog();
         }

@@ -21,7 +21,7 @@ namespace TransportWF
         public event Action GoBackToSetUpView;
         public event Action AddHorseDrawnVehicle;
         public event Action AddMuscleVehicle;
-        public event Action AddGasolineVehicle;
+        public event Action AddMotorVehicle;
         public event Action AddElectricVehicle;
 
         private void GoBackToSetUpViewButton_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace TransportWF
 
         private void AddVehicleButton_Click(object sender, EventArgs e)
         {
-            AddGasolineVehicle?.Invoke();
+            AddMotorVehicle?.Invoke();
         }
 
         private void AddMuscleVehicleButton_Click(object sender, EventArgs e)

@@ -29,6 +29,9 @@ namespace TransportWF
             
         }
 
-      
+        private void FuelConsumptionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

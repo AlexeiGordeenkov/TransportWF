@@ -1,5 +1,6 @@
 ﻿using Model;
 using Ninject;
+using Presentation.Presenters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,9 @@ namespace Presentation
             _view = view;
             _service = service;
 
-            _view.AddHorseDrawnVehicle += AddGooseVehicle;
+            _view.AddHorseDrawnVehicle += AddHorseDrawnVehicle;
             _view.AddMuscleVehicle += AddMuscleVehicle;
-            _view.AddGasolineVehicle += AddVehicle;
+            _view.AddMotorVehicle += AddMotorVehicle;
             _view.GoBackToSetUpView += GoBackToSetUpView;
         }
 
@@ -32,8 +33,9 @@ namespace Presentation
             _view.Close();
         }
 
-        private void AddVehicle()
+        private void AddMotorVehicle()
         {
+            _kernel.Get<AddMotorVehiclePresenter>().Run();
             _view.Close();
         }
 
@@ -42,7 +44,7 @@ namespace Presentation
             _view.Close();
         }
 
-        private void AddGooseVehicle()
+        private void AddHorseDrawnVehicle()
         {
             _view.Close();
         }
