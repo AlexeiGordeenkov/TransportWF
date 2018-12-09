@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.FuelConsumptionTextBox = new System.Windows.Forms.TextBox();
             this.CapacityTextBox = new System.Windows.Forms.TextBox();
             this.StartingSpeedTextBox = new System.Windows.Forms.TextBox();
@@ -40,7 +39,6 @@
             this.StartingSpeeLabel = new System.Windows.Forms.Label();
             this.MaxSpeedLabel = new System.Windows.Forms.Label();
             this.FuelLabel = new System.Windows.Forms.Label();
-            this.TypeLabel = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.AddFuelButton = new System.Windows.Forms.Button();
@@ -53,7 +51,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.listBox2);
-            this.panel1.Controls.Add(this.listBox1);
             this.panel1.Controls.Add(this.FuelConsumptionTextBox);
             this.panel1.Controls.Add(this.CapacityTextBox);
             this.panel1.Controls.Add(this.StartingSpeedTextBox);
@@ -63,7 +60,6 @@
             this.panel1.Controls.Add(this.StartingSpeeLabel);
             this.panel1.Controls.Add(this.MaxSpeedLabel);
             this.panel1.Controls.Add(this.FuelLabel);
-            this.panel1.Controls.Add(this.TypeLabel);
             this.panel1.Controls.Add(this.NameLabel);
             this.panel1.Controls.Add(this.NameTextBox);
             this.panel1.Controls.Add(this.AddFuelButton);
@@ -75,22 +71,14 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(267, 104);
+            this.listBox2.Location = new System.Drawing.Point(267, 72);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(135, 30);
             this.listBox2.TabIndex = 16;
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(267, 68);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(135, 30);
-            this.listBox1.TabIndex = 15;
-            // 
             // FuelConsumptionTextBox
             // 
-            this.FuelConsumptionTextBox.Location = new System.Drawing.Point(267, 273);
+            this.FuelConsumptionTextBox.Location = new System.Drawing.Point(267, 241);
             this.FuelConsumptionTextBox.Name = "FuelConsumptionTextBox";
             this.FuelConsumptionTextBox.Size = new System.Drawing.Size(136, 20);
             this.FuelConsumptionTextBox.TabIndex = 14;
@@ -98,21 +86,21 @@
             // 
             // CapacityTextBox
             // 
-            this.CapacityTextBox.Location = new System.Drawing.Point(267, 230);
+            this.CapacityTextBox.Location = new System.Drawing.Point(267, 198);
             this.CapacityTextBox.Name = "CapacityTextBox";
             this.CapacityTextBox.Size = new System.Drawing.Size(136, 20);
             this.CapacityTextBox.TabIndex = 13;
             // 
             // StartingSpeedTextBox
             // 
-            this.StartingSpeedTextBox.Location = new System.Drawing.Point(267, 192);
+            this.StartingSpeedTextBox.Location = new System.Drawing.Point(267, 160);
             this.StartingSpeedTextBox.Name = "StartingSpeedTextBox";
             this.StartingSpeedTextBox.Size = new System.Drawing.Size(136, 20);
             this.StartingSpeedTextBox.TabIndex = 12;
             // 
             // MaxSpeddTextBox
             // 
-            this.MaxSpeddTextBox.Location = new System.Drawing.Point(267, 154);
+            this.MaxSpeddTextBox.Location = new System.Drawing.Point(267, 122);
             this.MaxSpeddTextBox.Name = "MaxSpeddTextBox";
             this.MaxSpeddTextBox.Size = new System.Drawing.Size(136, 20);
             this.MaxSpeddTextBox.TabIndex = 11;
@@ -120,7 +108,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 273);
+            this.label2.Location = new System.Drawing.Point(69, 241);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 13);
             this.label2.TabIndex = 8;
@@ -130,7 +118,7 @@
             // 
             this.TankCapacityLabel.AutoSize = true;
             this.TankCapacityLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.TankCapacityLabel.Location = new System.Drawing.Point(69, 230);
+            this.TankCapacityLabel.Location = new System.Drawing.Point(69, 198);
             this.TankCapacityLabel.Name = "TankCapacityLabel";
             this.TankCapacityLabel.Size = new System.Drawing.Size(109, 13);
             this.TankCapacityLabel.TabIndex = 7;
@@ -139,7 +127,7 @@
             // StartingSpeeLabel
             // 
             this.StartingSpeeLabel.AutoSize = true;
-            this.StartingSpeeLabel.Location = new System.Drawing.Point(66, 192);
+            this.StartingSpeeLabel.Location = new System.Drawing.Point(66, 160);
             this.StartingSpeeLabel.Name = "StartingSpeeLabel";
             this.StartingSpeeLabel.Size = new System.Drawing.Size(142, 13);
             this.StartingSpeeLabel.TabIndex = 6;
@@ -148,7 +136,7 @@
             // MaxSpeedLabel
             // 
             this.MaxSpeedLabel.AutoSize = true;
-            this.MaxSpeedLabel.Location = new System.Drawing.Point(66, 154);
+            this.MaxSpeedLabel.Location = new System.Drawing.Point(66, 122);
             this.MaxSpeedLabel.Name = "MaxSpeedLabel";
             this.MaxSpeedLabel.Size = new System.Drawing.Size(158, 13);
             this.MaxSpeedLabel.TabIndex = 5;
@@ -157,20 +145,11 @@
             // FuelLabel
             // 
             this.FuelLabel.AutoSize = true;
-            this.FuelLabel.Location = new System.Drawing.Point(66, 116);
+            this.FuelLabel.Location = new System.Drawing.Point(66, 84);
             this.FuelLabel.Name = "FuelLabel";
             this.FuelLabel.Size = new System.Drawing.Size(50, 13);
             this.FuelLabel.TabIndex = 4;
             this.FuelLabel.Text = "Топливо";
-            // 
-            // TypeLabel
-            // 
-            this.TypeLabel.AutoSize = true;
-            this.TypeLabel.Location = new System.Drawing.Point(66, 76);
-            this.TypeLabel.Name = "TypeLabel";
-            this.TypeLabel.Size = new System.Drawing.Size(26, 13);
-            this.TypeLabel.TabIndex = 3;
-            this.TypeLabel.Text = "Тип";
             // 
             // NameLabel
             // 
@@ -228,11 +207,9 @@
         private System.Windows.Forms.Label StartingSpeeLabel;
         private System.Windows.Forms.Label MaxSpeedLabel;
         private System.Windows.Forms.Label FuelLabel;
-        private System.Windows.Forms.Label TypeLabel;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Button AddFuelButton;
         private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
     }
 }
