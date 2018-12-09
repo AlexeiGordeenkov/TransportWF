@@ -33,5 +33,10 @@ namespace TransportWF
         {
 
         }
+
+        private void AddMotorVehicleView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
