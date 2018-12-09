@@ -35,18 +35,18 @@ namespace Presentation
 
         private void AddMotorVehicle()
         {
-            _kernel.Get<AddMotorVehiclePresenter>().Run();
+            _kernel.Get<AddMotorVehicleTypeSelectionPresenter>().Run();
             _view.Close();
         }
 
         private void AddMuscleVehicle()
         {
-            _view.Close();
+         //   _view.Close();
         }
 
         private void AddHorseDrawnVehicle()
         {
-            _view.Close();
+          //  _view.Close();
         }
 
         public void Run()
