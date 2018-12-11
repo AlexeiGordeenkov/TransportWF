@@ -50,6 +50,7 @@ namespace TransportWF
 
             kernel.Bind<ITransportService>().To<TransportService>().InSingletonScope();
             kernel.Bind<IFuelService>().To<FuelService>().InSingletonScope();
+            kernel.Bind<IVerificationDataForVehicleService>().To<VerificationDataForVehicleService>().InSingletonScope();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

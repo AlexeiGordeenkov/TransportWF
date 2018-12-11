@@ -30,6 +30,10 @@ namespace Model.Services
 
         public bool VerifiacationFuel(Fuel fuel)// метод возвращает true в случае отсутствия еще такого топлива в списке
         {
+            if (fuel.GetName() == "" || fuel.GetName() == null)
+            {
+                return false;
+            }
             foreach (Fuel iteratorFuel in listOfFuel)
                 if (fuel.GetName() == iteratorFuel.GetName())
                     return false;

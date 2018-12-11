@@ -12,5 +12,6 @@ namespace Presentation.ViewInterfaces
         event Action AddFuelViewLoad;
         string GetNameFuel();
         void ShowListFuel(List<string> ListNameFuel);
+        void ShowMessage(string message);
     }
 }

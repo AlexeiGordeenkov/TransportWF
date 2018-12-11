@@ -61,5 +61,10 @@ namespace TransportWF
         {
             ShowDialog();
         }
+
+        public void ShowMessage(string message)
+        {
+            MessageBox.Show(message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+        }
     }
 }

@@ -35,6 +35,7 @@ namespace TransportWF
         private void AddFuelButton_Click(object sender, EventArgs e)
         {
             AddFuel?.Invoke();
+            NewFuelTextBox.Text = "";
         }
 
         private void AddFuelView_Load(object sender, EventArgs e)
@@ -44,6 +45,11 @@ namespace TransportWF
         public new void Show()
         {
             ShowDialog();
+        }
+
+        public void ShowMessage(string message)
+        {
+            ErrorLabel.Text = message;
         }
     }
 }

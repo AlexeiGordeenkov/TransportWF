@@ -36,7 +36,17 @@ namespace Presentation.Presenters
         {
             string NameFuel = _view.GetNameFuel();
             if (_service.VerifiacationFuel(new Fuel(NameFuel)))
+            {
                 _service.AddFuelInList(new Fuel(NameFuel));
+                _view.ShowMessage("топливо успешно добавлено");
+            }
+            else
+            {
+                _view.ShowMessage("такой вид топлива уже существует");
+            }
+
+
+                
            
             
             _view.ShowListFuel(_service.GetListNameFuel());

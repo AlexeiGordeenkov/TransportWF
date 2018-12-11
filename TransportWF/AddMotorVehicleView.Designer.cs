@@ -70,6 +70,7 @@
             // 
             // FuelComboBox
             // 
+            this.FuelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FuelComboBox.FormattingEnabled = true;
             this.FuelComboBox.Location = new System.Drawing.Point(267, 84);
             this.FuelComboBox.Name = "FuelComboBox";

@@ -16,14 +16,16 @@ namespace Presentation.Presenters
         private readonly IAddMotorVehicleView _view;
         private readonly ITransportService _transportService;
         private readonly IFuelService  _fuelService;
+        private readonly IVerificationDataForVehicleService _verificatinService;
         private ICreatorMotorVehicle _creator;
 
 
-        public AddMotorVehiclePresenter(IKernel kernel, IAddMotorVehicleView view, ITransportService transportService, IFuelService fuelService)
+        public AddMotorVehiclePresenter(IKernel kernel, IAddMotorVehicleView view, ITransportService transportService, IFuelService fuelService, IVerificationDataForVehicleService vrifiactionService)
         {
             _kernel = kernel;
             _transportService = transportService;
             _fuelService = fuelService;
+            _verificatinService = vrifiactionService;
             _view = view;
 
             _view.AddVehicle += AddVehicle;
@@ -43,11 +45,19 @@ namespace Presentation.Presenters
             string startSpeed;
             string tankCapacity;
             string fuelConsumption;
+            string message = "";
             _view.GetData(out name, out index, out maxSpeed, out startSpeed, out tankCapacity, out fuelConsumption);
-            Fuel fuel = _fuelService.GetFuelFromList(Int32.Parse(index));
-            MotorVehicle motorVehicle = _creator.Creator(name,fuel,Double.Parse(maxSpeed), Double.Parse(startSpeed), Double.Parse(tankCapacity), Double.Parse(fuelConsumption) );
-            Vehicle vehicle = motorVehicle;
-            _transportService.AddVehicle(vehicle);
+            if(_verificatinService.VerificationDataForMotorVehicle(name, maxSpeed, startSpeed, tankCapacity, fuelConsumption, ref message))
+            {
+                Fuel fuel = _fuelService.GetFuelFromList(Int32.Parse(index));
+                MotorVehicle motorVehicle = _creator.Creator(name, fuel, Double.Parse(maxSpeed), Double.Parse(startSpeed), Double.Parse(tankCapacity), Double.Parse(fuelConsumption));
+                Vehicle vehicle = motorVehicle;
+                _transportService.AddVehicle(vehicle);
+            }
+            else
+            {
+                _view.ShowMessage(message);
+            }
   
         }
         

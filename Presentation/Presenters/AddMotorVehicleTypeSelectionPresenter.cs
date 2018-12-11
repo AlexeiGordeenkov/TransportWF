@@ -32,8 +32,8 @@ namespace Presentation.Presenters
 
         private void PanzerTypeSelected()
         {
-            _kernel.Get<AddMotorVehiclePresenter>().Run(creator);
-            _view.Close();
+            //_kernel.Get<AddMotorVehiclePresenter>().Run(creator);
+            //_view.Close();
         }
 
         private void TrukTypeSelected()
