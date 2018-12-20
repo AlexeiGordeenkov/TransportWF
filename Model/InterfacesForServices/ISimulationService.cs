@@ -10,6 +10,6 @@ namespace Model.InterfacesForServices
     {
         void StartSimulation();
         void StopSimulation();
-        event 
+        event Action Draw;
     }
 }

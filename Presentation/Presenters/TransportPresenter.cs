@@ -25,6 +25,12 @@ namespace Presentation
             _view.SetUp += SetUp;
             _view.StartSimulation += StartSimulation;
             _view.StopSimulation += StopSimulation;
+            _simulationService.Draw += Draw;
+        }
+
+        private void Draw()
+        {
+            throw new NotImplementedException();
         }
 
         private void SetUp()

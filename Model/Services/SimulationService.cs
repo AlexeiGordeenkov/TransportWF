@@ -9,21 +9,24 @@ using System.Threading.Tasks;
 
 namespace Model.Services
 {
-    public class SimulationService:ISimulationService
+    public class SimulationService : ISimulationService
     {
         private readonly IKernel _kernel;
 
-        private bool simulationInProces=false;
-        private bool firstStart=true;
+        private bool simulationInProces = false;
+        private bool firstStart = true;
+
         private Thread simulationThread;
 
         private List<Vehicle> listOFVehicles = new List<Vehicle>();
+
+        public event Action Draw;
 
         public SimulationService(IKernel kernel)
         {
             _kernel = kernel;
         }
-     
+
         public void StartSimulation()
         {
             if (firstStart)
@@ -36,7 +39,7 @@ namespace Model.Services
                 }
                 simulationThread = new Thread(Simulate);
                 simulationThread.Start();
-                firstStart = false;              
+                firstStart = false;
             }
             else
             {
@@ -55,13 +58,13 @@ namespace Model.Services
         private void Simulate()
         {
             while (true)
-            {
-                System.Threading.Thread.Sleep(100);
+            {       
                 foreach (var item in listOFVehicles)
                 {
 
                 }
-
+                Draw?.Invoke();
+                System.Threading.Thread.Sleep(100);
             }
         }
 
