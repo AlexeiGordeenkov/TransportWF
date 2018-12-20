@@ -13,6 +13,7 @@ namespace Model.Services
     {
         private readonly IKernel _kernel;
 
+        private double divider = 3600000.0;
         private bool simulationInProces = false;
         private bool firstStart = true;
 
@@ -55,15 +56,30 @@ namespace Model.Services
                 }
             }
         }
-        private void Simulate()
+        private void Simulate()//Работает в новом потоке и считает координаты машин
         {
             while (true)
             {       
                 foreach (var vehicle in listOFVehicles)
                 {
-                    if (vehicle.StartSpeed+vehicle.GetTimeFromStart()*vehicle.Acceleration > vehicle.MaxSpeed)
+                    if (!vehicle.ReachedMaxSpeed)
                     {
-
+                        if (vehicle.StartSpeed + vehicle.GetTimeFromStart() * vehicle.Acceleration > vehicle.MaxSpeed)
+                        {
+                            vehicle.ReachedMaxSpeed = true;
+                            vehicle.StartCoordinate = vehicle.CurrentCoordinate;
+                            vehicle.StartTime = DateTime.Now;
+                        }
+                    }
+                    double t = ((double)vehicle.GetTimeFromStart()) / divider;
+                    if (vehicle.ReachedMaxSpeed)
+                    {
+                        vehicle.CurrentCoordinate = vehicle.StartCoordinate + vehicle.MaxSpeed * t + (vehicle.Acceleration/2)*t*t;
+                    }
+                    else
+                    {
+                        
+                        vehicle.CurrentCoordinate = vehicle.StartCoordinate + vehicle.StartSpeed *t;
                     }
                 }
                 Draw?.Invoke();
@@ -76,6 +92,12 @@ namespace Model.Services
             if (!simulationInProces) return;
             simulationInProces = false;
             simulationThread.Suspend();
+            foreach (var vehicle in listOFVehicles)
+            {
+                vehicle.StartSpeed = 0;
+                vehicle.StartCoordinate = vehicle.CurrentCoordinate;
+                vehicle.ReachedMaxSpeed = false;
+            }
         }
     }
 }

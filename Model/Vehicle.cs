@@ -19,6 +19,7 @@ namespace Model
         public double CurrentCoordinate { get; set; }
         public double StartCoordinate { get; set; }
         public DateTime StartTime { get; set; }
+        public bool ReachedMaxSpeed { get; set; }
 
 
         //methods
