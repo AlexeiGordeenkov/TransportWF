@@ -8,14 +8,18 @@ namespace Model
 {
     public class TransportService:ITransportService
     {
-        List<Vehicle> listOFVehicles = new List<Vehicle>();
-        
+        List<Vehicle> listOfVehicles = new List<Vehicle>();
+        List<Vehicle> listOfMovingVehicles = new List<Vehicle>();
 
-        public void AddVehicle(Vehicle vehicle) => listOFVehicles.Add(vehicle);
+        public void AddVehicle(Vehicle vehicle) => listOfVehicles.Add(vehicle);
 
         public List<Vehicle> GetListOfVehicles()
         {
-            return listOFVehicles == null ? new List<Vehicle>() : listOFVehicles;
+            return listOfVehicles == null ? new List<Vehicle>() : listOfVehicles;
+        }
+        public List<Vehicle> GetListOfMovingVehicles()
+        {
+            return listOfVehicles == null ? new List<Vehicle>() : listOfMovingVehicles;
         }
     }
 }
