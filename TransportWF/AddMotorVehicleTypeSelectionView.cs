@@ -21,6 +21,7 @@ namespace TransportWF
         public event Action CarTypeSelected;
         public event Action TrukTypeSelected;
         public event Action PanzerTypeSelected;
+        public event Action GoBackToSetUpVehicleView;
 
         private void CarTypeButton_Click(object sender, EventArgs e)
         {
@@ -35,6 +36,11 @@ namespace TransportWF
         private void PanzerTypeButton_Click(object sender, EventArgs e)
         {
             PanzerTypeSelected?.Invoke();
+        }
+
+        private void GoBackToSetUpVihiclesViewButton_Click(object sender, EventArgs e)
+        {
+            GoBackToSetUpVehicleView?.Invoke();
         }
     }
 }

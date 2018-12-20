@@ -25,6 +25,13 @@ namespace Presentation.Presenters
 
             view.TramTypeSelected += TramTypeSelected;
             view.TroleyBusTypeSelected += TroleyBusTypeSelected;
+            view.GoBackToSetUpVehicleView += GoBackToSetUpVehicleView;
+        }
+
+        private void GoBackToSetUpVehicleView()
+        {
+            _kernel.Get<SetUpVehiclesPresenter>().Run();
+            _view.Close();
         }
 
         private void TroleyBusTypeSelected()

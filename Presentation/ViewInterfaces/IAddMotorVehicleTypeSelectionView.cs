@@ -11,5 +11,6 @@ namespace Presentation.ViewInterfaces
         event Action CarTypeSelected;
         event Action TrukTypeSelected;
         event Action PanzerTypeSelected;
+        event Action GoBackToSetUpVehicleView;
     }
 }

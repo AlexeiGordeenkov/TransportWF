@@ -28,6 +28,13 @@ namespace Presentation.Presenters
             _view.CarTypeSelected += CarTypeSelected;
             _view.TrukTypeSelected += TrukTypeSelected;
             _view.PanzerTypeSelected += PanzerTypeSelected;
+            _view.GoBackToSetUpVehicleView += GoBackToSetUpVehicleView;
+        }
+
+        private void GoBackToSetUpVehicleView()
+        {
+            _kernel.Get<SetUpVehiclesPresenter>().Run();
+            _view.Close();
         }
 
         private void PanzerTypeSelected()
@@ -49,6 +56,7 @@ namespace Presentation.Presenters
             _kernel.Get<AddMotorVehiclePresenter>().Run(creator);
            // _view.Close();
         }
+
 
         public void Run()
         {

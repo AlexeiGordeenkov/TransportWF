@@ -10,5 +10,6 @@ namespace Presentation.ViewInterfaces
     {
         event Action TramTypeSelected;
         event Action TroleyBusTypeSelected;
+        event Action GoBackToSetUpVehicleView;
     }
 }

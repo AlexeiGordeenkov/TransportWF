@@ -20,6 +20,7 @@ namespace TransportWF.Resources
 
         public event Action TramTypeSelected;
         public event Action TroleyBusTypeSelected;
+        public event Action GoBackToSetUpVehicleView;
 
         private void AddTroleyBusButton_Click(object sender, EventArgs e)
         {
@@ -29,6 +30,11 @@ namespace TransportWF.Resources
         private void AddTramButton_Click(object sender, EventArgs e)
         {
             TramTypeSelected?.Invoke();
+        }
+
+        private void GoBackToSetUpVehicleViewButton_Click(object sender, EventArgs e)
+        {
+            GoBackToSetUpVehicleView?.Invoke();
         }
     }
 }
