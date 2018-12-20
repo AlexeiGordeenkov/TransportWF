@@ -33,11 +33,8 @@ namespace Presentation.Presenters
         private void AddVehicle()
         {
             string name;
-            string index;
             string maxSpeed;
             string startSpeed;
-            string tankCapacity;
-            string fuelConsumption;
             string message = "";
             _view.GetData(out name, out maxSpeed, out startSpeed);
             if (_verificatinService.VerificationDataForElectricVehicle(name, maxSpeed, startSpeed, ref message))

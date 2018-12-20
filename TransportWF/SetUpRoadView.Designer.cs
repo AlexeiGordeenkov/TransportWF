@@ -36,11 +36,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ApplyButton = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.Lane1ComboBox = new System.Windows.Forms.ComboBox();
+            this.Lane2ComboBox = new System.Windows.Forms.ComboBox();
+            this.Lane3ComboBox = new System.Windows.Forms.ComboBox();
+            this.Lane4ComboBox = new System.Windows.Forms.ComboBox();
+            this.Lane5ComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // NameOfColumn1
@@ -124,61 +124,61 @@
             this.ApplyButton.UseVisualStyleBackColor = true;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
-            // comboBox1
+            // Lane1ComboBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(474, 134);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(173, 21);
-            this.comboBox1.TabIndex = 13;
+            this.Lane1ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Lane1ComboBox.FormattingEnabled = true;
+            this.Lane1ComboBox.Location = new System.Drawing.Point(474, 134);
+            this.Lane1ComboBox.Name = "Lane1ComboBox";
+            this.Lane1ComboBox.Size = new System.Drawing.Size(173, 21);
+            this.Lane1ComboBox.TabIndex = 13;
             // 
-            // comboBox2
+            // Lane2ComboBox
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(474, 175);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(173, 21);
-            this.comboBox2.TabIndex = 14;
+            this.Lane2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Lane2ComboBox.FormattingEnabled = true;
+            this.Lane2ComboBox.Location = new System.Drawing.Point(474, 175);
+            this.Lane2ComboBox.Name = "Lane2ComboBox";
+            this.Lane2ComboBox.Size = new System.Drawing.Size(173, 21);
+            this.Lane2ComboBox.TabIndex = 14;
             // 
-            // comboBox3
+            // Lane3ComboBox
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(474, 214);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(173, 21);
-            this.comboBox3.TabIndex = 15;
+            this.Lane3ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Lane3ComboBox.FormattingEnabled = true;
+            this.Lane3ComboBox.Location = new System.Drawing.Point(474, 214);
+            this.Lane3ComboBox.Name = "Lane3ComboBox";
+            this.Lane3ComboBox.Size = new System.Drawing.Size(173, 21);
+            this.Lane3ComboBox.TabIndex = 15;
             // 
-            // comboBox4
+            // Lane4ComboBox
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(474, 252);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(173, 21);
-            this.comboBox4.TabIndex = 16;
+            this.Lane4ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Lane4ComboBox.FormattingEnabled = true;
+            this.Lane4ComboBox.Location = new System.Drawing.Point(474, 252);
+            this.Lane4ComboBox.Name = "Lane4ComboBox";
+            this.Lane4ComboBox.Size = new System.Drawing.Size(173, 21);
+            this.Lane4ComboBox.TabIndex = 16;
             // 
-            // comboBox5
+            // Lane5ComboBox
             // 
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(474, 292);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(173, 21);
-            this.comboBox5.TabIndex = 17;
+            this.Lane5ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Lane5ComboBox.FormattingEnabled = true;
+            this.Lane5ComboBox.Location = new System.Drawing.Point(474, 292);
+            this.Lane5ComboBox.Name = "Lane5ComboBox";
+            this.Lane5ComboBox.Size = new System.Drawing.Size(173, 21);
+            this.Lane5ComboBox.TabIndex = 17;
             // 
             // SetUpRoadView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Lane5ComboBox);
+            this.Controls.Add(this.Lane4ComboBox);
+            this.Controls.Add(this.Lane3ComboBox);
+            this.Controls.Add(this.Lane2ComboBox);
+            this.Controls.Add(this.Lane1ComboBox);
             this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -189,6 +189,7 @@
             this.Controls.Add(this.NameOfColumn1);
             this.Name = "SetUpRoadView";
             this.Text = "SetUpRoadView";
+            this.Load += new System.EventHandler(this.SetUpRoadView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,10 +205,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button ApplyButton;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox Lane1ComboBox;
+        private System.Windows.Forms.ComboBox Lane2ComboBox;
+        private System.Windows.Forms.ComboBox Lane3ComboBox;
+        private System.Windows.Forms.ComboBox Lane4ComboBox;
+        private System.Windows.Forms.ComboBox Lane5ComboBox;
     }
 }

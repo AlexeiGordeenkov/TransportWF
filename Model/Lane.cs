@@ -10,6 +10,12 @@ namespace Model
     {
         public bool IsThereRails { get; set; }
         public bool IsThereWires { get; set; }
-        public Vehicle Vehicle { get; set; }
+        public Vehicle _Vehicle { get; set; }
+        public void Clear()
+        {
+            IsThereRails = false;
+            IsThereWires = false;
+            _Vehicle = null;
+        }
     }
 }

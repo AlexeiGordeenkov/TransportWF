@@ -12,6 +12,6 @@ namespace Model
         List<Vehicle> GetListOfMovingVehicles();
         void AddVehicle(Vehicle vehicle);
         void AddVehicleToMovingVehicleList(Vehicle vehicle);
-        
+        void ClearListOfMovingVehicles();
     }
 }

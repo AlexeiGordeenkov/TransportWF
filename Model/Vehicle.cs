@@ -9,7 +9,7 @@ namespace Model
     abstract public class Vehicle
     {
         //Variables
-        protected string Name { get; set; }
+        public string Name { get; set; }
         public string PathToPictures { get; set; }
         public double MaxSpeed { get; set; }
         protected double BrakingDistaces { get; set; }
@@ -34,5 +34,9 @@ namespace Model
             return (int)differensTime.TotalMilliseconds;
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

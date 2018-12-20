@@ -17,14 +17,17 @@ namespace Model
         {
             return listOfVehicles == null ? new List<Vehicle>() : listOfVehicles;
         }
+
         public List<Vehicle> GetListOfMovingVehicles()
         {
             return listOfVehicles == null ? new List<Vehicle>() : listOfMovingVehicles;
         }
 
-        public void AddVehicleToMovingVehicleList(Vehicle vehicle)
+        public void AddVehicleToMovingVehicleList(Vehicle vehicle) => listOfMovingVehicles.Add(vehicle);
+
+        public void ClearListOfMovingVehicles()
         {
-            throw new NotImplementedException();
+            listOfMovingVehicles.Clear();
         }
     }
 }

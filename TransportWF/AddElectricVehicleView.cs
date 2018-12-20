@@ -19,7 +19,6 @@ namespace TransportWF
         }
 
         public event Action AddVehicle;
-        public event Action AddElectricVehicleViewLoad;
 
         public void GetData(out string name, out string maxSpeed, out string startingSpeed)
         {
@@ -38,10 +37,14 @@ namespace TransportWF
 
         private void AddVehicleButton_Click(object sender, EventArgs e)
         {
+            AddVehicle?.Invoke();
             NameTextBox.Clear();
             MaxSpeedTextBox.Clear();
             StartingSpeedTextBox.Clear();
-            AddVehicle?.Invoke();
+        }
+        public new void Show()
+        {
+            ShowDialog();
         }
     }
 }

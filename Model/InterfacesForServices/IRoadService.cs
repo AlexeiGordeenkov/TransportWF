@@ -12,5 +12,7 @@ namespace Model.InterfacesForServices
         bool IsThereWiresOnLane(int index);
         void SetVehiceOnLane(int index,Vehicle vehicle);
         Vehicle GetVehicleFromLane(int index);
+        void ClearRoad();
+        //int GetNUmberOfLanes();
     }
 }

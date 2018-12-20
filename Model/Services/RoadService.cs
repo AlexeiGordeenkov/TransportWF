@@ -23,9 +23,17 @@ namespace Model.Services
             }
         }
 
+        public void ClearRoad()
+        {
+            foreach(Lane lane in listofLanes)
+            {
+                lane.Clear();
+            }
+        }
+
         public Vehicle GetVehicleFromLane(int index)
         {
-            return listofLanes[index]?.Vehicle;
+            return listofLanes[index]?._Vehicle;
         }
 
         public bool IsThereRailsOnLane(int index)
@@ -40,7 +48,7 @@ namespace Model.Services
 
         public void SetVehiceOnLane(int index, Vehicle vehicle)
         {
-            listofLanes[index].Vehicle = vehicle;
+            listofLanes[index]._Vehicle = vehicle;
             _kernel.Get<ITransportService>().AddVehicleToMovingVehicleList(vehicle);
         }
     }
