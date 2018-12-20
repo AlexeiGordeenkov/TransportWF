@@ -19,7 +19,7 @@ namespace Model.Services
 
         private Thread simulationThread;
 
-        private List<Vehicle> listOFVehicles = new List<Vehicle>();
+        private List<Vehicle> listOFMovingVehicles = new List<Vehicle>();
 
         public event Action Draw;
 
@@ -32,9 +32,9 @@ namespace Model.Services
         {
             if (firstStart)
             {
-                listOFVehicles = _kernel.Get<ITransportService>().GetListOfVehicles();
+                listOFMovingVehicles = _kernel.Get<ITransportService>().GetListOfMovingVehicles();
                 simulationInProces = true;
-                foreach (var item in listOFVehicles)
+                foreach (var item in listOFMovingVehicles)
                 {
                     item.StartTime = DateTime.Now;
                 }
@@ -46,7 +46,7 @@ namespace Model.Services
             {
                 if (!simulationInProces)
                 {
-                    foreach (var item in listOFVehicles)
+                    foreach (var item in listOFMovingVehicles)
                     {
                         item.StartTime = DateTime.Now;
                         item.StartCoordinate = item.CurrentCoordinate;
@@ -60,7 +60,7 @@ namespace Model.Services
         {
             while (true)
             {       
-                foreach (var vehicle in listOFVehicles)
+                foreach (var vehicle in listOFMovingVehicles)
                 {
                     if (!vehicle.ReachedMaxSpeed)
                     {
@@ -92,7 +92,7 @@ namespace Model.Services
             if (!simulationInProces) return;
             simulationInProces = false;
             simulationThread.Suspend();
-            foreach (var vehicle in listOFVehicles)
+            foreach (var vehicle in listOFMovingVehicles)
             {
                 vehicle.StartSpeed = 0;
                 vehicle.StartCoordinate = vehicle.CurrentCoordinate;
