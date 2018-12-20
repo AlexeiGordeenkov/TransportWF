@@ -8,5 +8,8 @@ namespace Presentation
 {
     public interface IAddElectricVehicleView:IView
     {
+        event Action AddVehicle;
+        void GetData(out string name, out string maxSpeed, out string startingSpeed);
+        void ShowMessage(string message);
     }
 }

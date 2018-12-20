@@ -10,6 +10,7 @@ using Presentation.Presenters;
 using Presentation.ViewInterfaces;
 using Model.Services;
 using Model.InterfacesForServices;
+using TransportWF.Resources;
 
 namespace TransportWF
 {
@@ -35,6 +36,7 @@ namespace TransportWF
             kernel.Bind<IAddHorseDrawnVehicleView>().To<AddHorseDrawnVehicleView>();
             kernel.Bind<IAddMuscleVehicleView>().To<AddMuscleVehicleView>();
             kernel.Bind<IAddMotorVehicleTypeSelectionView>().To<AddMotorVehicleTypeSelectionView>();
+            kernel.Bind<IAddElectricVehicleTypeSelectionView>().To<AddElectricVehicleTypeSelectionView>();
 
             kernel.Bind<SetUpPresenter>().ToSelf();
             kernel.Bind<SetUpRoadPresenter>().ToSelf();
@@ -47,12 +49,14 @@ namespace TransportWF
             kernel.Bind<AddMuscleVehiclePresenter>().ToSelf();
 
             kernel.Bind<AddMotorVehicleTypeSelectionPresenter>().ToSelf();
+            kernel.Bind<AddElectricVehicleTypeSelectionPresenter>().ToSelf();
 
             kernel.Bind<ITransportService>().To<TransportService>().InSingletonScope();
             kernel.Bind<IFuelService>().To<FuelService>().InSingletonScope();
             kernel.Bind<ISimulationService>().To<SimulationService>().InSingletonScope();
             kernel.Bind<IRoadService>().To<RoadService>().InSingletonScope();
-            kernel.Bind<IVerificationDataForVehicleService>().To<VerificationDataForVehicleService>().InSingletonScope();
+            kernel.Bind<IVerificationDataForMotorVehicleService>().To<VerificationDataForMotorVehicleService>().InSingletonScope();
+            kernel.Bind<IVerificationDataForElectricVehicleService>().To<VerificationDataForElectricVehicleService>().InSingletonScope();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

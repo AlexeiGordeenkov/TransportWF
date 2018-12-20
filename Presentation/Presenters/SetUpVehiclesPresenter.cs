@@ -25,6 +25,13 @@ namespace Presentation
             _view.AddMuscleVehicle += AddMuscleVehicle;
             _view.AddMotorVehicle += AddMotorVehicle;
             _view.GoBackToSetUpView += GoBackToSetUpView;
+            _view.AddElectricVehicle += AddElectricVehicle;
+        }
+
+        private void AddElectricVehicle()
+        {
+            _kernel.Get<AddElectricVehicleTypeSelectionPresenter>().Run();
+            _view.Close();
         }
 
         private void GoBackToSetUpView()

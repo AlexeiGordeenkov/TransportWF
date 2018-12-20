@@ -7,7 +7,7 @@ using Model.InterfacesForServices;
 
 namespace Model.Services
 {
-    public class VerificationDataForVehicleService : IVerificationDataForVehicleService
+    public class VerificationDataForMotorVehicleService : IVerificationDataForMotorVehicleService
     {
         public bool VerificationDataForMotorVehicle(string name, string maxSpeed, string startingSpeed, string capacityTank, string fuelConsption, ref string message)
         {

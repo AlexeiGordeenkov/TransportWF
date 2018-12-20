@@ -16,11 +16,11 @@ namespace Presentation.Presenters
         private readonly IAddMotorVehicleView _view;
         private readonly ITransportService _transportService;
         private readonly IFuelService  _fuelService;
-        private readonly IVerificationDataForVehicleService _verificatinService;
+        private readonly IVerificationDataForMotorVehicleService _verificatinService;
         private ICreatorMotorVehicle _creator;
 
 
-        public AddMotorVehiclePresenter(IKernel kernel, IAddMotorVehicleView view, ITransportService transportService, IFuelService fuelService, IVerificationDataForVehicleService vrifiactionService)
+        public AddMotorVehiclePresenter(IKernel kernel, IAddMotorVehicleView view, ITransportService transportService, IFuelService fuelService, IVerificationDataForMotorVehicleService vrifiactionService)
         {
             _kernel = kernel;
             _transportService = transportService;

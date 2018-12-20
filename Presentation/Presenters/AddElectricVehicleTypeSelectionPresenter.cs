@@ -35,12 +35,12 @@ namespace Presentation.Presenters
 
         private void TramTypeSelected()
         {
-            _kernel.Get<AddElectricVehiclePresenter>().Run(new CreatorTroleyBus());
+            _kernel.Get<AddElectricVehiclePresenter>().Run(new CreatorTram());
         }
 
         public void Run()
         {
-            throw new NotImplementedException();
+            _view.Show();
         }
     }
 }

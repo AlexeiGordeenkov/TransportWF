@@ -17,5 +17,31 @@ namespace TransportWF
         {
             InitializeComponent();
         }
+
+        public event Action AddVehicle;
+        public event Action AddElectricVehicleViewLoad;
+
+        public void GetData(out string name, out string maxSpeed, out string startingSpeed)
+        {
+            name = NameTextBox.Text;
+            maxSpeed = MaxSpeedTextBox.Text;
+            startingSpeed = StartingSpeedTextBox.Text;
+        }
+
+        public void ShowMessage(string message)
+        {
+            MessageBox.Show(message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+
+        }
+
+
+
+        private void AddVehicleButton_Click(object sender, EventArgs e)
+        {
+            NameTextBox.Clear();
+            MaxSpeedTextBox.Clear();
+            StartingSpeedTextBox.Clear();
+            AddVehicle?.Invoke();
+        }
     }
 }

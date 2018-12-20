@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Presentation.ViewInterfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,24 @@ using System.Windows.Forms;
 
 namespace TransportWF.Resources
 {
-    public partial class AddElectricVehicleTypeSelectionView : Form
+    public partial class AddElectricVehicleTypeSelectionView : Form, IAddElectricVehicleTypeSelectionView
     {
         public AddElectricVehicleTypeSelectionView()
         {
             InitializeComponent();
         }
 
-        private void addTroleyBusButton_Click(object sender, EventArgs e)
-        {
+        public event Action TramTypeSelected;
+        public event Action TroleyBusTypeSelected;
 
+        private void AddTroleyBusButton_Click(object sender, EventArgs e)
+        {
+            TroleyBusTypeSelected?.Invoke();
+        }
+
+        private void AddTramButton_Click(object sender, EventArgs e)
+        {
+            TramTypeSelected?.Invoke();
         }
     }
 }

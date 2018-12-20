@@ -122,6 +122,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddElectricVehicleView.resx">
+      <DependentUpon>AddElectricVehicleView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddFuelView.resx">
       <DependentUpon>AddFuelView.cs</DependentUpon>
     </EmbeddedResource>

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.InterfacesForServices
+namespace Model
 {
-    public interface IVerificationDataForElectricVehicle
+    public abstract class ElectricVehicle : Vehicle
     {
     }
 }

@@ -15,8 +15,44 @@ namespace Presentation.Presenters
         private readonly IKernel _kernel;
         private readonly IAddElectricVehicleView _view;
         private readonly ITransportService _transportService;
-        private readonly IVerificationDataForElectricVehicle _verificatinService;
+        private readonly IVerificationDataForElectricVehicleService _verificatinService;
         private ICreatorElectricVehicle _creator;
+
+        public AddElectricVehiclePresenter(IKernel kernel, IAddElectricVehicleView view, ITransportService transportService, IVerificationDataForElectricVehicleService vrifiactionService)
+        {
+            _kernel = kernel;
+            _transportService = transportService;
+            _verificatinService = vrifiactionService;
+            _view = view;
+
+            _view.AddVehicle += AddVehicle;
+        }
+
+       
+
+        private void AddVehicle()
+        {
+            string name;
+            string index;
+            string maxSpeed;
+            string startSpeed;
+            string tankCapacity;
+            string fuelConsumption;
+            string message = "";
+            _view.GetData(out name, out maxSpeed, out startSpeed);
+            if (_verificatinService.VerificationDataForElectricVehicle(name, maxSpeed, startSpeed, ref message))
+            {
+                ElectricVehicle motorVehicle = _creator.Creator(name, Double.Parse(maxSpeed), Double.Parse(startSpeed));
+                Vehicle vehicle = motorVehicle;
+                _transportService.AddVehicle(vehicle);
+            }
+            else
+            {
+                _view.ShowMessage(message);
+            }
+
+        }
+
 
         public void Run()
         {
@@ -25,7 +61,8 @@ namespace Presentation.Presenters
 
         internal void Run(ICreatorElectricVehicle creator)
         {
-            throw new NotImplementedException();
+            this._creator = creator;
+            _view.Show();
         }
     }
 }

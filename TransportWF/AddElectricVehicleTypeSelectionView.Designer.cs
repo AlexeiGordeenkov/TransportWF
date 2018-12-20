@@ -34,22 +34,29 @@
             // 
             // addTramButton
             // 
+            this.addTramButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addTramButton.Image = global::TransportWF.Properties.Resources.TramIcon;
             this.addTramButton.Location = new System.Drawing.Point(407, 85);
             this.addTramButton.Name = "addTramButton";
             this.addTramButton.Size = new System.Drawing.Size(210, 167);
             this.addTramButton.TabIndex = 1;
+            this.addTramButton.Text = "Трамвай";
+            this.addTramButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.addTramButton.UseVisualStyleBackColor = true;
+            this.addTramButton.Click += new System.EventHandler(this.AddTramButton_Click);
             // 
             // addTroleyBusButton
             // 
+            this.addTroleyBusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addTroleyBusButton.Image = global::TransportWF.Properties.Resources.TroleyBus;
             this.addTroleyBusButton.Location = new System.Drawing.Point(47, 85);
             this.addTroleyBusButton.Name = "addTroleyBusButton";
             this.addTroleyBusButton.Size = new System.Drawing.Size(199, 167);
             this.addTroleyBusButton.TabIndex = 0;
+            this.addTroleyBusButton.Text = "Троллейбус";
+            this.addTroleyBusButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.addTroleyBusButton.UseVisualStyleBackColor = true;
-            this.addTroleyBusButton.Click += new System.EventHandler(this.addTroleyBusButton_Click);
+            this.addTroleyBusButton.Click += new System.EventHandler(this.AddTroleyBusButton_Click);
             // 
             // AddElectricVehicleTypeSelectionView
             // 
