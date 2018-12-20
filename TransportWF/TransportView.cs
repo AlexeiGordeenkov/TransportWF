@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 
 namespace TransportWF
@@ -90,6 +91,7 @@ namespace TransportWF
         {
            if(pathToImage!=null)
             {
+                listOfVehicles[index].Image = new Bitmap(pathToImage);
                 listOfVehicles[index].Location = new Point(xCoordinate, yCoordinate);
                 listOfVehicles[index].Visible = true;
                 listOfVehicles[index].BringToFront();
