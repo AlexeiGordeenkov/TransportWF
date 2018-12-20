@@ -7,65 +7,76 @@ using Model.InterfacesForServices;
 
 namespace Model.Services
 {
-   public class VerificationDataForVehicleService : IVerificationDataForVehicleService
+    public class VerificationDataForVehicleService : IVerificationDataForVehicleService
     {
         public bool VerificationDataForMotorVehicle(string name, string maxSpeed, string startingSpeed, string capacityTank, string fuelConsption, ref string message)
         {
+            bool check = true;
             try
             {
-                if (name == null && name == "")
-                {
-                    message = " Введите имя ";
-                    return false;
-                }
-                try
-                {
-                    Double.Parse(maxSpeed);
-                }
-                catch (FormatException exeption)
-                {
-                    message = "Ошибка формата поля максимльная скорость";
-                    return false;
-                }
-
-                try
-                {
-                    Double.Parse(startingSpeed);
-                }
-                catch (FormatException exeption)
-                {
-                    message = "Ошибка формата поля начальная скорость";
-                    return false;
-                }
-
-                try
-                {
-                    Double.Parse(capacityTank);
-                }
-                catch (FormatException exeption)
-                {
-                    message = "Ошибка формата поля емкость бака";
-                    return false;
-                }
-
-                try
-                {
-                    Double.Parse(fuelConsption);
-                }
-                catch (FormatException exeption)
-                {
-                    message = "Ошибка формата поля расход топлива";
-                    return false;
-                }
+                if (name == null || name == "")
+                    check = false;
+                if (maxSpeed == null || maxSpeed == "")
+                    check = false;
+                if (startingSpeed == null || startingSpeed == "")
+                    check = false;
+                if (capacityTank == null || capacityTank == "")
+                    check = false;
+                if (fuelConsption == null || fuelConsption == "")
+                    check = false;
+                if (check == false)
+                    throw new NullReferenceException();
             }
-            catch(NullReferenceException ex)
+            catch (NullReferenceException ex)
             {
                 message = "Заполните все поля";
-                return false;
+                return check;
             }
-            
-            return true;
-            
+
+            try
+            {
+                Double.Parse(maxSpeed);
+            }
+            catch (FormatException exeption)
+            {
+                message = "Ошибка формата поля максимльная скорость" + Environment.NewLine;
+                check = false;
+            }
+
+            try
+            {
+                Double.Parse(startingSpeed);
+            }
+            catch (FormatException exeption)
+            {
+                message += "Ошибка формата поля начальная скорость" + Environment.NewLine;
+                check = false;
+            }
+
+            try
+            {
+                Double.Parse(capacityTank);
+            }
+            catch (FormatException exeption)
+            {
+                message += "Ошибка формата поля емкость бака" + Environment.NewLine;
+                check = false;
+            }
+
+            try
+            {
+                Double.Parse(fuelConsption);
+            }
+            catch (FormatException exeption)
+            {
+                message += "Ошибка формата поля расход топлива" + Environment.NewLine;
+                check = false;
+            }
+            return check;
         }
+        
+            
+            
+         
     }
 }

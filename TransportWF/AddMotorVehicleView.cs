@@ -44,6 +44,7 @@ namespace TransportWF
         {
             foreach (string nameFuel in ListNameFuel)
                 FuelComboBox.Items.Add(nameFuel);
+            
         }
 
         public void GetData(out string name, out string IndexFuel, out string maxSpeed, 
