@@ -11,5 +11,6 @@ namespace Model.InterfacesForServices
         bool IsThereRailsOnLane(int index);
         bool IsThereWiresOnLane(int index);
         void SetVehiceOnLane(int index,Vehicle vehicle);
+        Vehicle GetVehicleFromLane(int index);
     }
 }

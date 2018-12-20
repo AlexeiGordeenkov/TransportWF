@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Presentation
 {
@@ -12,6 +13,12 @@ namespace Presentation
         event Action ShowLog;
         event Action StartSimulation;
         event Action StopSimulation;
+        event Action ViewLoad;
+        event EventHandler<ScrollEventArgs> Scroll;
         void WriteTempLabel(string s);
+        List<int> GetYCoordinatesOfLanes();
+        int GetWidth();
+        void DrawCar(int index,string pathToImage, int xCoordinate, int yCoordinate);
+        void MoveCar(int index, int xCoordinate, int yCoordinate);
     }
 }

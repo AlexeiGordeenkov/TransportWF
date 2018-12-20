@@ -11,11 +11,21 @@ namespace Model.Services
     public class RoadService:IRoadService
     {
         private readonly IKernel _kernel;
-        private List<Lane> listofLanes = new List<Lane>(5);
+        private List<Lane> listofLanes;
         
         public RoadService(IKernel kernel)
         {
             _kernel = kernel;
+            listofLanes = new List<Lane>(5);
+            for(int i = 0; i < 5; i++)
+            {
+                listofLanes.Add(new Lane());
+            }
+        }
+
+        public Vehicle GetVehicleFromLane(int index)
+        {
+            return listofLanes[index]?.Vehicle;
         }
 
         public bool IsThereRailsOnLane(int index)

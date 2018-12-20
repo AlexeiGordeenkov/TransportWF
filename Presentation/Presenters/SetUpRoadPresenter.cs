@@ -24,10 +24,6 @@ namespace Presentation
 
         private void Apply()
         {
-            /*
-             Тут должна быть 
-              Абстрактная Фабрика
-             */
 
             _kernel.Get<TransportPresenter>().Run();
             _view.Close();

@@ -10,7 +10,7 @@ namespace Model
     {
         //Variables
         protected string Name { get; set; }
-        protected string PathToPictures { get; set; }
+        public string PathToPictures { get; set; }
         public double MaxSpeed { get; set; }
         protected double BrakingDistaces { get; set; }
         public double Acceleration { get; set; }

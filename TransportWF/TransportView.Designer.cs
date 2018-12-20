@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransportView));
             this.RailsForLine4 = new System.Windows.Forms.PictureBox();
             this.RailsForLine3 = new System.Windows.Forms.PictureBox();
-            this.RailsForLine = new System.Windows.Forms.PictureBox();
+            this.RailsForLine2 = new System.Windows.Forms.PictureBox();
             this.RailsForLine1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -50,9 +50,10 @@
             this.WiresForLine2 = new System.Windows.Forms.PictureBox();
             this.WiresForLine1 = new System.Windows.Forms.PictureBox();
             this.TempLabel = new System.Windows.Forms.Label();
+            this.ScrollBar = new System.Windows.Forms.HScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -88,15 +89,15 @@
             this.RailsForLine3.TabStop = false;
             this.RailsForLine3.Visible = false;
             // 
-            // RailsForLine
+            // RailsForLine2
             // 
-            this.RailsForLine.Image = global::TransportWF.Properties.Resources.Rails1;
-            this.RailsForLine.Location = new System.Drawing.Point(-18, 190);
-            this.RailsForLine.Name = "RailsForLine";
-            this.RailsForLine.Size = new System.Drawing.Size(1263, 38);
-            this.RailsForLine.TabIndex = 11;
-            this.RailsForLine.TabStop = false;
-            this.RailsForLine.Visible = false;
+            this.RailsForLine2.Image = global::TransportWF.Properties.Resources.Rails1;
+            this.RailsForLine2.Location = new System.Drawing.Point(-18, 190);
+            this.RailsForLine2.Name = "RailsForLine2";
+            this.RailsForLine2.Size = new System.Drawing.Size(1263, 38);
+            this.RailsForLine2.TabIndex = 11;
+            this.RailsForLine2.TabStop = false;
+            this.RailsForLine2.Visible = false;
             // 
             // RailsForLine1
             // 
@@ -284,16 +285,28 @@
             this.TempLabel.Size = new System.Drawing.Size(0, 13);
             this.TempLabel.TabIndex = 20;
             // 
+            // ScrollBar
+            // 
+            this.ScrollBar.Location = new System.Drawing.Point(33, 450);
+            this.ScrollBar.Maximum = 500;
+            this.ScrollBar.Name = "ScrollBar";
+            this.ScrollBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ScrollBar.Size = new System.Drawing.Size(724, 17);
+            this.ScrollBar.TabIndex = 21;
+            this.ScrollBar.UseWaitCursor = true;
+            this.ScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ScrollBar_Scroll);
+            // 
             // TransportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 529);
+            this.Controls.Add(this.ScrollBar);
             this.Controls.Add(this.TempLabel);
             this.Controls.Add(this.RailsForLine4);
             this.Controls.Add(this.RailsForLine3);
-            this.Controls.Add(this.RailsForLine);
+            this.Controls.Add(this.RailsForLine2);
             this.Controls.Add(this.RailsForLine1);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -313,9 +326,10 @@
             this.Controls.Add(this.WiresForLine5);
             this.Name = "TransportView";
             this.Text = "Transport";
+            this.Load += new System.EventHandler(this.TransportView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RailsForLine2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -347,7 +361,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox RailsForLine1;
-        private System.Windows.Forms.PictureBox RailsForLine;
+        private System.Windows.Forms.PictureBox RailsForLine2;
         private System.Windows.Forms.PictureBox RailsForLine3;
         private System.Windows.Forms.PictureBox RailsForLine4;
         private System.Windows.Forms.PictureBox RailsForLine5;
@@ -357,6 +371,7 @@
         private System.Windows.Forms.PictureBox WiresForLine2;
         private System.Windows.Forms.PictureBox WiresForLine1;
         private System.Windows.Forms.Label TempLabel;
+        private System.Windows.Forms.HScrollBar ScrollBar;
     }
 }
 
