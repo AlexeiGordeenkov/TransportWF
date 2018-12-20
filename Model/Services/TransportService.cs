@@ -8,22 +8,14 @@ namespace Model
 {
     public class TransportService:ITransportService
     {
-        List<Vehicle> listOFVehicle = new List<Vehicle>();
-        public DateTime timeStarting = new DateTime();
+        List<Vehicle> listOFVehicles = new List<Vehicle>();
+        
 
-        public void StartRuning()
+        public void AddVehicle(Vehicle vehicle) => listOFVehicles.Add(vehicle);
+
+        public List<Vehicle> GetListOfVehicles()
         {
-            timeStarting = DateTime.Now;
+            return listOFVehicles == null ? new List<Vehicle>() : listOFVehicles;
         }
-
-        public int GetTimeFromStart()
-        {
-            TimeSpan differensTime = (DateTime.Now).Subtract(timeStarting);
-            return (int)differensTime.TotalMilliseconds;
-        }
-
-        public void AddVehicle(Vehicle vehicle) => listOFVehicle.Add(vehicle);
-       
-
     }
 }

@@ -10,10 +10,10 @@ namespace Model
     {
         public Car(string name, Fuel fuel, double maxSpeed, double startSpeed, double tankCapacity, double fuelConsumption )
         {
-            this.name = name;
+            this.Name = name;
             this.fuel = fuel;
-            this.maxSpeed = maxSpeed;
-            this.startSpeed = startSpeed;
+            this.MaxSpeed = maxSpeed;
+            this.StartSpeed = startSpeed;
             this.tankCapacity = tankCapacity;
             this.fuelConsumption = fuelConsumption;
         }

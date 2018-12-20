@@ -9,6 +9,6 @@ namespace Model
     public interface ITransportService
     {
         void AddVehicle(Vehicle vehicle);
-
+        List<Vehicle> GetListOfVehicles();
     }
 }
