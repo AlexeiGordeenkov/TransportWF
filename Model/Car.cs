@@ -8,8 +8,10 @@ namespace Model
 {
     public class Car : MotorVehicle
     {
+      
         public Car(string name, Fuel fuel, double maxSpeed, double startSpeed, double tankCapacity, double fuelConsumption )
         {
+            PathToPictures = "@Resourse\\CarIcon.png";
             this.Name = name;
             this.fuel = fuel;
             this.MaxSpeed = maxSpeed;

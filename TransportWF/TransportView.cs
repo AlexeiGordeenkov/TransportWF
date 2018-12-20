@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Windows.Forms;
 
 namespace TransportWF
@@ -43,7 +44,12 @@ namespace TransportWF
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-           
+            Bitmap bitmap = (Bitmap)Image.FromFile( Directory.GetCurrentDirectory() + "\\Resources\\CarIcon.png");
+
+            //C:\Users\vital\source\repos\Transport\TransportWF\TransportWF\Resources\CarIcon.png
+            ;
+            RailsForLine1.Image = bitmap;
+            RailsForLine1.Visible = true;
             StartSimulation?.Invoke();
         }
 
