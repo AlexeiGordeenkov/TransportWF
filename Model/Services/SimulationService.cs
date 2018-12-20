@@ -59,9 +59,12 @@ namespace Model.Services
         {
             while (true)
             {       
-                foreach (var item in listOFVehicles)
+                foreach (var vehicle in listOFVehicles)
                 {
+                    if (vehicle.StartSpeed+vehicle.GetTimeFromStart()*vehicle.Acceleration > vehicle.MaxSpeed)
+                    {
 
+                    }
                 }
                 Draw?.Invoke();
                 System.Threading.Thread.Sleep(100);

@@ -28,11 +28,6 @@ namespace Presentation
             _simulationService.Draw += Draw;
         }
 
-        private void Draw()
-        {
-            throw new NotImplementedException();
-        }
-
         private void SetUp()
         {
             _kernel.Get<SetUpPresenter>().Run();
@@ -47,7 +42,11 @@ namespace Presentation
         {
             _kernel.Get<ISimulationService>().StopSimulation();
         }
-       
+
+        private void Draw()
+        {
+            
+        }
 
         public void Run()
         {
