@@ -90,6 +90,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="AddElectricVehicleTypeSelectionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddElectricVehicleTypeSelectionView.Designer.cs">
+      <DependentUpon>AddElectricVehicleTypeSelectionView.cs</DependentUpon>
+    </Compile>
     <Compile Include="SetUpRoadView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddHorseDrawnVehicleView.resx">
       <DependentUpon>AddHorseDrawnVehicleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddElectricVehicleTypeSelectionView.resx">
+      <DependentUpon>AddElectricVehicleTypeSelectionView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SetUpRoadView.resx">
       <DependentUpon>SetUpRoadView.cs</DependentUpon>
@@ -213,6 +222,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Wires.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TroleyBus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -193,6 +193,16 @@ namespace TransportWF.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap TroleyBus {
+            get {
+                object obj = ResourceManager.GetObject("TroleyBus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TruckIcon {
             get {
                 object obj = ResourceManager.GetObject("TruckIcon", resourceCulture);

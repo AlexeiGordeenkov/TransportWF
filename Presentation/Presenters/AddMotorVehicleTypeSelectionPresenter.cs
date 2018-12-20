@@ -40,14 +40,14 @@ namespace Presentation.Presenters
         {
             creator = new CreatorTruck();
             _kernel.Get<AddMotorVehiclePresenter>().Run(creator);
-            _view.Close();
+           // _view.Close();
         }
 
         private void CarTypeSelected()
         {
             creator = new CreatorCar();
             _kernel.Get<AddMotorVehiclePresenter>().Run(creator);
-            _view.Close();
+           // _view.Close();
         }
 
         public void Run()

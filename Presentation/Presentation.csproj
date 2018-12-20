@@ -54,13 +54,18 @@
   <ItemGroup>
     <Compile Include="FactoryMethod\CreatorTruck.cs" />
     <Compile Include="FactoryMethod\CreatorCar.cs" />
+    <Compile Include="FactoryMethod\ForElectricVehicle\CreatorTram.cs" />
+    <Compile Include="FactoryMethod\ForElectricVehicle\CreatorTroleyBus.cs" />
+    <Compile Include="FactoryMethod\ForElectricVehicle\ICreatorElectricVehicle.cs" />
     <Compile Include="FactoryMethod\ICreatorMotorVehicle.cs" />
     <Compile Include="Presenters\AddElectricVehiclePresenter.cs" />
+    <Compile Include="Presenters\AddElectricVehicleTypeSelectionPresenter.cs" />
     <Compile Include="Presenters\AddFuelPresenter.cs" />
     <Compile Include="Presenters\AddMotorVehiclePresenter.cs" />
     <Compile Include="Presenters\AddHorseDrawnVehiclePresenter.cs" />
     <Compile Include="Presenters\AddMotorVehicleTypeSelectionPresenter.cs" />
     <Compile Include="Presenters\AddMuscleVehiclePresenter.cs" />
+    <Compile Include="ViewInterfaces\IAddElectricVehicleTypeSelectionView.cs" />
     <Compile Include="ViewInterfaces\IAddElectricVehicleView.cs" />
     <Compile Include="ViewInterfaces\IAddFuelView.cs" />
     <Compile Include="ViewInterfaces\IAddMotorVehicleTypeSelectionView.cs" />

@@ -1,0 +1,72 @@
+﻿namespace TransportWF.Resources
+{
+    partial class AddElectricVehicleTypeSelectionView
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.addTramButton = new System.Windows.Forms.Button();
+            this.addTroleyBusButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // addTramButton
+            // 
+            this.addTramButton.Image = global::TransportWF.Properties.Resources.TramIcon;
+            this.addTramButton.Location = new System.Drawing.Point(407, 85);
+            this.addTramButton.Name = "addTramButton";
+            this.addTramButton.Size = new System.Drawing.Size(210, 167);
+            this.addTramButton.TabIndex = 1;
+            this.addTramButton.UseVisualStyleBackColor = true;
+            // 
+            // addTroleyBusButton
+            // 
+            this.addTroleyBusButton.Image = global::TransportWF.Properties.Resources.TroleyBus;
+            this.addTroleyBusButton.Location = new System.Drawing.Point(47, 85);
+            this.addTroleyBusButton.Name = "addTroleyBusButton";
+            this.addTroleyBusButton.Size = new System.Drawing.Size(199, 167);
+            this.addTroleyBusButton.TabIndex = 0;
+            this.addTroleyBusButton.UseVisualStyleBackColor = true;
+            this.addTroleyBusButton.Click += new System.EventHandler(this.addTroleyBusButton_Click);
+            // 
+            // AddElectricVehicleTypeSelectionView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(697, 364);
+            this.Controls.Add(this.addTramButton);
+            this.Controls.Add(this.addTroleyBusButton);
+            this.Name = "AddElectricVehicleTypeSelectionView";
+            this.Text = "AddElectricVehicleTypeSelectionView";
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button addTroleyBusButton;
+        private System.Windows.Forms.Button addTramButton;
+    }
+}
