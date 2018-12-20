@@ -21,5 +21,10 @@ namespace Model
         {
             return listOfVehicles == null ? new List<Vehicle>() : listOfMovingVehicles;
         }
+
+        public void AddVehicleToMovingVehicleList(Vehicle vehicle)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

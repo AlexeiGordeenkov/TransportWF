@@ -10,6 +10,6 @@ namespace Model
     {
         public bool IsThereRails { get; set; }
         public bool IsThereWires { get; set; }
-        public Vehicle Vehicle { get; set; };
+        public Vehicle Vehicle { get; set; }
     }
 }
