@@ -48,6 +48,7 @@ namespace Presentation
             }
             _kernel.Get<TransportPresenter>().Run();
             _view.Close();
+            _kernel.Get<ISimulationService>().SetFirstStart();//Устанавливавем флаг что на главной вью будет первый старт тс
         }
 
         public void Run()

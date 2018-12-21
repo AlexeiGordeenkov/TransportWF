@@ -13,7 +13,6 @@ namespace Model.Services
     {
         private readonly IKernel _kernel;
 
-        private double divider = 3600000.0;
         private bool simulationInProces = false;
         private bool firstStart = true;
 
@@ -64,21 +63,21 @@ namespace Model.Services
                 {
                     if (!vehicle.ReachedMaxSpeed)
                     {
-                        if (vehicle.StartSpeed + vehicle.GetTimeFromStart()/divider * vehicle.Acceleration > vehicle.MaxSpeed)
+                        if (vehicle.StartSpeed + vehicle.GetTimeFromStart() * vehicle.Acceleration > vehicle.MaxSpeed)
                         {
                             vehicle.ReachedMaxSpeed = true;
                             vehicle.StartCoordinate = vehicle.CurrentCoordinate;
                             vehicle.StartTime = DateTime.Now;
+                            vehicle.StartSpeed = vehicle.MaxSpeed;
                         }
                     }
-                    double t = ((double)vehicle.GetTimeFromStart()) / divider;
-                    if (vehicle.ReachedMaxSpeed)
+                    double t = ((double)vehicle.GetTimeFromStart());
+                    if (!vehicle.ReachedMaxSpeed)
                     {
-                        vehicle.CurrentCoordinate = vehicle.StartCoordinate + vehicle.MaxSpeed * t + (vehicle.Acceleration/2)*t*t;
+                        vehicle.CurrentCoordinate = vehicle.StartCoordinate + vehicle.StartSpeed * t + (vehicle.Acceleration/2)*t*t;
                     }
                     else
-                    {
-                        
+                    {                        
                         vehicle.CurrentCoordinate = vehicle.StartCoordinate + vehicle.StartSpeed *t;
                     }
                 }
@@ -97,6 +96,11 @@ namespace Model.Services
                 vehicle.StartCoordinate = vehicle.CurrentCoordinate;
                 vehicle.ReachedMaxSpeed = false;
             }
+        }
+
+        public void SetFirstStart()
+        {
+            firstStart = true;
         }
     }
 }

@@ -8,8 +8,8 @@ namespace Model
 {
     abstract public class MotorVehicle : Vehicle
     {
-        protected double tankCapacity { get; set; }
-        protected Fuel fuel { get; set; }
-        protected double fuelConsumption { get; set; }
+        protected double TankCapacity { get; set; }
+        protected Fuel Fuel { get; set; }
+        protected double FuelConsumption { get; set; }
     }
 }

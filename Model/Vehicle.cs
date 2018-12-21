@@ -27,11 +27,19 @@ namespace Model
         abstract public void Stop();
         abstract public void SaveDate();
         abstract public void Step();
+        abstract public double GetMaxDistance();
+        abstract public double GetAcceleratingDistance();
 
-        public int GetTimeFromStart()
+        protected void SetAcceleration()
+        {
+            double t = GetMaxDistance() > GetAcceleratingDistance() ? GetAcceleratingDistance() : GetMaxDistance();
+            Acceleration = (MaxSpeed * MaxSpeed - StartSpeed * StartSpeed) /t;
+        }
+
+        public double GetTimeFromStart()
         {
             TimeSpan differensTime = (DateTime.Now).Subtract(StartTime);
-            return (int)differensTime.TotalMilliseconds;
+            return (double)differensTime.TotalMilliseconds/3600000f;
         }
 
         public override string ToString()

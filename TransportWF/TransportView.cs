@@ -110,9 +110,7 @@ namespace TransportWF
             int xCoordinate = _xCoordinate;
             int yCoordinate = _yCoordinate;
             listOfVehicles[index].Location = new Point(xCoordinate, yCoordinate);
-            listOfVehicles[index].Update();
             listOfVehicles[index].Visible = true;
-            listOfVehicles[index].BringToFront();
             listOfVehicles[index].Update();
         }
 
@@ -129,6 +127,11 @@ namespace TransportWF
         public void StopTimer()
         {
             throw new NotImplementedException();
+        }
+
+        public void HideCar(int index)
+        {
+            listOfVehicles[index].Visible = false;
         }
     }
 }

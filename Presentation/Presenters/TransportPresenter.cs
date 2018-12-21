@@ -66,7 +66,8 @@ namespace Presentation
         private void SetUp()
         {
             _kernel.Get<SetUpPresenter>().Run();
-            _view.Close();
+            Close();
+            
         }
 
         private void StartSimulation()
@@ -91,11 +92,20 @@ namespace Presentation
                         int x = (int)((1f - (double)currentKilometr + vehicle.CurrentCoordinate) * (double)_view.GetWidth());
                         _view.MoveCar(i, x, YCoordinatesOfLanes[i]);
                     }
+                    else
+                    {
+                        _view.HideCar(i);
+                    }
                 }
             }
             draw = false;
         }
 
+        private void Close()
+        {
+            StopSimulation();
+            _view.Close();
+        }
         public void Run()
         {
             ViewLoad();

@@ -46,7 +46,7 @@ namespace Presentation.Presenters
             string tankCapacity;
             string fuelConsumption;
             string message = "";
-            _view.GetData(out name, out index, out maxSpeed, out startSpeed, out tankCapacity, out fuelConsumption);
+            _view.GetData(out name, out index, out startSpeed, out maxSpeed, out tankCapacity, out fuelConsumption);
             if(_verificatinService.VerificationDataForMotorVehicle(name, maxSpeed, startSpeed, tankCapacity, fuelConsumption, ref message))
             {
                 Fuel fuel = _fuelService.GetFuelFromList(Int32.Parse(index));
@@ -58,6 +58,7 @@ namespace Presentation.Presenters
             {
                 _view.ShowMessage(message);
             }
+            _view.Close();
   
         }
         

@@ -21,6 +21,7 @@ namespace Presentation
         int GetWidth();
         void DrawCar(int index,string pathToImage, int xCoordinate, int yCoordinate);
         void MoveCar(int index, int xCoordinate, int yCoordinate);
+        void HideCar(int index);
         void StartTimer();
         void StopTimer();
     }

@@ -12,13 +12,22 @@ namespace Model
         public Truck(string name, Fuel fuel, double maxSpeed, double startSpeed, double tankCapacity, double fuelConsumption)
         {
             this.Name = name;
-            this.fuel = fuel;
+            this.Fuel = fuel;
             this.MaxSpeed = maxSpeed;
             this.StartSpeed = startSpeed;
-            this.tankCapacity = tankCapacity;
-            this.fuelConsumption = fuelConsumption;
+            this.TankCapacity = tankCapacity;
+            this.FuelConsumption = fuelConsumption;
         }
 
+        public override double GetAcceleratingDistance()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override double GetMaxDistance()
+        {
+            throw new NotImplementedException();
+        }
 
         public override void SaveDate()
         {
