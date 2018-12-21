@@ -70,12 +70,12 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.button1.Location = new System.Drawing.Point(556, 114);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(206, 167);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Добавить Топливо В Список";
+            this.button1.Text = "Добавить топливо";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.AddFuelInList_Click);
             // 

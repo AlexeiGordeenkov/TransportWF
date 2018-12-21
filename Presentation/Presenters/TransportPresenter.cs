@@ -87,10 +87,11 @@ namespace Presentation
                 var vehicle = _kernel.Get<IRoadService>().GetVehicleFromLane(i);
                 if (vehicle != null)
                 {
-                    if((vehicle.CurrentCoordinate< currentKilometr) && (vehicle.CurrentCoordinate >= currentKilometr - 1))//Если машина находится в отображаемом километре
+                    _view.MoveCarPointer(i, (int)vehicle.CurrentCoordinate);
+                    if ((vehicle.CurrentCoordinate< currentKilometr) && (vehicle.CurrentCoordinate >= currentKilometr - 1))//Если машина находится в отображаемом километре
                     {
                         int x = (int)((1f - (double)currentKilometr + vehicle.CurrentCoordinate) * (double)_view.GetWidth());
-                        _view.MoveCar(i, x, YCoordinatesOfLanes[i]);
+                        _view.MoveCar(i, x, YCoordinatesOfLanes[i]);                     
                     }
                     else
                     {
