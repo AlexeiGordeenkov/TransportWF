@@ -45,15 +45,13 @@ namespace TransportWF
             AddFuelInList?.Invoke();
         }
 
-<<<<<<< HEAD
         private void SetUpView_Load(object sender, EventArgs e)
         {
+        }
 
-=======
         private void HomeButton_Click(object sender, EventArgs e)
         {
             Home?.Invoke();
->>>>>>> bdc774502681cb133edc5cea3bc4318f14bc175a
         }
     }
 }
