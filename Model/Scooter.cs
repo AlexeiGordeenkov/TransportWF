@@ -46,5 +46,20 @@ namespace Model
         {
             throw new NotImplementedException();
         }
+
+        public override Vehicle Clone()
+        {
+            Scooter copy = new Scooter(Name, MaxSpeed, StartSpeed, MaxRange)
+            {
+                CurrentCoordinate = CurrentCoordinate,
+                BrakingDistances = BrakingDistances,
+                CurentSpeed = CurentSpeed,
+                Acceleration = Acceleration,
+                StartCoordinate = StartCoordinate,
+                StartTime = StartTime,
+                ReachedMaxSpeed = ReachedMaxSpeed
+            };
+            return copy;
+        }
     }
 }

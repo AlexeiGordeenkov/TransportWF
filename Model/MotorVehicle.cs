@@ -11,5 +11,6 @@ namespace Model
         protected double TankCapacity { get; set; }
         protected Fuel Fuel { get; set; }
         protected double FuelConsumption { get; set; }
+        
     }
 }

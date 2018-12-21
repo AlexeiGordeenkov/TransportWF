@@ -45,5 +45,19 @@ namespace Model
         {
             throw new NotImplementedException();
         }
+        public override Vehicle Clone()
+        {
+            TroleyBus copy = new TroleyBus(Name, MaxSpeed, StartSpeed)
+            {
+                CurrentCoordinate = CurrentCoordinate,
+                BrakingDistances = BrakingDistances,
+                CurentSpeed = CurentSpeed,
+                Acceleration = Acceleration,
+                StartCoordinate = StartCoordinate,
+                StartTime = StartTime,
+                ReachedMaxSpeed = ReachedMaxSpeed
+            };
+            return copy;
+        }
     }
 }

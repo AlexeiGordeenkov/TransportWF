@@ -51,5 +51,19 @@ namespace Model
         {
             throw new NotImplementedException();
         }
+        public override Vehicle Clone()
+        {
+            Car copy = new Car(Name, Fuel, MaxSpeed, StartSpeed, TankCapacity, FuelConsumption)
+            {
+                CurrentCoordinate = CurrentCoordinate,
+                BrakingDistances = BrakingDistances,
+                CurentSpeed = CurentSpeed,
+                Acceleration = Acceleration,
+                StartCoordinate = StartCoordinate,
+                StartTime = StartTime,
+                ReachedMaxSpeed = ReachedMaxSpeed
+            };
+            return copy;
+        }
     }
 }
