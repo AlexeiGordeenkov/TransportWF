@@ -37,7 +37,7 @@ namespace Presentation
 
         private void AddElectricVehicle()
         {
-            _kernel.Get<AddMuscleVehicleTypeSelectionPresenter>().Run();
+            _kernel.Get<AddElectricVehicleTypeSelectionPresenter>().Run();
             _view.Close();
         }
 
