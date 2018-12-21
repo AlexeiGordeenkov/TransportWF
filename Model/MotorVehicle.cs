@@ -11,14 +11,10 @@ namespace Model
         protected double TankCapacity { get; set; }
         protected Fuel Fuel { get; set; }
         protected double FuelConsumption { get; set; }
-<<<<<<< HEAD
         public override double GetMaxDistance()
         {
             if (FuelConsumption == 0) return 500f - CurrentCoordinate;
             return TankCapacity / FuelConsumption;
         }
-=======
-        
->>>>>>> 57f2f3f2521b1bdb13af398f4e005240b9227b6f
     }
 }
