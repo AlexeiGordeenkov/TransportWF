@@ -8,13 +8,22 @@ namespace Model
 {
     public class Lane
     {
-        public bool IsThereRails { get; set; }
-        public bool IsThereWires { get; set; }
+        public bool IsThereRails()
+        {
+            if(_Vehicle==null)return false;
+
+            if (_Vehicle.GetType().Name.Equals("Tram")) return true;
+            return false;
+        }
+        public bool IsThereWires()
+        {
+            if (_Vehicle == null) return false;
+            if (_Vehicle.GetType().Equals("TroleyBus")) return true;
+            return false;
+        }
         public Vehicle _Vehicle { get; set; }
         public void Clear()
         {
-            IsThereRails = false;
-            IsThereWires = false;
             _Vehicle = null;
         }
     }

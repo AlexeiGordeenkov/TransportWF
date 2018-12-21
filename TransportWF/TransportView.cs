@@ -13,6 +13,8 @@ namespace TransportWF
 
         private List<PictureBox> listOfVehicles;
         private List<PictureBox> listOfCarPointers;
+        private List<PictureBox> listOfRails;
+        private List<PictureBox> listOfWires;
 
         public TransportView()
         {
@@ -29,13 +31,25 @@ namespace TransportWF
             listOfCarPointers.Add(CarPointer3);
             listOfCarPointers.Add(CarPointer4);
             listOfCarPointers.Add(CarPointer5);
+            listOfRails = new List<PictureBox>();
+            listOfRails.Add(RailsForLine1);
+            listOfRails.Add(RailsForLine2);
+            listOfRails.Add(RailsForLine3);
+            listOfRails.Add(RailsForLine4);
+            listOfRails.Add(RailsForLine5);
+            listOfWires = new List<PictureBox>();
+            listOfWires.Add(WiresForLine1);
+            listOfWires.Add(WiresForLine2);
+            listOfWires.Add(WiresForLine3);
+            listOfWires.Add(WiresForLine4);
+            listOfWires.Add(WiresForLine5);
         }
 
         public event Action SetUp;
         public event Action ShowLog;
         public event Action StartSimulation;
         public event Action StopSimulation;
-        public  event EventHandler<ScrollEventArgs> Scroll;
+        public new event EventHandler<ScrollEventArgs> Scroll;
         public event Action ViewLoad;
         public event Action Tick;
 
@@ -147,6 +161,27 @@ namespace TransportWF
         {
             listOfCarPointers[index].Location = new Point((int)((double)x/500f*((double)ScrollBar.Size.Width-17*2)) + ScrollBar.Location.X + 17, listOfCarPointers[index].Location.Y);
             listOfCarPointers[index].Update();
+        }
+
+        public void PutRailsOnLane(int index)
+        {
+            listOfRails[index].Visible = true;
+            listOfRails[index].Update();
+        }
+
+        public void HideRailsFromLane(int index)
+        {
+            listOfRails[index].Visible = false;
+        }
+
+        public void putWiresOnLane(int index)
+        {
+            listOfWires[index].Visible = true;
+        }
+
+        public void hideWiresFromLane(int index)
+        {
+            listOfWires[index].Visible = false;
         }
     }
 }

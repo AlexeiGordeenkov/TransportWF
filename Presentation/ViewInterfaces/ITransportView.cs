@@ -25,5 +25,9 @@ namespace Presentation
         void HideCar(int index);
         void StartTimer();
         void StopTimer();
+        void PutRailsOnLane(int index);
+        void HideRailsFromLane(int index);
+        void putWiresOnLane(int index);
+        void hideWiresFromLane(int index);
     }
 }

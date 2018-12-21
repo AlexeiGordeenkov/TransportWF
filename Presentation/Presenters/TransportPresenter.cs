@@ -55,6 +55,14 @@ namespace Presentation
                 {
                     _view.DrawCar(i,null, 0, 0);
                 }
+                if (_kernel.Get<IRoadService>().IsThereRailsOnLane(i))
+                {
+
+                }
+                if (_kernel.Get<IRoadService>().IsThereRailsOnLane(i))
+                {
+
+                }
             }        
         }
 

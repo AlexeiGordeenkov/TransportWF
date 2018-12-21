@@ -38,12 +38,12 @@ namespace Model.Services
 
         public bool IsThereRailsOnLane(int index)
         {
-            return listofLanes[index].IsThereRails;
+            return listofLanes[index].IsThereRails();
         }
 
         public bool IsThereWiresOnLane(int index)
         {
-            return listofLanes[index].IsThereWires;
+            return listofLanes[index].IsThereWires();
         }
 
         public void SetVehiceOnLane(int index, Vehicle vehicle)
