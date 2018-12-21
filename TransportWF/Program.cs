@@ -37,6 +37,7 @@ namespace TransportWF
             kernel.Bind<IAddMuscleVehicleView>().To<AddMuscleVehicleView>();
             kernel.Bind<IAddMotorVehicleTypeSelectionView>().To<AddMotorVehicleTypeSelectionView>();
             kernel.Bind<IAddElectricVehicleTypeSelectionView>().To<AddElectricVehicleTypeSelectionView>();
+            kernel.Bind<IAddMuscleVehicleTypeSelectionView>().To<AddMuscleVehicleTypeSelectionView>();
 
             kernel.Bind<SetUpPresenter>().ToSelf();
             kernel.Bind<SetUpRoadPresenter>().ToSelf();
@@ -50,6 +51,7 @@ namespace TransportWF
 
             kernel.Bind<AddMotorVehicleTypeSelectionPresenter>().ToSelf();
             kernel.Bind<AddElectricVehicleTypeSelectionPresenter>().ToSelf();
+            kernel.Bind<AddMuscleVehicleTypeSelectionPresenter>().ToSelf();
 
             kernel.Bind<ITransportService>().To<TransportService>().InSingletonScope();
             kernel.Bind<IFuelService>().To<FuelService>().InSingletonScope();
@@ -57,6 +59,7 @@ namespace TransportWF
             kernel.Bind<IRoadService>().To<RoadService>().InSingletonScope();
             kernel.Bind<IVerificationDataForMotorVehicleService>().To<VerificationDataForMotorVehicleService>().InSingletonScope();
             kernel.Bind<IVerificationDataForElectricVehicleService>().To<VerificationDataForElectricVehicleService>().InSingletonScope();
+            kernel.Bind<IVerificationDataForMuscleVehicleService>().To<VerificationDataForMuscleVehicleService>().InSingletonScope();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

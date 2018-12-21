@@ -63,6 +63,16 @@ namespace TransportWF.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bicycle {
+            get {
+                object obj = ResourceManager.GetObject("Bicycle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BicycleIcon {
             get {
                 object obj = ResourceManager.GetObject("BicycleIcon", resourceCulture);
@@ -146,6 +156,16 @@ namespace TransportWF.Properties {
         internal static System.Drawing.Bitmap Rails1 {
             get {
                 object obj = ResourceManager.GetObject("Rails1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Scooter {
+            get {
+                object obj = ResourceManager.GetObject("Scooter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

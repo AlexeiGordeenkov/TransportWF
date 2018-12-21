@@ -8,5 +8,8 @@ namespace Presentation
 {
     public interface IAddMuscleVehicleView:IView
     {
+        event Action AddVehicle;
+        void GetData(out string name, out string startingSpeed, out string maxSpeed, out string maxRange);
+        void ShowMessage(string message);
     }
 }

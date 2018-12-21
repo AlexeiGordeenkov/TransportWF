@@ -73,6 +73,12 @@
     <Compile Include="AddMotorVehicleTypeSelectionView.Designer.cs">
       <DependentUpon>AddMotorVehicleTypeSelectionView.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddMuscleVehicleTypeSelectionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMuscleVehicleTypeSelectionView.Designer.cs">
+      <DependentUpon>AddMuscleVehicleTypeSelectionView.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddMuscleVehicleView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddElectricVehicleTypeSelectionView.resx">
       <DependentUpon>AddElectricVehicleTypeSelectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMuscleVehicleTypeSelectionView.resx">
+      <DependentUpon>AddMuscleVehicleTypeSelectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMuscleVehicleView.resx">
+      <DependentUpon>AddMuscleVehicleView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SetUpRoadView.resx">
       <DependentUpon>SetUpRoadView.cs</DependentUpon>
@@ -228,6 +240,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TroleyBus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bicycle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scooter.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

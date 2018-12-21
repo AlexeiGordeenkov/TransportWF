@@ -89,6 +89,7 @@
             this.Controls.Add(this.SetUpVehiclesButton);
             this.Name = "SetUpView";
             this.Text = "SetUpView";
+            this.Load += new System.EventHandler(this.SetUpView_Load);
             this.ResumeLayout(false);
 
         }

@@ -43,6 +43,11 @@ namespace TransportWF
         {
             AddFuelInList?.Invoke();
         }
+
+        private void SetUpView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

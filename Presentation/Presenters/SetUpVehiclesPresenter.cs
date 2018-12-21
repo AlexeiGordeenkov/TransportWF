@@ -30,7 +30,7 @@ namespace Presentation
 
         private void AddElectricVehicle()
         {
-            _kernel.Get<AddElectricVehicleTypeSelectionPresenter>().Run();
+            _kernel.Get<AddMuscleVehicleTypeSelectionPresenter>().Run();
             _view.Close();
         }
 
@@ -48,7 +48,8 @@ namespace Presentation
 
         private void AddMuscleVehicle()
         {
-         //   _view.Close();
+            _kernel.Get<AddMuscleVehicleTypeSelectionPresenter>().Run();
+            _view.Close();
         }
 
         private void AddHorseDrawnVehicle()

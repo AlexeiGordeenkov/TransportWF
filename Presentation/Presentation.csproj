@@ -57,6 +57,9 @@
     <Compile Include="FactoryMethod\ForElectricVehicle\CreatorTram.cs" />
     <Compile Include="FactoryMethod\ForElectricVehicle\CreatorTroleyBus.cs" />
     <Compile Include="FactoryMethod\ForElectricVehicle\ICreatorElectricVehicle.cs" />
+    <Compile Include="FactoryMethod\ForMuscleVehicle\CreatorScooter.cs" />
+    <Compile Include="FactoryMethod\ForMuscleVehicle\CreatorBicycle.cs" />
+    <Compile Include="FactoryMethod\ForMuscleVehicle\ICreatorMuscleVehicle.cs" />
     <Compile Include="FactoryMethod\ICreatorMotorVehicle.cs" />
     <Compile Include="Presenters\AddElectricVehiclePresenter.cs" />
     <Compile Include="Presenters\AddElectricVehicleTypeSelectionPresenter.cs" />
@@ -65,12 +68,14 @@
     <Compile Include="Presenters\AddHorseDrawnVehiclePresenter.cs" />
     <Compile Include="Presenters\AddMotorVehicleTypeSelectionPresenter.cs" />
     <Compile Include="Presenters\AddMuscleVehiclePresenter.cs" />
+    <Compile Include="Presenters\AddMuscleVehicleTypeSelectionPresenter.cs" />
     <Compile Include="ViewInterfaces\IAddElectricVehicleTypeSelectionView.cs" />
     <Compile Include="ViewInterfaces\IAddElectricVehicleView.cs" />
     <Compile Include="ViewInterfaces\IAddFuelView.cs" />
     <Compile Include="ViewInterfaces\IAddMotorVehicleTypeSelectionView.cs" />
     <Compile Include="ViewInterfaces\IAddMotorVehicleView.cs" />
     <Compile Include="ViewInterfaces\IAddHorseDrawnVehicleView.cs" />
+    <Compile Include="ViewInterfaces\IAddMuscleVehicleTypeSelectionView.cs" />
     <Compile Include="ViewInterfaces\IAddMuscleVehicleView.cs" />
     <Compile Include="IPresenter.cs" />
     <Compile Include="ViewInterfaces\ISetUpRoadView.cs" />

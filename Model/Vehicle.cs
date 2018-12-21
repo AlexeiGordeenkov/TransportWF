@@ -12,7 +12,7 @@ namespace Model
         public string Name { get; set; }
         public string PathToPictures { get; set; }
         public double MaxSpeed { get; set; }
-        protected double BrakingDistaces { get; set; }
+        protected double BrakingDistances { get; set; }
         public double Acceleration { get; set; }
         public double StartSpeed { get; set; }
         public double CurentSpeed { get; set; }
