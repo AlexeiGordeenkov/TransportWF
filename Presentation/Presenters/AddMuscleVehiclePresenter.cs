@@ -42,8 +42,12 @@ namespace Presentation.Presenters
             {
                 MuscleVehicle motorVehicle = _creator.Creator(name, Double.Parse(startSpeed), Double.Parse(maxSpeed), Double.Parse(maxRange));
                 Vehicle vehicle = motorVehicle;
-                _transportService.AddVehicle(vehicle);
-                _view.Close();
+                if (!_transportService.AddVehicle(vehicle, ref message))
+                {
+                    _view.ShowMessage(message);
+                }
+                else
+                    _view.Close();
             }
             else
             {

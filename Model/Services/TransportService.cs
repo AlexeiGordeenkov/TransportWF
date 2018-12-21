@@ -29,5 +29,19 @@ namespace Model
         {
             listOfMovingVehicles.Clear();
         }
+
+        public bool AddVehicle(Vehicle vehicle, ref string message)
+        {
+            foreach(Vehicle vehicleInList in listOfVehicles)
+            {
+                if(vehicle.Name == vehicleInList.Name)
+                {
+                    message = "Имеется транспортное средство с таким именем!";
+                    return false;
+                }
+            }
+            listOfVehicles.Add(vehicle);
+            return true;
+        }
     }
 }

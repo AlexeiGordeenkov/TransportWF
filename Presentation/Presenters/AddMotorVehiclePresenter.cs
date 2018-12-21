@@ -52,13 +52,18 @@ namespace Presentation.Presenters
                 Fuel fuel = _fuelService.GetFuelFromList(Int32.Parse(index));
                 MotorVehicle motorVehicle = _creator.Creator(name, fuel, Double.Parse(maxSpeed), Double.Parse(startSpeed), Double.Parse(tankCapacity), Double.Parse(fuelConsumption));
                 Vehicle vehicle = motorVehicle;
-                _transportService.AddVehicle(vehicle);
+                if(!_transportService.AddVehicle(vehicle,ref message))
+                {
+                    _view.ShowMessage(message);
+                }
+                else
+                    _view.Close();
             }
             else
             {
                 _view.ShowMessage(message);
             }
-            _view.Close();
+            
         }
 
 
