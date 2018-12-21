@@ -46,6 +46,10 @@ namespace TransportWF
 
         private void StartButton_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            
+=======
+>>>>>>> e9047f46b5f7107910a9d1b6824a75278a4e35de
             StartSimulation?.Invoke();
         }
 
