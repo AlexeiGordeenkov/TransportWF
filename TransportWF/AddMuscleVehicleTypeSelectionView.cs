@@ -23,6 +23,7 @@ namespace TransportWF
         public event Action GoBackToSetUpVehicleView;
         public event Action BicycleSelected;
         public event Action ScooterSelected;
+        public event Action HorseDrawnWagonSelected;
 
         private void AddScooterVehicleButton_Click(object sender, EventArgs e)
         {
@@ -37,6 +38,11 @@ namespace TransportWF
         private void AddBicycleVehicleButton_Click(object sender, EventArgs e)
         {
             BicycleSelected?.Invoke();
+        }
+
+        private void HourseWagonSelectedButton_Click(object sender, EventArgs e)
+        {
+            HorseDrawnWagonSelected?.Invoke();
         }
     }
 }

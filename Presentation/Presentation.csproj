@@ -57,6 +57,7 @@
     <Compile Include="FactoryMethod\ForElectricVehicle\CreatorTram.cs" />
     <Compile Include="FactoryMethod\ForElectricVehicle\CreatorTroleyBus.cs" />
     <Compile Include="FactoryMethod\ForElectricVehicle\ICreatorElectricVehicle.cs" />
+    <Compile Include="FactoryMethod\ForMuscleVehicle\CreatorHorseDrawnWagon.cs" />
     <Compile Include="FactoryMethod\ForMuscleVehicle\CreatorScooter.cs" />
     <Compile Include="FactoryMethod\ForMuscleVehicle\CreatorBicycle.cs" />
     <Compile Include="FactoryMethod\ForMuscleVehicle\ICreatorMuscleVehicle.cs" />

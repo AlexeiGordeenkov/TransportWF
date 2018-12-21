@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Bycicle : MuscleVehicle
+    public class HorseDrawnWagon : MuscleVehicle
     {
-        public Bycicle(string name, double startingSpeed, double maxSpeed, double maxRange)
+        public HorseDrawnWagon(string name, double startingSpeed, double maxSpeed, double maxRange)
         {
             // PathToPictures = Directory.GetCurrentDirectory() + "\\Resources\\TramIcon.png";
             Name = name;
             StartSpeed = startingSpeed;
             MaxSpeed = maxSpeed;
             MaxRange = maxRange;
-           // SetAcceleration();
+            // SetAcceleration();
         }
         public override double GetAcceleratingDistance()
         {
@@ -24,7 +24,7 @@ namespace Model
 
         public override double GetMaxDistance()
         {
-            return MaxRange;
+            throw new NotImplementedException();
         }
 
         public override void SaveDate()

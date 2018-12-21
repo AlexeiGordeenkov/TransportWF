@@ -56,6 +56,7 @@
     <Compile Include="Car.cs" />
     <Compile Include="ElectricVehicle.cs" />
     <Compile Include="Fuel.cs" />
+    <Compile Include="HorseDrawnWagon.cs" />
     <Compile Include="InterfacesForServices\IFuelService.cs" />
     <Compile Include="InterfacesForServices\IRoadService.cs" />
     <Compile Include="InterfacesForServices\ISimulationService.cs" />

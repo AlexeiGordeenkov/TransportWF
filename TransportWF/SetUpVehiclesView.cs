@@ -30,10 +30,6 @@ namespace TransportWF
             GoBackToSetUpView?.Invoke();
         }
 
-        private void AddHorseDrawnVehicleButton_Click(object sender, EventArgs e)
-        {
-            AddHorseDrawnVehicle?.Invoke();
-        }
 
         private void AddVehicleButton_Click(object sender, EventArgs e)
         {

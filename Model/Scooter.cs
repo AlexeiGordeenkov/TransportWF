@@ -24,7 +24,7 @@ namespace Model
 
         public override double GetMaxDistance()
         {
-            return BrakingDistances;
+            return MaxRange;
         }
 
         public override void SaveDate()

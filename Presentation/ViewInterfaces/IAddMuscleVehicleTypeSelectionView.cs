@@ -11,5 +11,6 @@ namespace Presentation.ViewInterfaces
         event Action BicycleSelected;
         event Action ScooterSelected;
         event Action GoBackToSetUpVehicleView;
+        event Action HorseDrawnWagonSelected;
     }
 }

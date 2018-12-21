@@ -25,7 +25,13 @@ namespace Presentation.Presenters
 
             view.ScooterSelected += ScooterSelected;
             view.BicycleSelected += BicycleSelected;
+            view.HorseDrawnWagonSelected += HorseDrawnWagonSelected;
             view.GoBackToSetUpVehicleView += GoBackToSetUpVehicleView;
+        }
+
+        private void HorseDrawnWagonSelected()
+        {
+            _kernel.Get<AddMuscleVehiclePresenter>().Run(new CreatorHorseDrawnWagon());
         }
 
         private void BicycleSelected()
