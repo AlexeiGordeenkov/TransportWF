@@ -31,7 +31,7 @@ namespace Presentation
             {
                 nameVehicle.Add(vehicle.Name);
             }
-            _view.LoadDataForSetUpRoadView(_service.GetListOfVehicles());
+            _view.LoadDataForSetUpRoadView(nameVehicle);
         }
 
         private void Apply()
@@ -43,7 +43,7 @@ namespace Presentation
 
                 if(listIndex[i] >= 0)
                 {
-                    _kernel.Get<IRoadService>().SetVehiceOnLane(i, ( _service.GetListOfVehicles())[ listIndex[i] ] );// добавление на i полосу ListIndex[i] того ТС
+                    _kernel.Get<IRoadService>().SetVehiceOnLane(i, ( (_service.GetListOfVehicles())[ listIndex[i] ]).Clone() );// добавление на i полосу ListIndex[i] того ТС
                 }
             }
             _kernel.Get<TransportPresenter>().Run();

@@ -132,6 +132,7 @@
             this.Lane1ComboBox.Name = "Lane1ComboBox";
             this.Lane1ComboBox.Size = new System.Drawing.Size(173, 21);
             this.Lane1ComboBox.TabIndex = 13;
+            this.Lane1ComboBox.SelectedIndexChanged += new System.EventHandler(this.Lane1ComboBox_SelectedIndexChanged);
             // 
             // Lane2ComboBox
             // 
@@ -141,6 +142,7 @@
             this.Lane2ComboBox.Name = "Lane2ComboBox";
             this.Lane2ComboBox.Size = new System.Drawing.Size(173, 21);
             this.Lane2ComboBox.TabIndex = 14;
+            this.Lane2ComboBox.SelectedIndexChanged += new System.EventHandler(this.Lane2ComboBox_SelectedIndexChanged);
             // 
             // Lane3ComboBox
             // 
@@ -150,6 +152,7 @@
             this.Lane3ComboBox.Name = "Lane3ComboBox";
             this.Lane3ComboBox.Size = new System.Drawing.Size(173, 21);
             this.Lane3ComboBox.TabIndex = 15;
+            this.Lane3ComboBox.SelectedIndexChanged += new System.EventHandler(this.Lane3ComboBox_SelectedIndexChanged);
             // 
             // Lane4ComboBox
             // 
@@ -159,6 +162,7 @@
             this.Lane4ComboBox.Name = "Lane4ComboBox";
             this.Lane4ComboBox.Size = new System.Drawing.Size(173, 21);
             this.Lane4ComboBox.TabIndex = 16;
+            this.Lane4ComboBox.SelectedIndexChanged += new System.EventHandler(this.Lane4ComboBox_SelectedIndexChanged);
             // 
             // Lane5ComboBox
             // 
@@ -168,6 +172,7 @@
             this.Lane5ComboBox.Name = "Lane5ComboBox";
             this.Lane5ComboBox.Size = new System.Drawing.Size(173, 21);
             this.Lane5ComboBox.TabIndex = 17;
+            this.Lane5ComboBox.SelectedIndexChanged += new System.EventHandler(this.Lane5ComboBox_SelectedIndexChanged);
             // 
             // SetUpRoadView
             // 
