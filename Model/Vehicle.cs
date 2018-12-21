@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace Model
         public double StartCoordinate { get; set; }
         public DateTime StartTime { get; set; }
         public bool ReachedMaxSpeed { get; set; }
-
+        public List<ArrayList> log;
 
         //methods
         abstract public void Start();
@@ -37,7 +38,7 @@ namespace Model
         }
         public void ResetAcceleration()
         {
-            SetAcceleration();S
+            SetAcceleration();
         }
 
         public double GetTimeFromStart()
