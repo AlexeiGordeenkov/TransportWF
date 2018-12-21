@@ -95,6 +95,7 @@ namespace Model.Services
                 vehicle.StartSpeed = 0;
                 vehicle.StartCoordinate = vehicle.CurrentCoordinate;
                 vehicle.ReachedMaxSpeed = false;
+                vehicle.ResetAcceleration();
             }
         }
 

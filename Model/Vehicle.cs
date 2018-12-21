@@ -35,6 +35,10 @@ namespace Model
             double t = GetMaxDistance() > GetAcceleratingDistance() ? GetAcceleratingDistance() : GetMaxDistance();
             Acceleration = (MaxSpeed * MaxSpeed - StartSpeed * StartSpeed) /t;
         }
+        public void ResetAcceleration()
+        {
+            SetAcceleration();S
+        }
 
         public double GetTimeFromStart()
         {
