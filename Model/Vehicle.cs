@@ -37,7 +37,7 @@ namespace Model
         }
         public void ResetAcceleration()
         {
-            SetAcceleration();S
+            SetAcceleration();
         }
 
         public double GetTimeFromStart()

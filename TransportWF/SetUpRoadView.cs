@@ -25,25 +25,44 @@ namespace TransportWF
         public List<int> GetListOfIndexes()
         {
             List<int> list = new List<int>();
-            list.Add(Lane1ComboBox.SelectedIndex);
-            list.Add(Lane2ComboBox.SelectedIndex);
-            list.Add(Lane3ComboBox.SelectedIndex);
-            list.Add(Lane4ComboBox.SelectedIndex);
-            list.Add(Lane5ComboBox.SelectedIndex);
+            if(Lane1ComboBox.SelectedItem!= null && Lane1ComboBox.SelectedItem.ToString() != "")
+                list.Add(Lane1ComboBox.SelectedIndex);
+            else
+                list.Add(-1);
+            if (Lane2ComboBox.SelectedItem != null && Lane2ComboBox.SelectedItem.ToString() != "")
+                list.Add(Lane2ComboBox.SelectedIndex);
+            else
+                list.Add(-1);
+            if (Lane3ComboBox.SelectedItem != null && Lane3ComboBox.SelectedItem.ToString() != "")
+                list.Add(Lane3ComboBox.SelectedIndex);
+            else
+                list.Add(-1);
+            if (Lane4ComboBox.SelectedItem != null && Lane4ComboBox.SelectedItem.ToString() != "")
+                list.Add(Lane4ComboBox.SelectedIndex);
+            else
+                list.Add(-1);
+            if (Lane5ComboBox.SelectedItem != null && Lane5ComboBox.SelectedItem.ToString() != "")
+                list.Add(Lane5ComboBox.SelectedIndex);
+            else
+                list.Add(-1);
             return list;
         }
 
-        public void LoadDataForSetUpRoadView(List<Vehicle> list)
+        public void LoadDataForSetUpRoadView(List<string> list)
         {
-            foreach(Vehicle vehicle in list)
+            foreach(string name in list)
             {
-                Lane1ComboBox.Items.Add(vehicle.Name);
-                Lane2ComboBox.Items.Add(vehicle);
-                Lane3ComboBox.Items.Add(vehicle);
-                Lane4ComboBox.Items.Add(vehicle);
-                Lane5ComboBox.Items.Add(vehicle);
+                Lane1ComboBox.Items.Add(name);
+                Lane2ComboBox.Items.Add(name);
+                Lane3ComboBox.Items.Add(name);
+                Lane4ComboBox.Items.Add(name);
+                Lane5ComboBox.Items.Add(name);
             }
-            
+            Lane1ComboBox.Items.Add("");
+            Lane2ComboBox.Items.Add("");
+            Lane3ComboBox.Items.Add("");
+            Lane4ComboBox.Items.Add("");
+            Lane5ComboBox.Items.Add("");
         }
 
         private void ApplyButton_Click(object sender, EventArgs e)
@@ -54,6 +73,78 @@ namespace TransportWF
         private void SetUpRoadView_Load(object sender, EventArgs e)
         {
             SetUpRoadLoad?.Invoke();
+        }
+
+        private void Lane1ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Lane1ComboBox.SelectedIndex == Lane2ComboBox.SelectedIndex)
+                Lane1ComboBox.ForeColor = Color.Red;
+            else if (Lane1ComboBox.SelectedIndex == Lane3ComboBox.SelectedIndex)
+                Lane1ComboBox.ForeColor = Color.Red;
+            else if (Lane1ComboBox.SelectedIndex == Lane4ComboBox.SelectedIndex)
+                Lane1ComboBox.ForeColor = Color.Red;
+            else if (Lane1ComboBox.SelectedIndex == Lane5ComboBox.SelectedIndex)
+                Lane1ComboBox.ForeColor = Color.Red;
+            else
+                Lane1ComboBox.ForeColor = Color.Gray;
+        }
+
+        private void Lane2ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Lane2ComboBox.SelectedIndex == Lane1ComboBox.SelectedIndex)
+                Lane2ComboBox.ForeColor = Color.Red;
+            else if (Lane2ComboBox.SelectedIndex == Lane3ComboBox.SelectedIndex)
+                Lane2ComboBox.ForeColor = Color.Red;
+            else if (Lane2ComboBox.SelectedIndex == Lane4ComboBox.SelectedIndex)
+                Lane2ComboBox.ForeColor = Color.Red;
+            else if (Lane2ComboBox.SelectedIndex == Lane5ComboBox.SelectedIndex)
+                Lane2ComboBox.ForeColor = Color.Red;
+            else
+                Lane2ComboBox.ForeColor = Color.Gray;
+        }
+
+        private void Lane3ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Lane3ComboBox.SelectedIndex == Lane2ComboBox.SelectedIndex)
+                Lane3ComboBox.ForeColor = Color.Red;
+            else if (Lane3ComboBox.SelectedIndex == Lane1ComboBox.SelectedIndex)
+                Lane3ComboBox.ForeColor = Color.Red;
+            else if (Lane3ComboBox.SelectedIndex == Lane4ComboBox.SelectedIndex)
+                Lane3ComboBox.ForeColor = Color.Red;
+            else if (Lane1ComboBox.SelectedIndex == Lane5ComboBox.SelectedIndex)
+                Lane3ComboBox.ForeColor = Color.Red;
+            else
+                Lane3ComboBox.ForeColor = Color.Gray;
+
+        }
+
+        private void Lane4ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Lane4ComboBox.SelectedIndex == Lane2ComboBox.SelectedIndex)
+                Lane4ComboBox.ForeColor = Color.Red;
+            else if (Lane4ComboBox.SelectedIndex == Lane3ComboBox.SelectedIndex)
+                Lane4ComboBox.ForeColor = Color.Red;
+            else if (Lane4ComboBox.SelectedIndex == Lane1ComboBox.SelectedIndex)
+                Lane4ComboBox.ForeColor = Color.Red;
+            else if (Lane4ComboBox.SelectedIndex == Lane5ComboBox.SelectedIndex)
+                Lane4ComboBox.ForeColor = Color.Red;
+            else
+                Lane4ComboBox.ForeColor = Color.Gray;
+
+        }
+
+        private void Lane5ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Lane5ComboBox.SelectedIndex == Lane2ComboBox.SelectedIndex)
+                Lane5ComboBox.ForeColor = Color.Red;
+            else if (Lane5ComboBox.SelectedIndex == Lane3ComboBox.SelectedIndex)
+                Lane5ComboBox.ForeColor = Color.Red;
+            else if (Lane5ComboBox.SelectedIndex == Lane4ComboBox.SelectedIndex)
+                Lane5ComboBox.ForeColor = Color.Red;
+            else if (Lane1ComboBox.SelectedIndex == Lane1ComboBox.SelectedIndex)
+                Lane5ComboBox.ForeColor = Color.Red;
+            else
+                Lane5ComboBox.ForeColor = Color.Gray;
         }
     }
 }
