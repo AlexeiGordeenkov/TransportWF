@@ -145,7 +145,7 @@ namespace TransportWF
 
         public void MoveCarPointer(int index,int x)
         {
-            listOfCarPointers[index].Location = new Point(x + ScrollBar.Location.X + 17, listOfCarPointers[index].Location.Y);
+            listOfCarPointers[index].Location = new Point((int)((double)x/500f*((double)ScrollBar.Size.Width-17*2)) + ScrollBar.Location.X + 17, listOfCarPointers[index].Location.Y);
             listOfCarPointers[index].Update();
         }
     }
