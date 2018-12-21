@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Model
         public string Name { get; set; }
         public string PathToPictures { get; set; }
         public double MaxSpeed { get; set; }
+        public double StopPoint { get; set; }
         protected double BrakingDistances { get; set; }
         public double Acceleration { get; set; }
         public double StartSpeed { get; set; }
@@ -20,7 +22,9 @@ namespace Model
         public double StartCoordinate { get; set; }
         public DateTime StartTime { get; set; }
         public bool ReachedMaxSpeed { get; set; }
-
+        public List<ArrayList> log;
+        public double LastLogCoordinate { get; set; }
+        public bool Finished { get; set; }
 
         //methods
         abstract public void Start();
@@ -30,6 +34,16 @@ namespace Model
         abstract public double GetMaxDistance();
         abstract public double GetAcceleratingDistance();
 
+        protected void Init()
+        {
+            SetStopPoint();
+            SetAcceleration();
+            Finished = false;
+        }
+        protected void SetStopPoint()
+        {
+            StopPoint = StartCoordinate + GetMaxDistance();
+        }
         protected void SetAcceleration()
         {
             double t = GetMaxDistance() > GetAcceleratingDistance() ? GetAcceleratingDistance() : GetMaxDistance();

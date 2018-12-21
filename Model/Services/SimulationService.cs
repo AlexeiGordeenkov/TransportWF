@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using Ninject;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace Model.Services
 {
@@ -27,6 +28,17 @@ namespace Model.Services
             _kernel = kernel;
         }
 
+        private void CreateLog(Vehicle vehicle,string mess)
+        {
+            var t = new ArrayList();
+            t.Add(DateTime.Now);
+            t.Add(vehicle.CurrentCoordinate);
+            t.Add(vehicle.CurentSpeed);
+            t.Add(mess);
+            vehicle.log.Add(t);//Записываем первый лог
+            vehicle.LastLogCoordinate = vehicle.CurrentCoordinate;
+        }
+
         public void StartSimulation()
         {
             if (firstStart)
@@ -36,6 +48,8 @@ namespace Model.Services
                 foreach (var item in listOFMovingVehicles)
                 {
                     item.StartTime = DateTime.Now;
+                    item.log = new List<ArrayList>();
+                    CreateLog(item,"FirstStart");
                 }
                 simulationThread = new Thread(Simulate);
                 simulationThread.Start();
@@ -49,6 +63,7 @@ namespace Model.Services
                     {
                         item.StartTime = DateTime.Now;
                         item.StartCoordinate = item.CurrentCoordinate;
+                        CreateLog(item, "Resume");
                     }
                     simulationThread.Resume();
                     simulationInProces = true;
@@ -61,24 +76,42 @@ namespace Model.Services
             {       
                 foreach (var vehicle in listOFMovingVehicles)
                 {
-                    if (!vehicle.ReachedMaxSpeed)
+                    if (vehicle.CurrentCoordinate - vehicle.LastLogCoordinate >= 50)
                     {
-                        if (vehicle.StartSpeed + vehicle.GetTimeFromStart() * vehicle.Acceleration > vehicle.MaxSpeed)
+                        CreateLog(vehicle, "50 километров проехал");
+                    }
+                    if (vehicle.CurrentCoordinate < vehicle.StopPoint)
+                    {
+                        if (!vehicle.ReachedMaxSpeed)
                         {
-                            vehicle.ReachedMaxSpeed = true;
-                            vehicle.StartCoordinate = vehicle.CurrentCoordinate;
-                            vehicle.StartTime = DateTime.Now;
-                            vehicle.StartSpeed = vehicle.MaxSpeed;
+                            if (vehicle.StartSpeed + vehicle.GetTimeFromStart() * vehicle.Acceleration > vehicle.MaxSpeed)
+                            {
+                                vehicle.ReachedMaxSpeed = true;
+                                vehicle.StartCoordinate = vehicle.CurrentCoordinate;
+                                vehicle.StartTime = DateTime.Now;
+                                vehicle.StartSpeed = vehicle.MaxSpeed;
+                                vehicle.CurentSpeed = vehicle.MaxSpeed;
+                            }
+                        }
+                        double t = ((double)vehicle.GetTimeFromStart());
+                        if (!vehicle.ReachedMaxSpeed)
+                        {
+                            vehicle.CurrentCoordinate = vehicle.StartCoordinate + vehicle.StartSpeed * t + (vehicle.Acceleration / 2) * t * t;
+                            vehicle.CurentSpeed = vehicle.Acceleration * t + vehicle.StartSpeed; ;
+                        }
+                        else
+                        {
+                            vehicle.CurrentCoordinate = vehicle.StartCoordinate + vehicle.StartSpeed * t;
                         }
                     }
-                    double t = ((double)vehicle.GetTimeFromStart());
-                    if (!vehicle.ReachedMaxSpeed)
-                    {
-                        vehicle.CurrentCoordinate = vehicle.StartCoordinate + vehicle.StartSpeed * t + (vehicle.Acceleration/2)*t*t;
-                    }
                     else
-                    {                        
-                        vehicle.CurrentCoordinate = vehicle.StartCoordinate + vehicle.StartSpeed *t;
+                    {
+                        if (!vehicle.Finished)
+
+                        {
+                            CreateLog(vehicle, "Finish");
+                            vehicle.Finished = true;
+                        }
                     }
                 }
                 Draw?.Invoke();
@@ -93,9 +126,11 @@ namespace Model.Services
             foreach (var vehicle in listOFMovingVehicles)
             {
                 vehicle.StartSpeed = 0;
+                vehicle.CurentSpeed = 0;
                 vehicle.StartCoordinate = vehicle.CurrentCoordinate;
                 vehicle.ReachedMaxSpeed = false;
                 vehicle.ResetAcceleration();
+                CreateLog(vehicle, "StopAll");
             }
         }
 

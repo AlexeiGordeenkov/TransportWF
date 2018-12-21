@@ -15,17 +15,7 @@ namespace Model
             this.Name = name;
             this.StartSpeed = startingSpeed;
             this.MaxSpeed = maxSpeed;
-            SetAcceleration();
-        }
-
-        public override double GetAcceleratingDistance()
-        {
-            return 1;
-        }
-
-        public override double GetMaxDistance()
-        {
-            return 500f - StartCoordinate;
+            Init();
         }
 
         public override void SaveDate()

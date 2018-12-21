@@ -18,17 +18,12 @@ namespace Model
             this.StartSpeed = startSpeed;
             this.TankCapacity = tankCapacity;
             this.FuelConsumption = fuelConsumption;
-            SetAcceleration();
+            Init();
         }
 
         public override double GetAcceleratingDistance()
         {
-            return 3;
-        }
-
-        public override double GetMaxDistance()
-        {
-            return TankCapacity / FuelConsumption;
+            return 1;
         }
 
         public override void SaveDate()
