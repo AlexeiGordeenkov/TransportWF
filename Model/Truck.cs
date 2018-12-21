@@ -8,7 +8,6 @@ namespace Model
 {
     public class Truck : MotorVehicle
     {
-        public static string TYPE = "Грузовик";
         public Truck(string name, Fuel fuel, double maxSpeed, double startSpeed, double tankCapacity, double fuelConsumption)
         {
             this.Name = name;
@@ -17,6 +16,19 @@ namespace Model
             this.StartSpeed = startSpeed;
             this.TankCapacity = tankCapacity;
             this.FuelConsumption = fuelConsumption;
+        }
+
+        public override Vehicle Clone()
+        {
+            Truck copy = new Truck(Name, Fuel, MaxSpeed, StartSpeed, TankCapacity, FuelConsumption);
+            copy.CurrentCoordinate = CurrentCoordinate;
+            copy.BrakingDistances = BrakingDistances;
+            copy.CurentSpeed = CurentSpeed;
+            copy.Acceleration = Acceleration;
+            copy.StartCoordinate = StartCoordinate;
+            copy.StartTime = StartTime;
+            copy.ReachedMaxSpeed = ReachedMaxSpeed;
+            return copy;
         }
 
         public override double GetAcceleratingDistance()
@@ -49,9 +61,6 @@ namespace Model
             throw new NotImplementedException();
         }
 
-        public override string ToString()
-        {
-            return TYPE;
-        }
+        
     }
 }

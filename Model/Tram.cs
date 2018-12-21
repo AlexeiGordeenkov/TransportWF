@@ -47,5 +47,19 @@ namespace Model
         {
             throw new NotImplementedException();
         }
+        public override Vehicle Clone()
+        {
+            Tram copy = new Tram(Name, MaxSpeed, StartSpeed)
+            {
+                CurrentCoordinate = CurrentCoordinate,
+                BrakingDistances = BrakingDistances,
+                CurentSpeed = CurentSpeed,
+                Acceleration = Acceleration,
+                StartCoordinate = StartCoordinate,
+                StartTime = StartTime,
+                ReachedMaxSpeed = ReachedMaxSpeed
+            };
+            return copy;
+        }
     }
 }

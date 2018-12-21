@@ -47,6 +47,8 @@ namespace Model
             return (double)differensTime.TotalMilliseconds/3600000f;
         }
 
+        public abstract Vehicle Clone();
+
         public override string ToString()
         {
             return Name;
