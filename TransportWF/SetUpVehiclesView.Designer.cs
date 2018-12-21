@@ -100,6 +100,8 @@
             this.Controls.Add(this.AddMuscleVehicleButton);
             this.Controls.Add(this.AddVehicleButton);
             this.Controls.Add(this.AddHorseDrawnVehicleButton);
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "SetUpVehiclesView";
             this.Text = "SetUpVehiclesView";
             this.ResumeLayout(false);

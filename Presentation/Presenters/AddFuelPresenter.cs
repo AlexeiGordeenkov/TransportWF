@@ -28,7 +28,6 @@ namespace Presentation.Presenters
 
         private void AddFuelViewLoad()
         {
-           
             _view.ShowListFuel(_service.GetListNameFuel());
         }
 
@@ -45,11 +44,8 @@ namespace Presentation.Presenters
                 _view.ShowMessage("такой вид топлива уже существует");
             }
 
-
-                
-           
-            
             _view.ShowListFuel(_service.GetListNameFuel());
+            _view.Close();
         }
 
         public void Run()

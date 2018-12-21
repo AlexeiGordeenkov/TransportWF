@@ -75,10 +75,10 @@
             // 
             // GooBackSetUpVihiclesViewButton
             // 
-            this.GooBackSetUpVihiclesViewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GooBackSetUpVihiclesViewButton.Location = new System.Drawing.Point(552, 313);
+            this.GooBackSetUpVihiclesViewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.GooBackSetUpVihiclesViewButton.Location = new System.Drawing.Point(654, 385);
             this.GooBackSetUpVihiclesViewButton.Name = "GooBackSetUpVihiclesViewButton";
-            this.GooBackSetUpVihiclesViewButton.Size = new System.Drawing.Size(186, 65);
+            this.GooBackSetUpVihiclesViewButton.Size = new System.Drawing.Size(134, 53);
             this.GooBackSetUpVihiclesViewButton.TabIndex = 3;
             this.GooBackSetUpVihiclesViewButton.Text = "Назад";
             this.GooBackSetUpVihiclesViewButton.UseVisualStyleBackColor = true;
@@ -93,6 +93,8 @@
             this.Controls.Add(this.PanzerTypeButton);
             this.Controls.Add(this.TrukTypeButton);
             this.Controls.Add(this.CarTypeButton);
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "AddMotorVehicleTypeSelectionView";
             this.Text = "AddMotorVehicleTypeSelectionView";
             this.ResumeLayout(false);

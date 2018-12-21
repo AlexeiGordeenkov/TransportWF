@@ -116,7 +116,7 @@
             // ApplyButton
             // 
             this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.ApplyButton.Location = new System.Drawing.Point(534, 367);
+            this.ApplyButton.Location = new System.Drawing.Point(516, 368);
             this.ApplyButton.Name = "ApplyButton";
             this.ApplyButton.Size = new System.Drawing.Size(131, 35);
             this.ApplyButton.TabIndex = 12;
