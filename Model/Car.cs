@@ -11,13 +11,24 @@ namespace Model
       
         public Car(string name, Fuel fuel, double maxSpeed, double startSpeed, double tankCapacity, double fuelConsumption )
         {
-            PathToPictures = "@Resourse\\CarIcon.png";
+            PathToPictures = System.IO.Directory.GetCurrentDirectory() + "\\Resources\\CarIcon.png";
             this.Name = name;
-            this.fuel = fuel;
+            this.Fuel = fuel;
             this.MaxSpeed = maxSpeed;
             this.StartSpeed = startSpeed;
-            this.tankCapacity = tankCapacity;
-            this.fuelConsumption = fuelConsumption;
+            this.TankCapacity = tankCapacity;
+            this.FuelConsumption = fuelConsumption;
+            SetAcceleration();
+        }
+
+        public override double GetAcceleratingDistance()
+        {
+            return 3;
+        }
+
+        public override double GetMaxDistance()
+        {
+            return TankCapacity / FuelConsumption;
         }
 
         public override void SaveDate()

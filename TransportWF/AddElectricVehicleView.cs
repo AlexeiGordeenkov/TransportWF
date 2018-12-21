@@ -20,7 +20,7 @@ namespace TransportWF
 
         public event Action AddVehicle;
 
-        public void GetData(out string name, out string maxSpeed, out string startingSpeed)
+        public void GetData(out string name,  out string startingSpeed, out string maxSpeed)
         {
             name = NameTextBox.Text;
             maxSpeed = MaxSpeedTextBox.Text;

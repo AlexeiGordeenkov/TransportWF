@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransportView));
             this.RailsForLine4 = new System.Windows.Forms.PictureBox();
             this.RailsForLine3 = new System.Windows.Forms.PictureBox();
@@ -51,6 +52,12 @@
             this.WiresForLine1 = new System.Windows.Forms.PictureBox();
             this.TempLabel = new System.Windows.Forms.Label();
             this.ScrollBar = new System.Windows.Forms.HScrollBar();
+            this.Vehicle1 = new System.Windows.Forms.PictureBox();
+            this.Vehicle2 = new System.Windows.Forms.PictureBox();
+            this.Vehicle3 = new System.Windows.Forms.PictureBox();
+            this.Vehicle4 = new System.Windows.Forms.PictureBox();
+            this.Vehicle5 = new System.Windows.Forms.PictureBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine2)).BeginInit();
@@ -67,6 +74,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.WiresForLine3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WiresForLine2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WiresForLine1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle5)).BeginInit();
             this.SuspendLayout();
             // 
             // RailsForLine4
@@ -296,12 +308,63 @@
             this.ScrollBar.TabIndex = 21;
             this.ScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ScrollBar_Scroll);
             // 
+            // Vehicle1
+            // 
+            this.Vehicle1.Location = new System.Drawing.Point(1, 121);
+            this.Vehicle1.Name = "Vehicle1";
+            this.Vehicle1.Size = new System.Drawing.Size(70, 52);
+            this.Vehicle1.TabIndex = 22;
+            this.Vehicle1.TabStop = false;
+            // 
+            // Vehicle2
+            // 
+            this.Vehicle2.Location = new System.Drawing.Point(1, 183);
+            this.Vehicle2.Name = "Vehicle2";
+            this.Vehicle2.Size = new System.Drawing.Size(70, 52);
+            this.Vehicle2.TabIndex = 23;
+            this.Vehicle2.TabStop = false;
+            // 
+            // Vehicle3
+            // 
+            this.Vehicle3.Location = new System.Drawing.Point(1, 241);
+            this.Vehicle3.Name = "Vehicle3";
+            this.Vehicle3.Size = new System.Drawing.Size(70, 52);
+            this.Vehicle3.TabIndex = 24;
+            this.Vehicle3.TabStop = false;
+            // 
+            // Vehicle4
+            // 
+            this.Vehicle4.Location = new System.Drawing.Point(1, 301);
+            this.Vehicle4.Name = "Vehicle4";
+            this.Vehicle4.Size = new System.Drawing.Size(70, 52);
+            this.Vehicle4.TabIndex = 25;
+            this.Vehicle4.TabStop = false;
+            // 
+            // Vehicle5
+            // 
+            this.Vehicle5.Location = new System.Drawing.Point(1, 365);
+            this.Vehicle5.Name = "Vehicle5";
+            this.Vehicle5.Size = new System.Drawing.Size(70, 52);
+            this.Vehicle5.TabIndex = 26;
+            this.Vehicle5.TabStop = false;
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // TransportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 529);
+            this.Controls.Add(this.Vehicle5);
+            this.Controls.Add(this.Vehicle4);
+            this.Controls.Add(this.Vehicle3);
+            this.Controls.Add(this.Vehicle2);
+            this.Controls.Add(this.Vehicle1);
             this.Controls.Add(this.ScrollBar);
             this.Controls.Add(this.TempLabel);
             this.Controls.Add(this.RailsForLine4);
@@ -343,6 +406,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.WiresForLine3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WiresForLine2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WiresForLine1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,6 +440,12 @@
         private System.Windows.Forms.PictureBox WiresForLine1;
         private System.Windows.Forms.Label TempLabel;
         private System.Windows.Forms.HScrollBar ScrollBar;
+        public System.Windows.Forms.PictureBox Vehicle1;
+        public System.Windows.Forms.PictureBox Vehicle2;
+        public System.Windows.Forms.PictureBox Vehicle3;
+        public System.Windows.Forms.PictureBox Vehicle4;
+        public System.Windows.Forms.PictureBox Vehicle5;
+        private System.Windows.Forms.Timer timer;
     }
 }
 

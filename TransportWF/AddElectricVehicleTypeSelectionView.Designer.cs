@@ -35,11 +35,11 @@
             // 
             // addTramButton
             // 
-            this.addTramButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addTramButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.addTramButton.Image = global::TransportWF.Properties.Resources.TramIcon;
-            this.addTramButton.Location = new System.Drawing.Point(423, 61);
+            this.addTramButton.Location = new System.Drawing.Point(447, 97);
             this.addTramButton.Name = "addTramButton";
-            this.addTramButton.Size = new System.Drawing.Size(210, 167);
+            this.addTramButton.Size = new System.Drawing.Size(186, 132);
             this.addTramButton.TabIndex = 1;
             this.addTramButton.Text = "Трамвай";
             this.addTramButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -48,11 +48,11 @@
             // 
             // addTroleyBusButton
             // 
-            this.addTroleyBusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addTroleyBusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.addTroleyBusButton.Image = global::TransportWF.Properties.Resources.TroleyBus;
-            this.addTroleyBusButton.Location = new System.Drawing.Point(72, 61);
+            this.addTroleyBusButton.Location = new System.Drawing.Point(66, 97);
             this.addTroleyBusButton.Name = "addTroleyBusButton";
-            this.addTroleyBusButton.Size = new System.Drawing.Size(199, 167);
+            this.addTroleyBusButton.Size = new System.Drawing.Size(186, 132);
             this.addTroleyBusButton.TabIndex = 0;
             this.addTroleyBusButton.Text = "Троллейбус";
             this.addTroleyBusButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -62,9 +62,9 @@
             // GoBackToSetUpVehicleViewButton
             // 
             this.GoBackToSetUpVehicleViewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GoBackToSetUpVehicleViewButton.Location = new System.Drawing.Point(423, 278);
+            this.GoBackToSetUpVehicleViewButton.Location = new System.Drawing.Point(447, 298);
             this.GoBackToSetUpVehicleViewButton.Name = "GoBackToSetUpVehicleViewButton";
-            this.GoBackToSetUpVehicleViewButton.Size = new System.Drawing.Size(210, 77);
+            this.GoBackToSetUpVehicleViewButton.Size = new System.Drawing.Size(186, 65);
             this.GoBackToSetUpVehicleViewButton.TabIndex = 2;
             this.GoBackToSetUpVehicleViewButton.Text = "Назад";
             this.GoBackToSetUpVehicleViewButton.UseVisualStyleBackColor = true;

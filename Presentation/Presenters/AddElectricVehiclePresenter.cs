@@ -36,10 +36,10 @@ namespace Presentation.Presenters
             string maxSpeed;
             string startSpeed;
             string message = "";
-            _view.GetData(out name, out maxSpeed, out startSpeed);
+            _view.GetData(out name, out startSpeed, out maxSpeed);
             if (_verificatinService.VerificationDataForElectricVehicle(name, maxSpeed, startSpeed, ref message))
             {
-                ElectricVehicle motorVehicle = _creator.Creator(name, Double.Parse(maxSpeed), Double.Parse(startSpeed));
+                ElectricVehicle motorVehicle = _creator.Creator(name,  Double.Parse(startSpeed), Double.Parse(maxSpeed));
                 Vehicle vehicle = motorVehicle;
                 _transportService.AddVehicle(vehicle);
             }
@@ -47,7 +47,7 @@ namespace Presentation.Presenters
             {
                 _view.ShowMessage(message);
             }
-
+            _view.Close();
         }
 
 

@@ -13,6 +13,17 @@ namespace Model
             Name = name;
             StartSpeed = startingSpeed;
             MaxSpeed = maxSpeed;
+            SetAcceleration();
+        }
+
+        public override double GetAcceleratingDistance()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override double GetMaxDistance()
+        {
+            throw new NotImplementedException();
         }
 
         public override void SaveDate()

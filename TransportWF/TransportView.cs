@@ -17,10 +17,11 @@ namespace TransportWF
         {
             InitializeComponent();
             listOfVehicles = new List<PictureBox>();
-            for(int i = 0; i < 5; i++)
-            {
-                listOfVehicles.Add(new PictureBox());
-            }
+            listOfVehicles.Add(Vehicle1);
+            listOfVehicles.Add(Vehicle2);
+            listOfVehicles.Add(Vehicle3);
+            listOfVehicles.Add(Vehicle4);
+            listOfVehicles.Add(Vehicle5);
         }
 
         public event Action SetUp;
@@ -29,6 +30,7 @@ namespace TransportWF
         public event Action StopSimulation;
         public  event EventHandler<ScrollEventArgs> Scroll;
         public event Action ViewLoad;
+        public event Action Tick;
 
         string _s;
 
@@ -44,7 +46,10 @@ namespace TransportWF
 
         private void StartButton_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+>>>>>>> e9047f46b5f7107910a9d1b6824a75278a4e35de
             StartSimulation?.Invoke();
         }
 
@@ -70,11 +75,10 @@ namespace TransportWF
         public List<int> GetYCoordinatesOfLanes()
         {
            List<int> l = new List<int>(5);
-            l.Add(RailsForLine1.Location.Y);
-            l.Add(RailsForLine2.Location.Y);
-            l.Add(RailsForLine3.Location.Y);
-            l.Add(RailsForLine4.Location.Y);
-            l.Add(RailsForLine5.Location.Y);
+            foreach (var item in listOfVehicles)
+            {
+                l.Add(item.Location.Y);
+            }
             return l;
         }
 
@@ -88,11 +92,13 @@ namespace TransportWF
             return Size.Width;
         }
 
-        public void DrawCar(int index,string pathToImage, int xCoordinate, int yCoordinate)
+        public void DrawCar(int index,string pathToImage, int _xCoordinate, int _yCoordinate)
         {
+            int xCoordinate = _xCoordinate;
+            int yCoordinate = _yCoordinate;
            if(pathToImage!=null)
             {
-                listOfVehicles[index].Image = new Bitmap(pathToImage);
+                listOfVehicles[index].Image =(Bitmap)Image.FromFile(pathToImage);
                 listOfVehicles[index].Location = new Point(xCoordinate, yCoordinate);
                 listOfVehicles[index].Visible = true;
                 listOfVehicles[index].BringToFront();
@@ -103,10 +109,33 @@ namespace TransportWF
             }
         }
 
-        public void MoveCar(int index, int xCoordinate, int yCoordinate)
+        public void MoveCar(int index, int _xCoordinate, int _yCoordinate)
         {
+            int xCoordinate = _xCoordinate;
+            int yCoordinate = _yCoordinate;
             listOfVehicles[index].Location = new Point(xCoordinate, yCoordinate);
-            
+            listOfVehicles[index].Visible = true;
+            listOfVehicles[index].Update();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            Tick?.Invoke();
+        }
+
+        public void StartTimer()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void StopTimer()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void HideCar(int index)
+        {
+            listOfVehicles[index].Visible = false;
         }
     }
 }
