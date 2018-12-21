@@ -18,16 +18,6 @@ namespace Model
             SetAcceleration();
         }
 
-        public override double GetAcceleratingDistance()
-        {
-            return 1;
-        }
-
-        public override double GetMaxDistance()
-        {
-            return 500f - StartCoordinate;
-        }
-
         public override void SaveDate()
         {
             throw new NotImplementedException();
