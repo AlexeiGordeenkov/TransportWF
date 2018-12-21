@@ -15,7 +15,7 @@ namespace Presentation.Presenters
         private readonly IKernel _kernel;
         private readonly IAddMotorVehicleView _view;
         private readonly ITransportService _transportService;
-        private readonly IFuelService  _fuelService;
+        private readonly IFuelService _fuelService;
         private readonly IVerificationDataForMotorVehicleService _verificatinService;
         private ICreatorMotorVehicle _creator;
 
@@ -46,8 +46,8 @@ namespace Presentation.Presenters
             string tankCapacity;
             string fuelConsumption;
             string message = "";
-            _view.GetData(out name, out index,  out maxSpeed, out startSpeed, out tankCapacity, out fuelConsumption);
-            if(_verificatinService.VerificationDataForMotorVehicle(name, maxSpeed, startSpeed, tankCapacity, fuelConsumption, ref message))
+            _view.GetData(out name, out index, out maxSpeed, out startSpeed, out tankCapacity, out fuelConsumption);
+            if (_verificatinService.VerificationDataForMotorVehicle(name, maxSpeed, startSpeed, tankCapacity, fuelConsumption, ref message))
             {
                 Fuel fuel = _fuelService.GetFuelFromList(Int32.Parse(index));
                 MotorVehicle motorVehicle = _creator.Creator(name, fuel, Double.Parse(maxSpeed), Double.Parse(startSpeed), Double.Parse(tankCapacity), Double.Parse(fuelConsumption));
@@ -59,9 +59,8 @@ namespace Presentation.Presenters
                 _view.ShowMessage(message);
             }
             _view.Close();
-  
         }
-        
+
 
         public void Run(ICreatorMotorVehicle creator)
         {

@@ -23,6 +23,7 @@ namespace TransportWF
         public event Action AddMuscleVehicle;
         public event Action AddMotorVehicle;
         public event Action AddElectricVehicle;
+        public event Action Home;
 
         private void GoBackToSetUpViewButton_Click(object sender, EventArgs e)
         {
@@ -49,6 +50,9 @@ namespace TransportWF
             AddElectricVehicle?.Invoke();
         }
 
-        
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            Home?.Invoke();
+        }
     }
 }

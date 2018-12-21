@@ -13,5 +13,6 @@ namespace Presentation
         event Action SetUpRoad;
         event Action AddFuelInList;
         event Action GoBackToTransportView;
+        event Action Home;
     }
 }

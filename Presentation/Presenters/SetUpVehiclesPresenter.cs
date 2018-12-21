@@ -26,6 +26,13 @@ namespace Presentation
             _view.AddMotorVehicle += AddMotorVehicle;
             _view.GoBackToSetUpView += GoBackToSetUpView;
             _view.AddElectricVehicle += AddElectricVehicle;
+            _view.Home += GoHome;
+        }
+
+        private void GoHome()
+        {
+            _view.Close();
+            _kernel.Get<TransportPresenter>().Run();
         }
 
         private void AddElectricVehicle()

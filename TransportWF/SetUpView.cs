@@ -23,6 +23,7 @@ namespace TransportWF
         public event Action SetUpRoad;
         public event Action GoBackToTransportView;
         public event Action AddFuelInList;
+        public event Action Home;
 
         private void SetUpVehiclesButton_Click(object sender, EventArgs e)
         {
@@ -42,6 +43,11 @@ namespace TransportWF
         private void AddFuelInList_Click(object sender, EventArgs e)
         {
             AddFuelInList?.Invoke();
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            Home?.Invoke();
         }
     }
 }

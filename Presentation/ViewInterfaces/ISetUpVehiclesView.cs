@@ -13,5 +13,6 @@ namespace Presentation
         event Action AddMuscleVehicle;
         event Action AddMotorVehicle;
         event Action AddElectricVehicle;
+        event Action Home;
     }
 }
