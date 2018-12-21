@@ -302,10 +302,12 @@
             this.ScrollBar.Cursor = System.Windows.Forms.Cursors.Default;
             this.ScrollBar.Location = new System.Drawing.Point(33, 450);
             this.ScrollBar.Maximum = 500;
+            this.ScrollBar.Minimum = 1;
             this.ScrollBar.Name = "ScrollBar";
             this.ScrollBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ScrollBar.Size = new System.Drawing.Size(724, 17);
             this.ScrollBar.TabIndex = 21;
+            this.ScrollBar.Value = 1;
             this.ScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ScrollBar_Scroll);
             // 
             // Vehicle1
