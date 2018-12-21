@@ -64,7 +64,7 @@ namespace Model.Services
                 {
                     if (!vehicle.ReachedMaxSpeed)
                     {
-                        if (vehicle.StartSpeed + vehicle.GetTimeFromStart() * vehicle.Acceleration > vehicle.MaxSpeed)
+                        if (vehicle.StartSpeed + vehicle.GetTimeFromStart()/divider * vehicle.Acceleration > vehicle.MaxSpeed)
                         {
                             vehicle.ReachedMaxSpeed = true;
                             vehicle.StartCoordinate = vehicle.CurrentCoordinate;
@@ -83,7 +83,6 @@ namespace Model.Services
                     }
                 }
                 Draw?.Invoke();
-                System.Threading.Thread.Sleep(100);
             }
         }
 

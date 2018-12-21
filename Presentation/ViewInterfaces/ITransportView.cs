@@ -14,11 +14,14 @@ namespace Presentation
         event Action StartSimulation;
         event Action StopSimulation;
         event Action ViewLoad;
+        event Action Tick;
         event EventHandler<ScrollEventArgs> Scroll;
         void WriteTempLabel(string s);
         List<int> GetYCoordinatesOfLanes();
         int GetWidth();
         void DrawCar(int index,string pathToImage, int xCoordinate, int yCoordinate);
         void MoveCar(int index, int xCoordinate, int yCoordinate);
+        void StartTimer();
+        void StopTimer();
     }
 }

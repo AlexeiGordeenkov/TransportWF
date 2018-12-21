@@ -16,6 +16,7 @@ namespace Presentation
 
         private int currentKilometr;
         private List<int> YCoordinatesOfLanes { get; set; }
+        private bool draw = false;
     
         public TransportPresenter(IKernel kernel, ITransportView view, ITransportService transportService, ISimulationService simulationService)
         {
@@ -30,7 +31,13 @@ namespace Presentation
             _view.StopSimulation += StopSimulation;
             _view.Scroll += Scroll;
             _view.ViewLoad += ViewLoad;
-            _simulationService.Draw += Draw;
+            _view.Tick += Draw;
+            _simulationService.Draw += SetDraw;
+        }
+
+        private void SetDraw()
+        {
+            draw = true;
         }
 
         private void ViewLoad()
@@ -54,7 +61,6 @@ namespace Presentation
         private void Scroll(object sender, System.Windows.Forms.ScrollEventArgs e)
         {
             currentKilometr = e.NewValue;
-            Draw();
         }
 
         private void SetUp()
@@ -74,22 +80,25 @@ namespace Presentation
 
         private void Draw()//Рисует наше перемещение машин.
         {
+            if (!draw) return;
             for (int i = 0; i< 5; i++)
             {
                 var vehicle = _kernel.Get<IRoadService>().GetVehicleFromLane(i);
                 if (vehicle != null)
                 {
-                    if((vehicle.CurrentCoordinate< currentKilometr) && (vehicle.CurrentCoordinate > currentKilometr - 1))//Если машина находится в отображаемом километре
+                    if((vehicle.CurrentCoordinate< currentKilometr) && (vehicle.CurrentCoordinate >= currentKilometr - 1))//Если машина находится в отображаемом километре
                     {
-                        int x = (int)((double)currentKilometr - vehicle.CurrentCoordinate) * _view.GetWidth();
+                        int x = (int)((1f - (double)currentKilometr + vehicle.CurrentCoordinate) * (double)_view.GetWidth());
                         _view.MoveCar(i, x, YCoordinatesOfLanes[i]);
                     }
                 }
             }
+            draw = false;
         }
 
         public void Run()
         {
+            ViewLoad();
             _view.Show();
         }
     }
