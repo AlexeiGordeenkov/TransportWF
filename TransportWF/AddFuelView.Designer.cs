@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ErrorLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.AddFuelButton = new System.Windows.Forms.Button();
             this.ListFuelTextBox = new System.Windows.Forms.TextBox();
             this.NewFuelTextBox = new System.Windows.Forms.TextBox();
-            this.ErrorLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,23 +53,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(305, 378);
             this.panel1.TabIndex = 0;
-  
+            // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.AutoSize = true;
+            this.ErrorLabel.Location = new System.Drawing.Point(71, 74);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(0, 13);
+            this.ErrorLabel.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 108);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label2.Location = new System.Drawing.Point(46, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 13);
+            this.label2.Size = new System.Drawing.Size(205, 17);
             this.label2.TabIndex = 4;
-            this.label2.Text = "имеющееся в списке топливо";
+            this.label2.Text = "Имеющееся в списке топливо";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 22);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label1.Location = new System.Drawing.Point(10, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 13);
+            this.label1.Size = new System.Drawing.Size(292, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Введите топливо которое хотите добавить";
             // 
@@ -97,14 +106,6 @@
             this.NewFuelTextBox.Name = "NewFuelTextBox";
             this.NewFuelTextBox.Size = new System.Drawing.Size(216, 20);
             this.NewFuelTextBox.TabIndex = 0;
-            // 
-            // ErrorLabel
-            // 
-            this.ErrorLabel.AutoSize = true;
-            this.ErrorLabel.Location = new System.Drawing.Point(71, 74);
-            this.ErrorLabel.Name = "ErrorLabel";
-            this.ErrorLabel.Size = new System.Drawing.Size(0, 13);
-            this.ErrorLabel.TabIndex = 5;
             // 
             // AddFuelView
             // 

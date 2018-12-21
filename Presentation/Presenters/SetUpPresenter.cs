@@ -23,6 +23,7 @@ namespace Presentation
             _view.SetUpVehicles += SetUpVehicles;
             _view.SetUpRoad += SetUpRoad;
             _view.GoBackToTransportView += GoBackToTransportView;
+            _view.Home += GoBackToTransportView;
             _view.AddFuelInList += AddFuelInList;
         }
 

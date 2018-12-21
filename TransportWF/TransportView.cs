@@ -12,6 +12,7 @@ namespace TransportWF
     {
 
         private List<PictureBox> listOfVehicles;
+        private List<PictureBox> listOfCarPointers;
 
         public TransportView()
         {
@@ -22,6 +23,12 @@ namespace TransportWF
             listOfVehicles.Add(Vehicle3);
             listOfVehicles.Add(Vehicle4);
             listOfVehicles.Add(Vehicle5);
+            listOfCarPointers = new List<PictureBox>();
+            listOfCarPointers.Add(CarPointer1);
+            listOfCarPointers.Add(CarPointer2);
+            listOfCarPointers.Add(CarPointer3);
+            listOfCarPointers.Add(CarPointer4);
+            listOfCarPointers.Add(CarPointer5);
         }
 
         public event Action SetUp;
@@ -46,7 +53,10 @@ namespace TransportWF
 
         private void StartButton_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+>>>>>>> bdc774502681cb133edc5cea3bc4318f14bc175a
             StartSimulation?.Invoke();
         }
 
@@ -99,10 +109,12 @@ namespace TransportWF
                 listOfVehicles[index].Location = new Point(xCoordinate, yCoordinate);
                 listOfVehicles[index].Visible = true;
                 listOfVehicles[index].BringToFront();
+                listOfCarPointers[index].Visible = true;
             }
             else
             {
                 listOfVehicles[index].Image = null;
+                listOfCarPointers[index].Visible = false;
             }
         }
 
@@ -133,6 +145,12 @@ namespace TransportWF
         public void HideCar(int index)
         {
             listOfVehicles[index].Visible = false;
+        }
+
+        public void MoveCarPointer(int index,int x)
+        {
+            listOfCarPointers[index].Location = new Point(x + ScrollBar.Location.X + 17, listOfCarPointers[index].Location.Y);
+            listOfCarPointers[index].Update();
         }
     }
 }

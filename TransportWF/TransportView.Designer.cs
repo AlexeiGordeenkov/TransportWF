@@ -30,6 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransportView));
+            this.TempLabel = new System.Windows.Forms.Label();
+            this.ScrollBar = new System.Windows.Forms.HScrollBar();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.CarPointer1 = new System.Windows.Forms.PictureBox();
+            this.Vehicle5 = new System.Windows.Forms.PictureBox();
+            this.Vehicle4 = new System.Windows.Forms.PictureBox();
+            this.Vehicle3 = new System.Windows.Forms.PictureBox();
+            this.Vehicle2 = new System.Windows.Forms.PictureBox();
+            this.Vehicle1 = new System.Windows.Forms.PictureBox();
             this.RailsForLine4 = new System.Windows.Forms.PictureBox();
             this.RailsForLine3 = new System.Windows.Forms.PictureBox();
             this.RailsForLine2 = new System.Windows.Forms.PictureBox();
@@ -45,19 +55,22 @@
             this.StartButton = new System.Windows.Forms.Button();
             this.SetUpSimulationButton = new System.Windows.Forms.Button();
             this.RailsForLine5 = new System.Windows.Forms.PictureBox();
-            this.WiresForLine5 = new System.Windows.Forms.PictureBox();
-            this.WiresForLine4 = new System.Windows.Forms.PictureBox();
-            this.WiresForLine3 = new System.Windows.Forms.PictureBox();
-            this.WiresForLine2 = new System.Windows.Forms.PictureBox();
             this.WiresForLine1 = new System.Windows.Forms.PictureBox();
-            this.TempLabel = new System.Windows.Forms.Label();
-            this.ScrollBar = new System.Windows.Forms.HScrollBar();
-            this.Vehicle1 = new System.Windows.Forms.PictureBox();
-            this.Vehicle2 = new System.Windows.Forms.PictureBox();
-            this.Vehicle3 = new System.Windows.Forms.PictureBox();
-            this.Vehicle4 = new System.Windows.Forms.PictureBox();
-            this.Vehicle5 = new System.Windows.Forms.PictureBox();
-            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.WiresForLine2 = new System.Windows.Forms.PictureBox();
+            this.WiresForLine3 = new System.Windows.Forms.PictureBox();
+            this.WiresForLine4 = new System.Windows.Forms.PictureBox();
+            this.WiresForLine5 = new System.Windows.Forms.PictureBox();
+            this.CarPointer2 = new System.Windows.Forms.PictureBox();
+            this.CarPointer3 = new System.Windows.Forms.PictureBox();
+            this.CarPointer4 = new System.Windows.Forms.PictureBox();
+            this.CarPointer5 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CarPointer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine2)).BeginInit();
@@ -69,17 +82,101 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WiresForLine1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Vehicle1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Vehicle2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Vehicle3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Vehicle4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Vehicle5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CarPointer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CarPointer3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CarPointer4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CarPointer5)).BeginInit();
             this.SuspendLayout();
+            // 
+            // TempLabel
+            // 
+            this.TempLabel.AutoSize = true;
+            this.TempLabel.Location = new System.Drawing.Point(612, 467);
+            this.TempLabel.Name = "TempLabel";
+            this.TempLabel.Size = new System.Drawing.Size(0, 13);
+            this.TempLabel.TabIndex = 20;
+            // 
+            // ScrollBar
+            // 
+            this.ScrollBar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ScrollBar.Location = new System.Drawing.Point(33, 450);
+            this.ScrollBar.Maximum = 500;
+            this.ScrollBar.Minimum = 1;
+            this.ScrollBar.Name = "ScrollBar";
+            this.ScrollBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ScrollBar.Size = new System.Drawing.Size(724, 17);
+            this.ScrollBar.TabIndex = 21;
+            this.ScrollBar.Value = 1;
+            this.ScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ScrollBar_Scroll);
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Location = new System.Drawing.Point(389, 253);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(22, 23);
+            this.pictureBox8.TabIndex = 28;
+            this.pictureBox8.TabStop = false;
+            // 
+            // CarPointer1
+            // 
+            this.CarPointer1.Image = global::TransportWF.Properties.Resources.location_pointer;
+            this.CarPointer1.Location = new System.Drawing.Point(50, 470);
+            this.CarPointer1.Name = "CarPointer1";
+            this.CarPointer1.Size = new System.Drawing.Size(16, 20);
+            this.CarPointer1.TabIndex = 27;
+            this.CarPointer1.TabStop = false;
+            this.CarPointer1.Visible = false;
+            // 
+            // Vehicle5
+            // 
+            this.Vehicle5.Location = new System.Drawing.Point(1, 365);
+            this.Vehicle5.Name = "Vehicle5";
+            this.Vehicle5.Size = new System.Drawing.Size(70, 52);
+            this.Vehicle5.TabIndex = 26;
+            this.Vehicle5.TabStop = false;
+            // 
+            // Vehicle4
+            // 
+            this.Vehicle4.Location = new System.Drawing.Point(1, 301);
+            this.Vehicle4.Name = "Vehicle4";
+            this.Vehicle4.Size = new System.Drawing.Size(70, 52);
+            this.Vehicle4.TabIndex = 25;
+            this.Vehicle4.TabStop = false;
+            // 
+            // Vehicle3
+            // 
+            this.Vehicle3.Location = new System.Drawing.Point(1, 241);
+            this.Vehicle3.Name = "Vehicle3";
+            this.Vehicle3.Size = new System.Drawing.Size(70, 52);
+            this.Vehicle3.TabIndex = 24;
+            this.Vehicle3.TabStop = false;
+            // 
+            // Vehicle2
+            // 
+            this.Vehicle2.Location = new System.Drawing.Point(1, 183);
+            this.Vehicle2.Name = "Vehicle2";
+            this.Vehicle2.Size = new System.Drawing.Size(70, 52);
+            this.Vehicle2.TabIndex = 23;
+            this.Vehicle2.TabStop = false;
+            // 
+            // Vehicle1
+            // 
+            this.Vehicle1.Location = new System.Drawing.Point(1, 121);
+            this.Vehicle1.Name = "Vehicle1";
+            this.Vehicle1.Size = new System.Drawing.Size(70, 52);
+            this.Vehicle1.TabIndex = 22;
+            this.Vehicle1.TabStop = false;
             // 
             // RailsForLine4
             // 
@@ -234,38 +331,16 @@
             this.RailsForLine5.TabStop = false;
             this.RailsForLine5.Visible = false;
             // 
-            // WiresForLine5
+            // WiresForLine1
             // 
-            this.WiresForLine5.Image = global::TransportWF.Properties.Resources.Wires;
-            this.WiresForLine5.Location = new System.Drawing.Point(-67, 370);
-            this.WiresForLine5.Name = "WiresForLine5";
-            this.WiresForLine5.Size = new System.Drawing.Size(1263, 47);
-            this.WiresForLine5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.WiresForLine5.TabIndex = 15;
-            this.WiresForLine5.TabStop = false;
-            this.WiresForLine5.Visible = false;
-            // 
-            // WiresForLine4
-            // 
-            this.WiresForLine4.Image = global::TransportWF.Properties.Resources.Wires;
-            this.WiresForLine4.Location = new System.Drawing.Point(-185, 301);
-            this.WiresForLine4.Name = "WiresForLine4";
-            this.WiresForLine4.Size = new System.Drawing.Size(1263, 47);
-            this.WiresForLine4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.WiresForLine4.TabIndex = 16;
-            this.WiresForLine4.TabStop = false;
-            this.WiresForLine4.Visible = false;
-            // 
-            // WiresForLine3
-            // 
-            this.WiresForLine3.Image = global::TransportWF.Properties.Resources.Wires;
-            this.WiresForLine3.Location = new System.Drawing.Point(-185, 241);
-            this.WiresForLine3.Name = "WiresForLine3";
-            this.WiresForLine3.Size = new System.Drawing.Size(1263, 47);
-            this.WiresForLine3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.WiresForLine3.TabIndex = 17;
-            this.WiresForLine3.TabStop = false;
-            this.WiresForLine3.Visible = false;
+            this.WiresForLine1.Image = global::TransportWF.Properties.Resources.Wires;
+            this.WiresForLine1.Location = new System.Drawing.Point(-185, 121);
+            this.WiresForLine1.Name = "WiresForLine1";
+            this.WiresForLine1.Size = new System.Drawing.Size(1263, 47);
+            this.WiresForLine1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.WiresForLine1.TabIndex = 19;
+            this.WiresForLine1.TabStop = false;
+            this.WiresForLine1.Visible = false;
             // 
             // WiresForLine2
             // 
@@ -278,81 +353,78 @@
             this.WiresForLine2.TabStop = false;
             this.WiresForLine2.Visible = false;
             // 
-            // WiresForLine1
+            // WiresForLine3
             // 
-            this.WiresForLine1.Image = global::TransportWF.Properties.Resources.Wires;
-            this.WiresForLine1.Location = new System.Drawing.Point(-185, 121);
-            this.WiresForLine1.Name = "WiresForLine1";
-            this.WiresForLine1.Size = new System.Drawing.Size(1263, 47);
-            this.WiresForLine1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.WiresForLine1.TabIndex = 19;
-            this.WiresForLine1.TabStop = false;
-            this.WiresForLine1.Visible = false;
+            this.WiresForLine3.Image = global::TransportWF.Properties.Resources.Wires;
+            this.WiresForLine3.Location = new System.Drawing.Point(-185, 241);
+            this.WiresForLine3.Name = "WiresForLine3";
+            this.WiresForLine3.Size = new System.Drawing.Size(1263, 47);
+            this.WiresForLine3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.WiresForLine3.TabIndex = 17;
+            this.WiresForLine3.TabStop = false;
+            this.WiresForLine3.Visible = false;
             // 
-            // TempLabel
+            // WiresForLine4
             // 
-            this.TempLabel.AutoSize = true;
-            this.TempLabel.Location = new System.Drawing.Point(612, 467);
-            this.TempLabel.Name = "TempLabel";
-            this.TempLabel.Size = new System.Drawing.Size(0, 13);
-            this.TempLabel.TabIndex = 20;
+            this.WiresForLine4.Image = global::TransportWF.Properties.Resources.Wires;
+            this.WiresForLine4.Location = new System.Drawing.Point(-185, 301);
+            this.WiresForLine4.Name = "WiresForLine4";
+            this.WiresForLine4.Size = new System.Drawing.Size(1263, 47);
+            this.WiresForLine4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.WiresForLine4.TabIndex = 16;
+            this.WiresForLine4.TabStop = false;
+            this.WiresForLine4.Visible = false;
             // 
-            // ScrollBar
+            // WiresForLine5
             // 
-            this.ScrollBar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ScrollBar.Location = new System.Drawing.Point(33, 450);
-            this.ScrollBar.Maximum = 500;
-            this.ScrollBar.Name = "ScrollBar";
-            this.ScrollBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ScrollBar.Size = new System.Drawing.Size(724, 17);
-            this.ScrollBar.TabIndex = 21;
-            this.ScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ScrollBar_Scroll);
+            this.WiresForLine5.Image = global::TransportWF.Properties.Resources.Wires;
+            this.WiresForLine5.Location = new System.Drawing.Point(-67, 370);
+            this.WiresForLine5.Name = "WiresForLine5";
+            this.WiresForLine5.Size = new System.Drawing.Size(1263, 47);
+            this.WiresForLine5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.WiresForLine5.TabIndex = 15;
+            this.WiresForLine5.TabStop = false;
+            this.WiresForLine5.Visible = false;
             // 
-            // Vehicle1
+            // CarPointer2
             // 
-            this.Vehicle1.Location = new System.Drawing.Point(1, 121);
-            this.Vehicle1.Name = "Vehicle1";
-            this.Vehicle1.Size = new System.Drawing.Size(70, 52);
-            this.Vehicle1.TabIndex = 22;
-            this.Vehicle1.TabStop = false;
+            this.CarPointer2.Image = global::TransportWF.Properties.Resources.location_pointer;
+            this.CarPointer2.Location = new System.Drawing.Point(50, 470);
+            this.CarPointer2.Name = "CarPointer2";
+            this.CarPointer2.Size = new System.Drawing.Size(16, 20);
+            this.CarPointer2.TabIndex = 29;
+            this.CarPointer2.TabStop = false;
+            this.CarPointer2.Visible = false;
             // 
-            // Vehicle2
+            // CarPointer3
             // 
-            this.Vehicle2.Location = new System.Drawing.Point(1, 183);
-            this.Vehicle2.Name = "Vehicle2";
-            this.Vehicle2.Size = new System.Drawing.Size(70, 52);
-            this.Vehicle2.TabIndex = 23;
-            this.Vehicle2.TabStop = false;
+            this.CarPointer3.Image = global::TransportWF.Properties.Resources.location_pointer;
+            this.CarPointer3.Location = new System.Drawing.Point(50, 470);
+            this.CarPointer3.Name = "CarPointer3";
+            this.CarPointer3.Size = new System.Drawing.Size(16, 20);
+            this.CarPointer3.TabIndex = 30;
+            this.CarPointer3.TabStop = false;
+            this.CarPointer3.Visible = false;
             // 
-            // Vehicle3
+            // CarPointer4
             // 
-            this.Vehicle3.Location = new System.Drawing.Point(1, 241);
-            this.Vehicle3.Name = "Vehicle3";
-            this.Vehicle3.Size = new System.Drawing.Size(70, 52);
-            this.Vehicle3.TabIndex = 24;
-            this.Vehicle3.TabStop = false;
+            this.CarPointer4.Image = global::TransportWF.Properties.Resources.location_pointer;
+            this.CarPointer4.Location = new System.Drawing.Point(50, 470);
+            this.CarPointer4.Name = "CarPointer4";
+            this.CarPointer4.Size = new System.Drawing.Size(16, 20);
+            this.CarPointer4.TabIndex = 31;
+            this.CarPointer4.TabStop = false;
+            this.CarPointer4.Visible = false;
             // 
-            // Vehicle4
+            // CarPointer5
             // 
-            this.Vehicle4.Location = new System.Drawing.Point(1, 301);
-            this.Vehicle4.Name = "Vehicle4";
-            this.Vehicle4.Size = new System.Drawing.Size(70, 52);
-            this.Vehicle4.TabIndex = 25;
-            this.Vehicle4.TabStop = false;
-            // 
-            // Vehicle5
-            // 
-            this.Vehicle5.Location = new System.Drawing.Point(1, 365);
-            this.Vehicle5.Name = "Vehicle5";
-            this.Vehicle5.Size = new System.Drawing.Size(70, 52);
-            this.Vehicle5.TabIndex = 26;
-            this.Vehicle5.TabStop = false;
-            // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 1;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            this.CarPointer5.Image = global::TransportWF.Properties.Resources.location_pointer;
+            this.CarPointer5.Location = new System.Drawing.Point(50, 470);
+            this.CarPointer5.Name = "CarPointer5";
+            this.CarPointer5.Size = new System.Drawing.Size(16, 20);
+            this.CarPointer5.TabIndex = 32;
+            this.CarPointer5.TabStop = false;
+            this.CarPointer5.Visible = false;
             // 
             // TransportView
             // 
@@ -360,6 +432,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 529);
+            this.Controls.Add(this.CarPointer5);
+            this.Controls.Add(this.CarPointer4);
+            this.Controls.Add(this.CarPointer3);
+            this.Controls.Add(this.CarPointer2);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.CarPointer1);
             this.Controls.Add(this.Vehicle5);
             this.Controls.Add(this.Vehicle4);
             this.Controls.Add(this.Vehicle3);
@@ -390,6 +468,13 @@
             this.Name = "TransportView";
             this.Text = "Transport";
             this.Load += new System.EventHandler(this.TransportView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CarPointer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Vehicle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine2)).EndInit();
@@ -401,16 +486,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RailsForLine5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WiresForLine1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Vehicle1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Vehicle2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Vehicle3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Vehicle4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Vehicle5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiresForLine5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CarPointer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CarPointer3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CarPointer4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CarPointer5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,6 +530,12 @@
         public System.Windows.Forms.PictureBox Vehicle4;
         public System.Windows.Forms.PictureBox Vehicle5;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.PictureBox CarPointer1;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox CarPointer2;
+        private System.Windows.Forms.PictureBox CarPointer3;
+        private System.Windows.Forms.PictureBox CarPointer4;
+        private System.Windows.Forms.PictureBox CarPointer5;
     }
 }
 

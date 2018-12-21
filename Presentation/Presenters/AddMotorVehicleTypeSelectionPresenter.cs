@@ -29,6 +29,13 @@ namespace Presentation.Presenters
             _view.TrukTypeSelected += TrukTypeSelected;
             _view.PanzerTypeSelected += PanzerTypeSelected;
             _view.GoBackToSetUpVehicleView += GoBackToSetUpVehicleView;
+            _view.Home += GoHome;
+        }
+
+        private void GoHome()
+        {
+            _view.Close();
+            _kernel.Get<TransportPresenter>().Run();
         }
 
         private void GoBackToSetUpVehicleView()

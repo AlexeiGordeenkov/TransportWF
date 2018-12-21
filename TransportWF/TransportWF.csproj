@@ -242,10 +242,17 @@
     <None Include="Resources\TroleyBus.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\Bicycle.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Scooter.png" />
+=======
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location-pointer.png" />
+>>>>>>> bdc774502681cb133edc5cea3bc4318f14bc175a
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
