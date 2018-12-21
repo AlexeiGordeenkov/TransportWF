@@ -14,7 +14,7 @@ namespace Model
         public override double GetMaxDistance()
         {
             if (FuelConsumption == 0) return 500f - CurrentCoordinate;
-            return TankCapacity / FuelConsumption;
+            return TankCapacity*100 / FuelConsumption;
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Model
             this.StartSpeed = startSpeed;
             this.TankCapacity = tankCapacity;
             this.FuelConsumption = fuelConsumption;
-            SetAcceleration();
+            Init();
         }
 
         public override double GetAcceleratingDistance()

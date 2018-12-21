@@ -15,7 +15,7 @@ namespace Model
             this.Name = name;
             this.StartSpeed = startingSpeed;
             this.MaxSpeed = maxSpeed;
-            SetAcceleration();
+            Init();
         }
 
         public override void SaveDate()
