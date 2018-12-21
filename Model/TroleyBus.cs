@@ -16,16 +16,6 @@ namespace Model
             SetAcceleration();
         }
 
-        public override double GetAcceleratingDistance()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override double GetMaxDistance()
-        {
-            throw new NotImplementedException();
-        }
-
         public override void SaveDate()
         {
             throw new NotImplementedException();
