@@ -20,5 +20,18 @@ namespace Model
         {
             return 1;
         }
+        public override Vehicle Clone()
+        {
+            Car copy = new Car(Name, Fuel, MaxSpeed, StartSpeed, TankCapacity, FuelConsumption)
+            {
+                CurrentCoordinate = CurrentCoordinate,
+                CurentSpeed = CurentSpeed,
+                Acceleration = Acceleration,
+                StartCoordinate = StartCoordinate,
+                StartTime = StartTime,
+                ReachedMaxSpeed = ReachedMaxSpeed
+            };
+            return copy;
+        }
     }
 }

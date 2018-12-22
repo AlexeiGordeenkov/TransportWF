@@ -14,7 +14,6 @@ namespace Model
         public string PathToPictures { get; set; }
         public double MaxSpeed { get; set; }
         public double StopPoint { get; set; }
-        protected double BrakingDistances { get; set; }
         public double Acceleration { get; set; }
         public double StartSpeed { get; set; }
         public double CurentSpeed { get; set; }
@@ -27,10 +26,6 @@ namespace Model
         public bool Finished { get; set; }
 
         //methods
-        abstract public void Start();
-        abstract public void Stop();
-        abstract public void SaveDate();
-        abstract public void Step();
         abstract public double GetMaxDistance();
         abstract public double GetAcceleratingDistance();
 
