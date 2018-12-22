@@ -39,7 +39,7 @@ namespace Model
         }
         public override Vehicle Clone()
         {
-            Tram copy = new Tram(Name, MaxSpeed, StartSpeed)
+            Tram copy = new Tram(Name, StartSpeed, MaxSpeed)
             {
                 CurrentCoordinate = CurrentCoordinate,
                 BrakingDistances = BrakingDistances,

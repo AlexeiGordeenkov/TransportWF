@@ -49,7 +49,7 @@ namespace Model
 
         public override Vehicle Clone()
         {
-            Scooter copy = new Scooter(Name, MaxSpeed, StartSpeed, MaxRange)
+            Scooter copy = new Scooter(Name, StartSpeed, MaxSpeed,  MaxRange)
             {
                 CurrentCoordinate = CurrentCoordinate,
                 BrakingDistances = BrakingDistances,
