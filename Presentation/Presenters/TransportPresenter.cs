@@ -57,11 +57,19 @@ namespace Presentation
                 }
                 if (_kernel.Get<IRoadService>().IsThereRailsOnLane(i))
                 {
-
+                    _view.PutRailsOnLane(i);
                 }
-                if (_kernel.Get<IRoadService>().IsThereRailsOnLane(i))
+                else
                 {
-
+                    _view.HideRailsFromLane(i);
+                }
+                if (_kernel.Get<IRoadService>().IsThereWiresOnLane(i))
+                {
+                    _view.PutWiresOnLane(i);
+                }
+                else
+                {
+                    _view.HideWiresFromLane(i);
                 }
             }        
         }

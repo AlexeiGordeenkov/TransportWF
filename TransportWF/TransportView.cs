@@ -166,7 +166,6 @@ namespace TransportWF
         public void PutRailsOnLane(int index)
         {
             listOfRails[index].Visible = true;
-            listOfRails[index].Update();
         }
 
         public void HideRailsFromLane(int index)
@@ -174,12 +173,12 @@ namespace TransportWF
             listOfRails[index].Visible = false;
         }
 
-        public void putWiresOnLane(int index)
+        public void PutWiresOnLane(int index)
         {
             listOfWires[index].Visible = true;
         }
 
-        public void hideWiresFromLane(int index)
+        public void HideWiresFromLane(int index)
         {
             listOfWires[index].Visible = false;
         }

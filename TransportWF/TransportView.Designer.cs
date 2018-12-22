@@ -33,7 +33,6 @@
             this.TempLabel = new System.Windows.Forms.Label();
             this.ScrollBar = new System.Windows.Forms.HScrollBar();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.CarPointer1 = new System.Windows.Forms.PictureBox();
             this.Vehicle5 = new System.Windows.Forms.PictureBox();
             this.Vehicle4 = new System.Windows.Forms.PictureBox();
@@ -64,7 +63,6 @@
             this.CarPointer3 = new System.Windows.Forms.PictureBox();
             this.CarPointer4 = new System.Windows.Forms.PictureBox();
             this.CarPointer5 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarPointer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vehicle5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vehicle4)).BeginInit();
@@ -119,14 +117,6 @@
             this.timer.Enabled = true;
             this.timer.Interval = 1;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Location = new System.Drawing.Point(389, 253);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(22, 23);
-            this.pictureBox8.TabIndex = 28;
-            this.pictureBox8.TabStop = false;
             // 
             // CarPointer1
             // 
@@ -436,7 +426,6 @@
             this.Controls.Add(this.CarPointer4);
             this.Controls.Add(this.CarPointer3);
             this.Controls.Add(this.CarPointer2);
-            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.CarPointer1);
             this.Controls.Add(this.Vehicle5);
             this.Controls.Add(this.Vehicle4);
@@ -468,7 +457,6 @@
             this.Name = "TransportView";
             this.Text = "Transport";
             this.Load += new System.EventHandler(this.TransportView_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarPointer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vehicle5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vehicle4)).EndInit();
@@ -531,7 +519,6 @@
         public System.Windows.Forms.PictureBox Vehicle5;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.PictureBox CarPointer1;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox CarPointer2;
         private System.Windows.Forms.PictureBox CarPointer3;
         private System.Windows.Forms.PictureBox CarPointer4;

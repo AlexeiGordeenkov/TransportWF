@@ -27,7 +27,7 @@ namespace Presentation
         void StopTimer();
         void PutRailsOnLane(int index);
         void HideRailsFromLane(int index);
-        void putWiresOnLane(int index);
-        void hideWiresFromLane(int index);
+        void PutWiresOnLane(int index);
+        void HideWiresFromLane(int index);
     }
 }
