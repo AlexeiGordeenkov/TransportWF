@@ -34,7 +34,6 @@ namespace TransportWF
 
             kernel.Bind<IAddElectricVehicleView>().To<AddElectricVehicleView>();
             kernel.Bind<IAddMotorVehicleView>().To<AddMotorVehicleView>();
-            kernel.Bind<IAddHorseDrawnVehicleView>().To<AddHorseDrawnVehicleView>();
             kernel.Bind<IAddMuscleVehicleView>().To<AddMuscleVehicleView>();
             kernel.Bind<IAddMotorVehicleTypeSelectionView>().To<AddMotorVehicleTypeSelectionView>();
             kernel.Bind<IAddElectricVehicleTypeSelectionView>().To<AddElectricVehicleTypeSelectionView>();

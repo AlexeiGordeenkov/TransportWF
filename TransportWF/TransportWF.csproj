@@ -84,12 +84,6 @@
     <Compile Include="AddFuelView.Designer.cs">
       <DependentUpon>AddFuelView.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddHorseDrawnVehicleView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddHorseDrawnVehicleView.Designer.cs">
-      <DependentUpon>AddHorseDrawnVehicleView.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddMotorVehicleTypeSelectionView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,9 +162,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddMotorVehicleView.resx">
       <DependentUpon>AddMotorVehicleView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddHorseDrawnVehicleView.resx">
-      <DependentUpon>AddHorseDrawnVehicleView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddElectricVehicleTypeSelectionView.resx">
       <DependentUpon>AddElectricVehicleTypeSelectionView.cs</DependentUpon>

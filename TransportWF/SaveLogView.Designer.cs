@@ -60,13 +60,6 @@
             this.label1.Size = new System.Drawing.Size(129, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Транспортное средство";
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
-            // 
-            // SaveLogView
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(331, 310);
@@ -75,6 +68,7 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "SaveLogView";
             this.Text = "SaveLogView";
+            this.Load += new System.EventHandler(this.SaveLogView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

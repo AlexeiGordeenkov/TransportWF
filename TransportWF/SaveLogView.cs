@@ -18,16 +18,31 @@ namespace TransportWF
             InitializeComponent();
         }
 
-        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
+        public event Action Save;
+        public event Action ViewLoad;
 
-        }
 
         private void SaveAssButton_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.ShowDialog();
-            //saveFile.FileOk += Save(saveFile.)
+            Save?.Invoke();
+        }
+
+        public int GetIndexOfSelectedVehicle()
+        {
+            return comboBox1.SelectedIndex;
+        }
+
+        private void SaveLogView_Load(object sender, EventArgs e)
+        {
+            ViewLoad?.Invoke();
+        }
+
+        public void ShowList(List<string> list)
+        {
+            foreach (var item in list)
+            {
+                comboBox1.Items.Add(item);
+            }          
         }
     }
 }

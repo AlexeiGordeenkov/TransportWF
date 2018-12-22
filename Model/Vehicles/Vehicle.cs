@@ -68,42 +68,7 @@ namespace Model
             workbook.SaveAs(Path.Combine(Environment.CurrentDirectory, Name + ".xlsx"));
 
         }
-        public void SaveData(string nameFile)
-        {
-            if (log == null)
-                return;
-
-            Excel.Application application = new Excel.Application();
-            Excel.Workbook workbook;
-            Excel.Worksheet worksheet;
-            // Файл шаблона
-            const string template = "template.xlsx";
-
-            // Открываем книгу
-            workbook = application.Workbooks.Open(Path.Combine(Environment.CurrentDirectory, template));
-
-            // Получаем активную таблицу
-            worksheet = workbook.ActiveSheet as Worksheet;
-            int row = 1;
-            foreach (ArrayList arrayList in log)
-            {
-                for (int col = 1; col <= arrayList.Count; col++)
-                {
-                    worksheet.Cells[row, col].Value = arrayList[col - 1];
-                }
-            }
-            // worksheet.Cells[1,1].Value = DateTime.Now;
-            //worksheet.Cells[1,2].Value = this.Name;
-            //  worksheet.Cells[1,3].Value = MaxSpeed;
-            //  worksheet.Cells[1, 4].Value = MaxSpeed;
-
-
-            // Показываем приложение
-            application.Visible = true;
-
-            workbook.SaveAs(Path.Combine(Environment.CurrentDirectory,  nameFile + ".xlsx"));
-
-        }
+       
         protected void Init()
         {
             SetStopPoint();
