@@ -4,6 +4,8 @@ using Model;
 using System.Threading;
 using Model.InterfacesForServices;
 using System.Collections.Generic;
+using Presentation.ViewInterfaces;
+using Presentation.Presenters;
 
 namespace Presentation
 {
@@ -33,7 +35,13 @@ namespace Presentation
             _view.TrackBarScroll += TrackBarScroll;
             _view.ViewLoad += ViewLoad;
             _view.Tick += Draw;
+            _view.ShowLog += ShowLog;
             _simulationService.Draw += SetDraw;
+        }
+
+        private void ShowLog()
+        {
+            _kernel.Get<SaveLogPresenter>().Run();
         }
 
         private void TrackBarScroll()

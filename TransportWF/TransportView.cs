@@ -78,7 +78,7 @@ namespace TransportWF
 
         private void ShowLogButton_Click(object sender, EventArgs e)
         {
-            TempLabel.Text = _s;
+            ShowLog?.Invoke();
         }
         public new void Close()
         {

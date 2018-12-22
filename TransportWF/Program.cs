@@ -30,6 +30,7 @@ namespace TransportWF
             kernel.Bind<ISetUpVehiclesView>().To<SetUpVehiclesView>();
             kernel.Bind<ITransportView>().To<TransportView>().InSingletonScope();
             kernel.Bind<IAddFuelView>().To<AddFuelView>();
+            kernel.Bind<ISaveLogView>().To<SaveLogView>();
 
             kernel.Bind<IAddElectricVehicleView>().To<AddElectricVehicleView>();
             kernel.Bind<IAddMotorVehicleView>().To<AddMotorVehicleView>();
@@ -48,6 +49,7 @@ namespace TransportWF
             kernel.Bind<AddHorseDrawnVehiclePresenter>().ToSelf();
             kernel.Bind<AddMotorVehiclePresenter>().ToSelf();
             kernel.Bind<AddMuscleVehiclePresenter>().ToSelf();
+            kernel.Bind<SaveLogPresenter>().ToSelf();
 
             kernel.Bind<AddMotorVehicleTypeSelectionPresenter>().ToSelf();
             kernel.Bind<AddElectricVehicleTypeSelectionPresenter>().ToSelf();

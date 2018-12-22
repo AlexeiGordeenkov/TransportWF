@@ -76,6 +76,7 @@
     <Compile Include="Presenters\AddMotorVehicleTypeSelectionPresenter.cs" />
     <Compile Include="Presenters\AddMuscleVehiclePresenter.cs" />
     <Compile Include="Presenters\AddMuscleVehicleTypeSelectionPresenter.cs" />
+    <Compile Include="Presenters\SaveLogPresenter.cs" />
     <Compile Include="ViewInterfaces\IAddElectricVehicleTypeSelectionView.cs" />
     <Compile Include="ViewInterfaces\IAddElectricVehicleView.cs" />
     <Compile Include="ViewInterfaces\IAddFuelView.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="ViewInterfaces\IAddMuscleVehicleTypeSelectionView.cs" />
     <Compile Include="ViewInterfaces\IAddMuscleVehicleView.cs" />
     <Compile Include="IPresenter.cs" />
+    <Compile Include="ViewInterfaces\ISaveLogView.cs" />
     <Compile Include="ViewInterfaces\ISetUpRoadView.cs" />
     <Compile Include="ViewInterfaces\ISetUpVehiclesView.cs" />
     <Compile Include="ViewInterfaces\ISetUpView.cs" />

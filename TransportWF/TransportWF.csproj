@@ -125,6 +125,12 @@
     <Compile Include="AddElectricVehicleTypeSelectionView.Designer.cs">
       <DependentUpon>AddElectricVehicleTypeSelectionView.cs</DependentUpon>
     </Compile>
+    <Compile Include="SaveLogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveLogView.Designer.cs">
+      <DependentUpon>SaveLogView.cs</DependentUpon>
+    </Compile>
     <Compile Include="SetUpRoadView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddMuscleVehicleView.resx">
       <DependentUpon>AddMuscleVehicleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveLogView.resx">
+      <DependentUpon>SaveLogView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SetUpRoadView.resx">
       <DependentUpon>SetUpRoadView.cs</DependentUpon>
