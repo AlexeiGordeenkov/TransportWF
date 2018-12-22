@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FactoryMethod\CreatorPanzer.cs" />
     <Compile Include="FactoryMethod\CreatorTruck.cs" />
     <Compile Include="FactoryMethod\CreatorCar.cs" />
     <Compile Include="FactoryMethod\ForElectricVehicle\CreatorTram.cs" />

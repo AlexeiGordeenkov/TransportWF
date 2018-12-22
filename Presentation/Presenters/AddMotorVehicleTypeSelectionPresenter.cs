@@ -16,7 +16,6 @@ namespace Presentation.Presenters
         private readonly IAddMotorVehicleTypeSelectionView _view;
         private readonly ITransportService _service;
 
-        private ICreatorMotorVehicle creator;
 
         //Methods/////////////////////////////
         public AddMotorVehicleTypeSelectionPresenter(IKernel kernel, IAddMotorVehicleTypeSelectionView view, ITransportService service)
@@ -46,21 +45,19 @@ namespace Presentation.Presenters
 
         private void PanzerTypeSelected()
         {
-            //_kernel.Get<AddMotorVehiclePresenter>().Run(creator);
-            //_view.Close();
+            _kernel.Get<AddMotorVehiclePresenter>().Run(new CreatorPanzer());
+           // _view.Close();
         }
 
         private void TrukTypeSelected()
         {
-            creator = new CreatorTruck();
-            _kernel.Get<AddMotorVehiclePresenter>().Run(creator);
+            _kernel.Get<AddMotorVehiclePresenter>().Run(new CreatorTruck());
            // _view.Close();
         }
 
         private void CarTypeSelected()
         {
-            creator = new CreatorCar();
-            _kernel.Get<AddMotorVehiclePresenter>().Run(creator);
+            _kernel.Get<AddMotorVehiclePresenter>().Run(new CreatorCar());
            // _view.Close();
         }
 
