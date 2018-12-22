@@ -479,6 +479,8 @@
             this.Controls.Add(this.WiresForLine3);
             this.Controls.Add(this.WiresForLine4);
             this.Controls.Add(this.WiresForLine5);
+            this.MaximumSize = new System.Drawing.Size(816, 568);
+            this.MinimumSize = new System.Drawing.Size(816, 568);
             this.Name = "TransportView";
             this.Text = "Transport";
             this.Load += new System.EventHandler(this.TransportView_Load);

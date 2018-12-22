@@ -187,8 +187,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 369);
             this.Controls.Add(this.panel1);
+            this.MaximumSize = new System.Drawing.Size(464, 408);
+            this.MinimumSize = new System.Drawing.Size(464, 408);
             this.Name = "AddMotorVehicleView";
-            this.Text = "Form1";
+            this.Text = "Добавить механическое ТС";
             this.Load += new System.EventHandler(this.AddMotorVehicleView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -161,7 +161,6 @@
             this.Lane4ComboBox.Name = "Lane4ComboBox";
             this.Lane4ComboBox.Size = new System.Drawing.Size(173, 21);
             this.Lane4ComboBox.TabIndex = 16;
-
             // 
             // Lane5ComboBox
             // 
@@ -190,8 +189,10 @@
             this.Controls.Add(this.Lane1);
             this.Controls.Add(this.NameOfColumn2);
             this.Controls.Add(this.NameOfColumn1);
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "SetUpRoadView";
-            this.Text = "SetUpRoadView";
+            this.Text = "Настроить дорогу";
             this.Load += new System.EventHandler(this.SetUpRoadView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

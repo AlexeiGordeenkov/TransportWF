@@ -127,8 +127,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AddVehicleButton);
+            this.MaximumSize = new System.Drawing.Size(442, 366);
+            this.MinimumSize = new System.Drawing.Size(442, 366);
             this.Name = "AddMuscleVehicleView";
-            this.Text = "AddMuscleVehicleView";
+            this.Text = "Добавить ТС";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -113,8 +113,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 373);
             this.Controls.Add(this.panel1);
+            this.MinimumSize = new System.Drawing.Size(320, 412);
             this.Name = "AddFuelView";
-            this.Text = "AddFuelView";
+            this.Text = "Добаить топливо";
             this.Load += new System.EventHandler(this.AddFuelView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

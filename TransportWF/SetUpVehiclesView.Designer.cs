@@ -103,7 +103,7 @@
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "SetUpVehiclesView";
-            this.Text = "SetUpVehiclesView";
+            this.Text = "Выбрать категроию ТС";
             this.ResumeLayout(false);
 
         }

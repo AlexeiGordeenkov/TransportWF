@@ -96,7 +96,7 @@
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "AddElectricVehicleTypeSelectionView";
-            this.Text = "AddElectricVehicleTypeSelectionView";
+            this.Text = "Добавить электрическое ТС";
             this.ResumeLayout(false);
 
         }

@@ -100,8 +100,10 @@
             this.Controls.Add(this.GoBackToTransportViewButton);
             this.Controls.Add(this.SetUpRoadButton);
             this.Controls.Add(this.SetUpVehiclesButton);
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "SetUpView";
-            this.Text = "SetUpView";
+            this.Text = "Настройки";
             this.Load += new System.EventHandler(this.SetUpView_Load);
             this.ResumeLayout(false);
 

@@ -109,7 +109,7 @@
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "AddMotorVehicleTypeSelectionView";
-            this.Text = "AddMotorVehicleTypeSelectionView";
+            this.Text = "Добавить механическое ТС";
             this.ResumeLayout(false);
 
         }

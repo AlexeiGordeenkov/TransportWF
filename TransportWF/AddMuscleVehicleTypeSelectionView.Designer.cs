@@ -109,7 +109,7 @@
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "AddMuscleVehicleTypeSelectionView";
-            this.Text = "AddMuscleVehicleTypeSelectionView";
+            this.Text = "Добавить непонятно как назвать ТС";
             this.ResumeLayout(false);
 
         }

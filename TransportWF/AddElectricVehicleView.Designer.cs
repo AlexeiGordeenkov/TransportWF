@@ -107,8 +107,10 @@
             this.Controls.Add(this.StartingSpeedLabel);
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.NameLabel);
+            this.MaximumSize = new System.Drawing.Size(473, 344);
+            this.MinimumSize = new System.Drawing.Size(473, 344);
             this.Name = "AddElectricVehicleView";
-            this.Text = "AddElectricVehicle";
+            this.Text = "Добавить электричекое ТС";
             this.ResumeLayout(false);
             this.PerformLayout();
 
