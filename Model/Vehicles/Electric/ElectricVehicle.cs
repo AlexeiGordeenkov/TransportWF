@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public abstract class ElectricVehicle : Vehicle
+    public class ElectricVehicle : Vehicle
     {
+        protected ElectricVehicle(string name, double startingSpeed, double maxSpeed)
+        {
+            this.Name = name;
+            this.StartSpeed = startingSpeed;
+            this.MaxSpeed = maxSpeed;
+            Init();
+        }
         public override double GetAcceleratingDistance()
         {
             return 1;

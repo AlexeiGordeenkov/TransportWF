@@ -9,13 +9,9 @@ namespace Model
 {
     public class Tram : ElectricVehicle
     {
-        public Tram(string name, double startingSpeed, double maxSpeed)
+        public Tram(string name, double startingSpeed, double maxSpeed) : base(name, startingSpeed, maxSpeed)
         {
-            PathToPictures = Directory.GetCurrentDirectory() + "\\Resources\\TramIcon.png";
-            this.Name = name;
-            this.StartSpeed = startingSpeed;
-            this.MaxSpeed = maxSpeed;
-            Init();
+            PathToPictures = Directory.GetCurrentDirectory() + "\\Resources\\TramIcon.png";           
         }
     }
 }

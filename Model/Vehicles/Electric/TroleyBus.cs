@@ -9,13 +9,9 @@ namespace Model
 {
     public class TroleyBus : ElectricVehicle
     {
-        public TroleyBus(string name, double startingSpeed, double maxSpeed)
+        public TroleyBus(string name, double startingSpeed, double maxSpeed) : base(name, startingSpeed, maxSpeed)
         {
-            PathToPictures = Directory.GetCurrentDirectory() + "\\Resources\\TroleyBusIcon.png";
-            Name = name;
-            StartSpeed = startingSpeed;
-            MaxSpeed = maxSpeed;
-            Init();
+            PathToPictures = Directory.GetCurrentDirectory() + "\\Resources\\TroleyBus.png";
         }
     }
 }

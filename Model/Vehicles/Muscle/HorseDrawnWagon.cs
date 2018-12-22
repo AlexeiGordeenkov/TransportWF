@@ -9,14 +9,9 @@ namespace Model
 {
     public class HorseDrawnWagon : MuscleVehicle
     {
-        public HorseDrawnWagon(string name, double startingSpeed, double maxSpeed, double maxRange)
+        public HorseDrawnWagon(string name, double startingSpeed, double maxSpeed, double maxRange) : base(name, startingSpeed, maxSpeed, maxRange)
         {
             PathToPictures = Directory.GetCurrentDirectory() + "\\Resources\\HourseWagon.png";
-            Name = name;
-            StartSpeed = startingSpeed;
-            MaxSpeed = maxSpeed;
-            MaxRange = maxRange;
-            Init();
         }
     }
 }

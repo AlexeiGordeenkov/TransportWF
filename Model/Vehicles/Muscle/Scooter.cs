@@ -9,14 +9,9 @@ namespace Model
 {
     public class Scooter : MuscleVehicle
     {
-        public Scooter(string name, double startingSpeed, double maxSpeed, double maxRange)
+        public Scooter(string name, double startingSpeed, double maxSpeed, double maxRange):base(name,startingSpeed,maxSpeed,maxRange)
         {
             PathToPictures = Directory.GetCurrentDirectory() + "\\Resources\\Scooter.png";
-            Name = name;
-            StartSpeed = startingSpeed;
-            MaxSpeed = maxSpeed;
-            MaxRange = maxRange;
-            Init();
         }
     }
 }

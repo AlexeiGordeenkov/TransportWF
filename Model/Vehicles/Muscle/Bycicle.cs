@@ -9,14 +9,9 @@ namespace Model
 {
     public class Bycicle : MuscleVehicle
     {
-        public Bycicle(string name, double startingSpeed, double maxSpeed, double maxRange)
+        public Bycicle(string name, double startingSpeed, double maxSpeed, double maxRange) : base(name, startingSpeed, maxSpeed, maxRange)
         {
             PathToPictures = Directory.GetCurrentDirectory() + "\\Resources\\BicycleIcon.png";
-            Name = name;
-            StartSpeed = startingSpeed;
-            MaxSpeed = maxSpeed;
-            MaxRange = maxRange;
-            Init();
         }
     }
 }

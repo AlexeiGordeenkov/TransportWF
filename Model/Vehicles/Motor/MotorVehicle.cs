@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    abstract public class MotorVehicle : Vehicle
+    public class MotorVehicle : Vehicle
     {
+        protected MotorVehicle(string name, Fuel fuel, double maxSpeed, double startSpeed, double tankCapacity, double fuelConsumption)
+        {
+            this.Name = name;
+            this.Fuel = fuel;
+            this.MaxSpeed = maxSpeed;
+            this.StartSpeed = startSpeed;
+            this.TankCapacity = tankCapacity;
+            this.FuelConsumption = fuelConsumption;
+            Init();
+        }
         protected double TankCapacity { get; set; }
         protected Fuel Fuel { get; set; }
         protected double FuelConsumption { get; set; }

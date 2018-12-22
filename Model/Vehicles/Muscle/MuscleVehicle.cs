@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public abstract class MuscleVehicle : Vehicle
+    public class MuscleVehicle : Vehicle
     {
+        protected MuscleVehicle(string name, double startingSpeed, double maxSpeed, double maxRange)
+        {
+            Name = name;
+            StartSpeed = startingSpeed;
+            MaxSpeed = maxSpeed;
+            MaxRange = maxRange;
+            Init();
+        }
         public double MaxRange { get; set; }
         public override double GetMaxDistance()
         {
