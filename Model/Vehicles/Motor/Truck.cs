@@ -12,5 +12,21 @@ namespace Model
         {
             PathToPictures = System.IO.Directory.GetCurrentDirectory() + "\\Resources\\TruckIcon.png";
         }
+        public override Vehicle Clone()
+        {
+            Truck copy = new Truck(Name, Fuel, MaxSpeed, StartSpeed, TankCapacity, FuelConsumption)
+            {
+                CurrentCoordinate = CurrentCoordinate,
+                StartSpeed = StartSpeed,
+                MaxSpeed = MaxSpeed,
+                FuelConsumption = FuelConsumption,
+                TankCapacity = TankCapacity,
+                Acceleration = Acceleration,
+                StartCoordinate = StartCoordinate,
+                StartTime = StartTime,
+                ReachedMaxSpeed = ReachedMaxSpeed
+            };
+            return copy;
+        }
     }
 }

@@ -13,5 +13,19 @@ namespace Model
         {
             PathToPictures = Directory.GetCurrentDirectory() + "\\Resources\\HourseWagon.png";
         }
+        public override Vehicle Clone()
+        {
+            HorseDrawnWagon copy = new HorseDrawnWagon(Name, StartSpeed, MaxSpeed, MaxRange)
+            {
+                StartSpeed = StartSpeed,
+                MaxSpeed = MaxSpeed,
+                Acceleration = Acceleration,
+                MaxRange = MaxRange,
+                StartCoordinate = StartCoordinate,
+                StartTime = StartTime,
+                ReachedMaxSpeed = ReachedMaxSpeed
+            };
+            return copy;
+        }
     }
 }

@@ -13,5 +13,19 @@ namespace Model
         {
             PathToPictures = Directory.GetCurrentDirectory() + "\\Resources\\TroleyBus.png";
         }
+        public override Vehicle Clone()
+        {
+            TroleyBus copy = new TroleyBus(Name, StartSpeed, MaxSpeed)
+            {
+                CurrentCoordinate = CurrentCoordinate,
+                MaxSpeed = MaxSpeed,
+                StartSpeed = StartSpeed,
+                Acceleration = Acceleration,
+                StartCoordinate = StartCoordinate,
+                StartTime = StartTime,
+                ReachedMaxSpeed = ReachedMaxSpeed
+            };
+            return copy;
+        }
     }
 }

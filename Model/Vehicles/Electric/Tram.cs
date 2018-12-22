@@ -13,5 +13,19 @@ namespace Model
         {
             PathToPictures = Directory.GetCurrentDirectory() + "\\Resources\\TramIcon.png";           
         }
+        public override Vehicle Clone()
+        {
+            Tram copy = new Tram(Name, StartSpeed, MaxSpeed)
+            {
+                CurrentCoordinate = CurrentCoordinate,
+                MaxSpeed = MaxSpeed,
+                StartSpeed = StartSpeed,
+                Acceleration = Acceleration,
+                StartCoordinate = StartCoordinate,
+                StartTime = StartTime,
+                ReachedMaxSpeed = ReachedMaxSpeed
+            };
+            return copy;
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace Model
         public override double GetMaxDistance()
         {
             if (FuelConsumption == 0) return 500f - CurrentCoordinate;
-            return TankCapacity*100 / FuelConsumption;
+            return TankCapacity * 100 / FuelConsumption;
         }
         public override double GetAcceleratingDistance()
         {
@@ -32,16 +32,7 @@ namespace Model
         }
         public override Vehicle Clone()
         {
-            Car copy = new Car(Name, Fuel, MaxSpeed, StartSpeed, TankCapacity, FuelConsumption)
-            {
-                CurrentCoordinate = CurrentCoordinate,
-                CurentSpeed = CurentSpeed,
-                Acceleration = Acceleration,
-                StartCoordinate = StartCoordinate,
-                StartTime = StartTime,
-                ReachedMaxSpeed = ReachedMaxSpeed
-            };
-            return copy;
+            return this;
         }
     }
 }

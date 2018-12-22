@@ -13,5 +13,19 @@ namespace Model
         {
             PathToPictures = Directory.GetCurrentDirectory() + "\\Resources\\BicycleIcon.png";
         }
+        public override Vehicle Clone()
+        {
+            Bycicle copy = new Bycicle(Name, StartSpeed, MaxSpeed, MaxRange)
+            {
+                StartSpeed = StartSpeed,
+                MaxSpeed = MaxSpeed,
+                Acceleration = Acceleration,
+                MaxRange = MaxRange,
+                StartCoordinate = StartCoordinate,
+                StartTime = StartTime,
+                ReachedMaxSpeed = ReachedMaxSpeed
+            };
+            return copy;
+        }
     }
 }

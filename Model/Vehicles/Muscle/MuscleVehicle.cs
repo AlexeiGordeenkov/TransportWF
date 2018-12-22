@@ -27,16 +27,7 @@ namespace Model
         }
         public override Vehicle Clone()
         {
-            Bycicle copy = new Bycicle(Name, StartSpeed, MaxSpeed, MaxRange)
-            {
-                CurrentCoordinate = CurrentCoordinate,
-                CurentSpeed = CurentSpeed,
-                Acceleration = Acceleration,
-                StartCoordinate = StartCoordinate,
-                StartTime = StartTime,
-                ReachedMaxSpeed = ReachedMaxSpeed
-            };
-            return copy;
+            return this;
         }
     }
 }

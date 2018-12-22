@@ -13,5 +13,21 @@ namespace Model
         {
             PathToPictures = System.IO.Directory.GetCurrentDirectory() + "\\Resources\\Panzer.png";
         }
+        public override Vehicle Clone()
+        {
+            Panzer copy = new Panzer(Name, Fuel, MaxSpeed, StartSpeed, TankCapacity, FuelConsumption)
+            {
+                CurrentCoordinate = CurrentCoordinate,
+                StartSpeed = StartSpeed,
+                MaxSpeed = MaxSpeed,
+                FuelConsumption = FuelConsumption,
+                TankCapacity = TankCapacity,
+                Acceleration = Acceleration,
+                StartCoordinate = StartCoordinate,
+                StartTime = StartTime,
+                ReachedMaxSpeed = ReachedMaxSpeed
+            };
+            return copy;
+        }
     }
 }

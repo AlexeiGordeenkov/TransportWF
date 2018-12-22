@@ -26,16 +26,7 @@ namespace Model
         }
         public override Vehicle Clone()
         {
-            TroleyBus copy = new TroleyBus(Name, StartSpeed, MaxSpeed)
-            {
-                CurrentCoordinate = CurrentCoordinate,
-                CurentSpeed = CurentSpeed,
-                Acceleration = Acceleration,
-                StartCoordinate = StartCoordinate,
-                StartTime = StartTime,
-                ReachedMaxSpeed = ReachedMaxSpeed
-            };
-            return copy;
+            return this;
         }
     }
 }
