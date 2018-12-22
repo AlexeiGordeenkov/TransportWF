@@ -38,17 +38,40 @@ namespace Presentation
         {
             _kernel.Get<IRoadService>().ClearRoad();
             List<int> listIndex = _view.GetListOfIndexes();
+            List<Vehicle> list = new List<Vehicle>();
+            string message = "";
             for (int i = 0; i < listIndex.Count; i++)
             {
 
-                if(listIndex[i] >= 0)
+                if (listIndex[i] >= 0)
                 {
-                    _kernel.Get<IRoadService>().SetVehiceOnLane(i, ( (_service.GetListOfVehicles())[ listIndex[i] ]).Clone() );// добавление на i полосу ListIndex[i] того ТС
+                   list.Add(_service.GetListOfVehicles()[listIndex[i]]);
+                }
+                else
+                {
+                    list.Add(null);
                 }
             }
-            _kernel.Get<TransportPresenter>().Run();
-            _view.Close();
-            _kernel.Get<ISimulationService>().SetFirstStart();//Устанавливавем флаг что на главной вью будет первый старт тс
+            if (_kernel.Get<ICheckCorectLocationVehicleService>().CheckCorectLocationVehicle(list, ref message))
+            {
+                for (int i = 0; i < listIndex.Count; i++)
+                {
+
+                    if (listIndex[i] >= 0)
+                    {
+                        _kernel.Get<IRoadService>().SetVehiceOnLane(i, ((_service.GetListOfVehicles())[listIndex[i]]).Clone());// добавление на i полосу ListIndex[i] того ТС
+                    }
+
+                }
+                _kernel.Get<TransportPresenter>().Run();
+                _view.Close();
+                _kernel.Get<ISimulationService>().SetFirstStart();//Устанавливавем флаг что на главной вью будет первый старт тс
+
+            }
+            else
+                _view.ShowMessage(message);
+
+            
         }
 
         public void Run()

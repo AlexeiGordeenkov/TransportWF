@@ -60,6 +60,7 @@ namespace TransportWF
             kernel.Bind<IVerificationDataForMotorVehicleService>().To<VerificationDataForMotorVehicleService>().InSingletonScope();
             kernel.Bind<IVerificationDataForElectricVehicleService>().To<VerificationDataForElectricVehicleService>().InSingletonScope();
             kernel.Bind<IVerificationDataForMuscleVehicleService>().To<VerificationDataForMuscleVehicleService>().InSingletonScope();
+            kernel.Bind<ICheckCorectLocationVehicleService>().To<CheckCorectLocationVehicleService>().InSingletonScope();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

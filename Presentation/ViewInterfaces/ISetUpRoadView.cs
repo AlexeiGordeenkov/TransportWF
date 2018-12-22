@@ -11,6 +11,7 @@ namespace Presentation
     {
         event Action Apply;
         event Action SetUpRoadLoad;
+        void ShowMessage(string message);
         void LoadDataForSetUpRoadView(List<string> list);
         List<int> GetListOfIndexes();
     }

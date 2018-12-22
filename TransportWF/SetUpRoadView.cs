@@ -65,6 +65,12 @@ namespace TransportWF
             Lane5ComboBox.Items.Add("");
         }
 
+        public void ShowMessage(string message)
+        {
+            MessageBox.Show(message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+
+        }
+
         private void ApplyButton_Click(object sender, EventArgs e)
         {
             Apply?.Invoke();

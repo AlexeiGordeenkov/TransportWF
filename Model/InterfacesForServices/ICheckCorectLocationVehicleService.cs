@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.InterfacesForServices
 {
-    public interface ICheckCorectLocationVehicle
+    public interface ICheckCorectLocationVehicleService
     {
         bool CheckCorectLocationVehicle(List<Vehicle> list, ref string message);
     }
