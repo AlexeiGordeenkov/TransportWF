@@ -94,6 +94,7 @@
             this.HomeButton.Size = new System.Drawing.Size(45, 41);
             this.HomeButton.TabIndex = 6;
             this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // AddMuscleVehicleTypeSelectionView
             // 

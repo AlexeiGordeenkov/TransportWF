@@ -23,10 +23,17 @@ namespace Presentation.Presenters
             _view = view;
             _service = service;
 
-            view.ScooterSelected += ScooterSelected;
-            view.BicycleSelected += BicycleSelected;
-            view.HorseDrawnWagonSelected += HorseDrawnWagonSelected;
-            view.GoBackToSetUpVehicleView += GoBackToSetUpVehicleView;
+            _view.ScooterSelected += ScooterSelected;
+            _view.BicycleSelected += BicycleSelected;
+            _view.HorseDrawnWagonSelected += HorseDrawnWagonSelected;
+            _view.GoBackToSetUpVehicleView += GoBackToSetUpVehicleView;
+            _view.Home += GoHome;
+        }
+
+        private void GoHome()
+        {
+            _view.Close();
+            _kernel.Get<TransportPresenter>().Run();
         }
 
         private void HorseDrawnWagonSelected()
