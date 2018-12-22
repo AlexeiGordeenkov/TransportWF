@@ -9,6 +9,37 @@ namespace Model.Services
 {
     public class VerificationDataForMotorVehicleService : IVerificationDataForMotorVehicleService
     {
+        private bool ValidationMaxSpeed(string speed)
+        {
+            if (Double.Parse(speed) > 0)
+                return true;
+            return false;
+        }
+
+        private bool ValidationStartSpeedAndMaxSped(string startSpeed, string maxSpeed)
+        {
+            if (Double.Parse(startSpeed) <= Double.Parse(maxSpeed))
+                return true;
+            return false;
+        }
+        private bool ValidationStartSpeed(string speed)
+        {
+            if (Double.Parse(speed) >= 0)
+                return true;
+            return false;
+        }
+        private bool ValidatonCapacityTank(string capacity)
+        {
+            if (Double.Parse(capacity) > 0)
+                return true;
+            return false;
+        }
+        private bool ValidatonFuelConsption(string consption)
+        {
+            if (Double.Parse(consption) > 0)
+                return true;
+            return false;
+        }
         public bool VerificationDataForMotorVehicle(string name, string maxSpeed, string startingSpeed, string capacityTank, string fuelConsption, ref string message)
         {
             bool check = true;
@@ -71,6 +102,35 @@ namespace Model.Services
             {
                 message += "Ошибка формата поля расход топлива" + Environment.NewLine;
                 check = false;
+            }
+            if (check)
+            {
+                if (!ValidationMaxSpeed(maxSpeed))
+                {
+                    message = "Максимальная скорость дожна быть больше 0";
+                    check = false;
+                }
+                if (!ValidationStartSpeed(startingSpeed))
+                {
+                    message += "Начальная скорость не может быть отрицательной величиной" + Environment.NewLine;
+                    check = false;
+                }
+                if (!ValidationStartSpeedAndMaxSped(startingSpeed, maxSpeed))
+                {
+                    message += "Начальная скорость не может быть больше максимаьной" + Environment.NewLine;
+                    check = false;
+                }
+                if (!ValidatonCapacityTank(capacityTank))
+                {
+                    message += "Ёмкость бака не может быть меньше 0" + Environment.NewLine;
+                    check = false;
+                }
+                if (!ValidatonFuelConsption(fuelConsption))
+                {
+                    message += "Расход топлива не отрицательная величина" + Environment.NewLine;
+                    check = false;
+                }
+
             }
             return check;
         }

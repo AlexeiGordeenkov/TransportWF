@@ -38,9 +38,7 @@ namespace TransportWF
         private void AddVehicleButton_Click(object sender, EventArgs e)
         {
             AddVehicle?.Invoke();
-            NameTextBox.Clear();
-            MaxSpeedTextBox.Clear();
-            StartingSpeedTextBox.Clear();
+           
         }
         public new void Show()
         {
