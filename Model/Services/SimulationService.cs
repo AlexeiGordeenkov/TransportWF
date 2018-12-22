@@ -142,15 +142,18 @@ namespace Model.Services
 
         public void SetTimeKoef(int _timeKoef)
         {
-            simulationThread.Suspend();
-            foreach (var vehicle in listOFMovingVehicles)
+            if (simulationInProces)
             {
-                vehicle.StartCoordinate = vehicle.CurrentCoordinate;
-                vehicle.StartSpeed = vehicle.CurentSpeed;
-                vehicle.StartTime = DateTime.Now;
+                simulationThread.Suspend();
+                foreach (var vehicle in listOFMovingVehicles)
+                {
+                    vehicle.StartCoordinate = vehicle.CurrentCoordinate;
+                    vehicle.StartSpeed = vehicle.CurentSpeed;
+                    vehicle.StartTime = DateTime.Now;
+                }               
+                simulationThread.Resume();
             }
             timeKoef = _timeKoef;
-            simulationThread.Resume();
         }
     }
 }
