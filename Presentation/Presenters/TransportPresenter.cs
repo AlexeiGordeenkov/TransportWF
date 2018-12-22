@@ -77,6 +77,7 @@ namespace Presentation
         private void Scroll(object sender, System.Windows.Forms.ScrollEventArgs e)
         {
             currentKilometr = e.NewValue;
+            SetDraw();
         }
 
         private void SetUp()
