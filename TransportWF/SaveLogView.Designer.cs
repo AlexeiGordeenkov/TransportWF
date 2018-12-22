@@ -36,8 +36,11 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(43, 86);
+            this.comboBox1.MaximumSize = new System.Drawing.Size(243, 0);
+            this.comboBox1.MinimumSize = new System.Drawing.Size(243, 0);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(243, 21);
             this.comboBox1.TabIndex = 0;
@@ -60,6 +63,9 @@
             this.label1.Size = new System.Drawing.Size(129, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Транспортное средство";
+            // 
+            // SaveLogView
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(331, 310);
