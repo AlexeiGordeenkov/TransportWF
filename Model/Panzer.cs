@@ -34,11 +34,6 @@ namespace Model
             };
             return copy;
         }
-       
-        public override double GetAcceleratingDistance()
-        {
-            return 5;
-        }
 
         public override void SaveDate()
         {

@@ -31,12 +31,6 @@ namespace Model
             return copy;
         }
 
-        public override double GetAcceleratingDistance()
-        {
-            throw new NotImplementedException();
-        }
-
-
         public override void SaveDate()
         {
             throw new NotImplementedException();

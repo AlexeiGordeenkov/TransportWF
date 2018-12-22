@@ -17,16 +17,7 @@ namespace Model
             MaxRange = maxRange;
             // SetAcceleration();
         }
-        public override double GetAcceleratingDistance()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override double GetMaxDistance()
-        {
-            return MaxRange;
-        }
-
+ 
         public override void SaveDate()
         {
             throw new NotImplementedException();

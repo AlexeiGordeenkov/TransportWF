@@ -16,5 +16,9 @@ namespace Model
             if (FuelConsumption == 0) return 500f - CurrentCoordinate;
             return TankCapacity*100 / FuelConsumption;
         }
+        public override double GetAcceleratingDistance()
+        {
+            return 1;
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace Model
             Name = name;
             StartSpeed = startingSpeed;
             MaxSpeed = maxSpeed;
-            SetAcceleration();
+            Init();
         }
 
         public override void SaveDate()
