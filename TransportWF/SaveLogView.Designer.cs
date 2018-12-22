@@ -73,7 +73,7 @@
             this.Controls.Add(this.SaveAssButton);
             this.Controls.Add(this.comboBox1);
             this.Name = "SaveLogView";
-            this.Text = "SaveLogView";
+            this.Text = "Сохранить Журнал";
             this.Load += new System.EventHandler(this.SaveLogView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
