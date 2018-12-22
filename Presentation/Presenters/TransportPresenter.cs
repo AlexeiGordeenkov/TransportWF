@@ -41,6 +41,7 @@ namespace Presentation
 
         private void ShowLog()
         {
+            StopSimulation();
             _kernel.Get<SaveLogPresenter>().Run();
         }
 
