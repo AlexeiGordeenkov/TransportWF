@@ -39,8 +39,11 @@ namespace Presentation.Presenters
         }
         public void Save()
         {
+
             var vehicle = _kernel.Get<ITransportService>().GetListOfMovingVehicles()[_view.GetIndexOfSelectedVehicle()];
             var log = vehicle.log;
+            if (log == null)
+                return;
             Excel.Application application = new Excel.Application();
             Excel.Workbook workbook;
             Excel.Worksheet worksheet;
@@ -57,6 +60,7 @@ namespace Presentation.Presenters
                 {
                     worksheet.Cells[row, col].Value = arrayList[col - 1];
                 }
+                row++;
             }
             // worksheet.Cells[1,1].Value = DateTime.Now;
             //worksheet.Cells[1,2].Value = this.Name;
@@ -65,7 +69,7 @@ namespace Presentation.Presenters
             // Показываем приложение
             application.Visible = true;
 
-            workbook.SaveAs(Path.Combine(Environment.CurrentDirectory, vehicle.Name + ".xlsx"));
+            workbook.SaveAs(Path.Combine(Environment.CurrentDirectory, vehicle.Name + DateTime.Now.Millisecond + ".xlsx"));
         }
         public void Run()
         {

@@ -29,6 +29,7 @@ namespace Model.Services
             {
                 lane.Clear();
             }
+            _kernel.Get<ITransportService>().ClearListOfMovingVehicles();
         }
 
         public Vehicle GetVehicleFromLane(int index)
