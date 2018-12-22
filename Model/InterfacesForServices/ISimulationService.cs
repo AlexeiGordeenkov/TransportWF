@@ -11,6 +11,7 @@ namespace Model.InterfacesForServices
         void StartSimulation();
         void StopSimulation();
         void SetFirstStart();
+        void SetTimeKoef(int _timeKoef);
         event Action Draw;
     }
 }

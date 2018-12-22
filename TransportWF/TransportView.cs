@@ -52,6 +52,7 @@ namespace TransportWF
         public new event EventHandler<ScrollEventArgs> Scroll;
         public event Action ViewLoad;
         public event Action Tick;
+        public event Action TrackBarScroll;
 
         string _s;
 
@@ -181,6 +182,16 @@ namespace TransportWF
         public void HideWiresFromLane(int index)
         {
             listOfWires[index].Visible = false;
+        }
+
+        public int GetTimeKoef()
+        {
+            return trackBar.Value;
+        }
+
+        private void trackBar_Scroll(object sender, EventArgs e)
+        {
+            TrackBarScroll?.Invoke();
         }
     }
 }
