@@ -52,12 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bycicle.cs" />
-    <Compile Include="Car.cs" />
-    <Compile Include="ElectricVehicle.cs" />
+    <Compile Include="Vehicles\Muscle\Bycicle.cs" />
+    <Compile Include="Vehicles\Motor\Car.cs" />
+    <Compile Include="Vehicles\Electric\ElectricVehicle.cs" />
     <Compile Include="Fuel.cs" />
+<<<<<<< HEAD
     <Compile Include="HorseDrawnWagon.cs" />
     <Compile Include="InterfacesForServices\ICheckCorectLocationVehicleService.cs" />
+=======
+    <Compile Include="Vehicles\Muscle\HorseDrawnWagon.cs" />
+>>>>>>> 549668e2ba4e1133201f56cc3b5bc86bd0b11efd
     <Compile Include="InterfacesForServices\IFuelService.cs" />
     <Compile Include="InterfacesForServices\IRoadService.cs" />
     <Compile Include="InterfacesForServices\ISimulationService.cs" />
@@ -66,12 +70,16 @@
     <Compile Include="InterfacesForServices\IVerificationDataForMotorVehicleService.cs" />
     <Compile Include="InterfacesForServices\IVerificationDataForMuscleVehicleService.cs" />
     <Compile Include="Lane.cs" />
-    <Compile Include="MotorVehicle.cs" />
-    <Compile Include="MuscleVehicle.cs" />
-    <Compile Include="Panzer.cs" />
+    <Compile Include="Vehicles\Motor\MotorVehicle.cs" />
+    <Compile Include="Vehicles\Muscle\MuscleVehicle.cs" />
+    <Compile Include="Vehicles\Motor\Panzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="Scooter.cs" />
     <Compile Include="Services\CheckCorectLocationVehicleService.cs" />
+=======
+    <Compile Include="Vehicles\Muscle\Scooter.cs" />
+>>>>>>> 549668e2ba4e1133201f56cc3b5bc86bd0b11efd
     <Compile Include="Services\FuelService.cs" />
     <Compile Include="Services\RoadService.cs" />
     <Compile Include="Services\SimulationService.cs" />
@@ -79,10 +87,10 @@
     <Compile Include="Services\VerificationDataForMotorVehicleService.cs" />
     <Compile Include="Services\TransportService.cs" />
     <Compile Include="Services\VerificationDataForMuscleVehicleService.cs" />
-    <Compile Include="Tram.cs" />
-    <Compile Include="TroleyBus.cs" />
-    <Compile Include="Truck.cs" />
-    <Compile Include="Vehicle.cs" />
+    <Compile Include="Vehicles\Electric\Tram.cs" />
+    <Compile Include="Vehicles\Electric\TroleyBus.cs" />
+    <Compile Include="Vehicles\Motor\Truck.cs" />
+    <Compile Include="Vehicles\Vehicle.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

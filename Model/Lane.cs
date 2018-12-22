@@ -18,7 +18,7 @@ namespace Model
         public bool IsThereWires()
         {
             if (_Vehicle == null) return false;
-            if (_Vehicle.GetType().Equals("TroleyBus")) return true;
+            if (_Vehicle.GetType().Name.Equals("TroleyBus")) return true;
             return false;
         }
         public Vehicle _Vehicle { get; set; }
