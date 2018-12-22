@@ -63,6 +63,8 @@
             this.CarPointer3 = new System.Windows.Forms.PictureBox();
             this.CarPointer4 = new System.Windows.Forms.PictureBox();
             this.CarPointer5 = new System.Windows.Forms.PictureBox();
+            this.trackBar = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CarPointer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vehicle5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vehicle4)).BeginInit();
@@ -89,6 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CarPointer3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarPointer4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarPointer5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // TempLabel
@@ -102,7 +105,7 @@
             // ScrollBar
             // 
             this.ScrollBar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ScrollBar.Location = new System.Drawing.Point(33, 450);
+            this.ScrollBar.Location = new System.Drawing.Point(30, 439);
             this.ScrollBar.Maximum = 500;
             this.ScrollBar.Minimum = 1;
             this.ScrollBar.Name = "ScrollBar";
@@ -121,7 +124,7 @@
             // CarPointer1
             // 
             this.CarPointer1.Image = global::TransportWF.Properties.Resources.location_pointer;
-            this.CarPointer1.Location = new System.Drawing.Point(50, 470);
+            this.CarPointer1.Location = new System.Drawing.Point(50, 460);
             this.CarPointer1.Name = "CarPointer1";
             this.CarPointer1.Size = new System.Drawing.Size(16, 20);
             this.CarPointer1.TabIndex = 27;
@@ -379,7 +382,7 @@
             // CarPointer2
             // 
             this.CarPointer2.Image = global::TransportWF.Properties.Resources.location_pointer;
-            this.CarPointer2.Location = new System.Drawing.Point(50, 470);
+            this.CarPointer2.Location = new System.Drawing.Point(50, 460);
             this.CarPointer2.Name = "CarPointer2";
             this.CarPointer2.Size = new System.Drawing.Size(16, 20);
             this.CarPointer2.TabIndex = 29;
@@ -389,7 +392,7 @@
             // CarPointer3
             // 
             this.CarPointer3.Image = global::TransportWF.Properties.Resources.location_pointer;
-            this.CarPointer3.Location = new System.Drawing.Point(50, 470);
+            this.CarPointer3.Location = new System.Drawing.Point(50, 460);
             this.CarPointer3.Name = "CarPointer3";
             this.CarPointer3.Size = new System.Drawing.Size(16, 20);
             this.CarPointer3.TabIndex = 30;
@@ -399,7 +402,7 @@
             // CarPointer4
             // 
             this.CarPointer4.Image = global::TransportWF.Properties.Resources.location_pointer;
-            this.CarPointer4.Location = new System.Drawing.Point(50, 470);
+            this.CarPointer4.Location = new System.Drawing.Point(50, 460);
             this.CarPointer4.Name = "CarPointer4";
             this.CarPointer4.Size = new System.Drawing.Size(16, 20);
             this.CarPointer4.TabIndex = 31;
@@ -409,12 +412,31 @@
             // CarPointer5
             // 
             this.CarPointer5.Image = global::TransportWF.Properties.Resources.location_pointer;
-            this.CarPointer5.Location = new System.Drawing.Point(50, 470);
+            this.CarPointer5.Location = new System.Drawing.Point(50, 460);
             this.CarPointer5.Name = "CarPointer5";
             this.CarPointer5.Size = new System.Drawing.Size(16, 20);
             this.CarPointer5.TabIndex = 32;
             this.CarPointer5.TabStop = false;
             this.CarPointer5.Visible = false;
+            // 
+            // trackBar
+            // 
+            this.trackBar.Location = new System.Drawing.Point(679, 472);
+            this.trackBar.Minimum = 1;
+            this.trackBar.Name = "trackBar";
+            this.trackBar.Size = new System.Drawing.Size(109, 45);
+            this.trackBar.TabIndex = 33;
+            this.trackBar.Value = 1;
+            this.trackBar.Scroll += new System.EventHandler(this.trackBar_Scroll);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(582, 480);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Ускорить время";
             // 
             // TransportView
             // 
@@ -422,6 +444,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 529);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.trackBar);
             this.Controls.Add(this.CarPointer5);
             this.Controls.Add(this.CarPointer4);
             this.Controls.Add(this.CarPointer3);
@@ -483,6 +507,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CarPointer3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarPointer4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarPointer5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -523,6 +548,8 @@
         private System.Windows.Forms.PictureBox CarPointer3;
         private System.Windows.Forms.PictureBox CarPointer4;
         private System.Windows.Forms.PictureBox CarPointer5;
+        private System.Windows.Forms.TrackBar trackBar;
+        private System.Windows.Forms.Label label1;
     }
 }
 

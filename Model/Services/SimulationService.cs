@@ -16,6 +16,7 @@ namespace Model.Services
 
         private bool simulationInProces = false;
         private bool firstStart = true;
+        public int timeKoef=1;
 
         private Thread simulationThread;
 
@@ -28,7 +29,7 @@ namespace Model.Services
             _kernel = kernel;
         }
 
-        private void CreateLog(Vehicle vehicle,string mess)
+        private void CreateLog(Vehicle vehicle, string mess)
         {
             var t = new ArrayList();
             t.Add(DateTime.Now);
@@ -49,7 +50,7 @@ namespace Model.Services
                 {
                     item.StartTime = DateTime.Now;
                     item.log = new List<ArrayList>();
-                    CreateLog(item,"FirstStart");
+                    CreateLog(item, "FirstStart");
                 }
                 simulationThread = new Thread(Simulate);
                 simulationThread.Start();
@@ -73,7 +74,7 @@ namespace Model.Services
         private void Simulate()//Работает в новом потоке и считает координаты машин
         {
             while (true)
-            {       
+            {
                 foreach (var vehicle in listOFMovingVehicles)
                 {
                     if (vehicle.CurrentCoordinate - vehicle.LastLogCoordinate >= 50)
@@ -84,7 +85,7 @@ namespace Model.Services
                     {
                         if (!vehicle.ReachedMaxSpeed)
                         {
-                            if (vehicle.StartSpeed + vehicle.GetTimeFromStart() * vehicle.Acceleration > vehicle.MaxSpeed)
+                            if (vehicle.StartSpeed + vehicle.GetTimeFromStart() * timeKoef * vehicle.Acceleration > vehicle.MaxSpeed)
                             {
                                 vehicle.ReachedMaxSpeed = true;
                                 vehicle.StartCoordinate = vehicle.CurrentCoordinate;
@@ -93,7 +94,7 @@ namespace Model.Services
                                 vehicle.CurentSpeed = vehicle.MaxSpeed;
                             }
                         }
-                        double t = ((double)vehicle.GetTimeFromStart());
+                        double t = ((double)vehicle.GetTimeFromStart()) * timeKoef;
                         if (!vehicle.ReachedMaxSpeed)
                         {
                             vehicle.CurrentCoordinate = vehicle.StartCoordinate + vehicle.StartSpeed * t + (vehicle.Acceleration / 2) * t * t;
@@ -137,6 +138,19 @@ namespace Model.Services
         public void SetFirstStart()
         {
             firstStart = true;
+        }
+
+        public void SetTimeKoef(int _timeKoef)
+        {
+            simulationThread.Suspend();
+            foreach (var vehicle in listOFMovingVehicles)
+            {
+                vehicle.StartCoordinate = vehicle.CurrentCoordinate;
+                vehicle.StartSpeed = vehicle.CurentSpeed;
+                vehicle.StartTime = DateTime.Now;
+            }
+            timeKoef = _timeKoef;
+            simulationThread.Resume();
         }
     }
 }

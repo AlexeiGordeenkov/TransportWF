@@ -30,9 +30,15 @@ namespace Presentation
             _view.StartSimulation += StartSimulation;
             _view.StopSimulation += StopSimulation;
             _view.Scroll += Scroll;
+            _view.TrackBarScroll += TrackBarScroll;
             _view.ViewLoad += ViewLoad;
             _view.Tick += Draw;
             _simulationService.Draw += SetDraw;
+        }
+
+        private void TrackBarScroll()
+        {
+            _kernel.Get<ISimulationService>().SetTimeKoef(_view.GetTimeKoef());
         }
 
         private void SetDraw()

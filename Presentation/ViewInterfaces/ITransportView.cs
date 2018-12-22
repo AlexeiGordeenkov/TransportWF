@@ -15,6 +15,7 @@ namespace Presentation
         event Action StopSimulation;
         event Action ViewLoad;
         event Action Tick;
+        event Action TrackBarScroll;
         event EventHandler<ScrollEventArgs> Scroll;
         void WriteTempLabel(string s);
         List<int> GetYCoordinatesOfLanes();
@@ -29,5 +30,6 @@ namespace Presentation
         void HideRailsFromLane(int index);
         void PutWiresOnLane(int index);
         void HideWiresFromLane(int index);
+        int GetTimeKoef();
     }
 }
