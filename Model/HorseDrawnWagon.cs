@@ -48,7 +48,7 @@ namespace Model
         }
         public override Vehicle Clone()
         {
-            HorseDrawnWagon copy = new HorseDrawnWagon(Name, MaxSpeed, StartSpeed, MaxRange)
+            HorseDrawnWagon copy = new HorseDrawnWagon(Name, StartSpeed, MaxSpeed,  MaxRange)
             {
                 CurrentCoordinate = CurrentCoordinate,
                 BrakingDistances = BrakingDistances,

@@ -48,7 +48,7 @@ namespace Model
         }
         public override Vehicle Clone()
         {
-            Bycicle copy = new Bycicle(Name, MaxSpeed, StartSpeed, MaxRange)
+            Bycicle copy = new Bycicle(Name,  StartSpeed, MaxSpeed, MaxRange)
             {
                 CurrentCoordinate = CurrentCoordinate,
                 BrakingDistances = BrakingDistances,

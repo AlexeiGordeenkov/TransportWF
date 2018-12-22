@@ -37,7 +37,7 @@ namespace Model
         }
         public override Vehicle Clone()
         {
-            TroleyBus copy = new TroleyBus(Name, MaxSpeed, StartSpeed)
+            TroleyBus copy = new TroleyBus(Name, StartSpeed, MaxSpeed)
             {
                 CurrentCoordinate = CurrentCoordinate,
                 BrakingDistances = BrakingDistances,
